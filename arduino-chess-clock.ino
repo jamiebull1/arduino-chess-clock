@@ -74,28 +74,16 @@ class Player {
     String menuText;          // text for the time-setting menu
     long secondsRun;          // seconds run while the player was active
 
-    void IncrementMinutes();   
-    void DecrementMinutes();   
-    int SecondsRemaining();
-};
-
-void Player::IncrementMinutes() {
-  if (this->minutes < 99) {
-    this->minutes += 1;
-  }
-};
-
-void Player::DecrementMinutes() {
-  if (this->minutes > 1) {
-    this->minutes -= 1;
-  }
-};
-
-int Player::SecondsRemaining() {
-  // number of seconds remaining on the player's clock
-  int minsAllowed = this->minutes;
-  int secondsRunSoFar = this->secondsRun;
-  return minsAllowed * 60 - secondsRunSoFar;
+    void IncrementMinutes() {minutes = min(minutes + 1, 99);
+    }
+    void DecrementMinutes() {minutes = max(minutes - 1, 0);
+    }
+    int SecondsRemaining() {
+        // number of seconds remaining on the player's clock
+        int minsAllowed = minutes;
+        int secondsRunSoFar = secondsRun;
+        return minsAllowed * 60 - secondsRunSoFar;
+    }
 };
 
 String timeString(long seconds){
