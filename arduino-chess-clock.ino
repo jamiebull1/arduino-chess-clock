@@ -44,19 +44,19 @@ enum Button
 // read the buttons
 int read_LCD_buttons()
 {
- adc_key_in = analogRead(0);      // read the value from the sensor 
- // buttons when read are centered at these values: 0, 144, 329, 504, 741
- // we add approx 50 to those values and check to see if we are close
-
- // We make this the 1st option for speed reasons since it will be the most likely result
- if (adc_key_in > 1000) return btnNONE; 
- if (adc_key_in < 50)   return btnRIGHT;  
- if (adc_key_in < 250)  return btnUP; 
- if (adc_key_in < 450)  return btnDOWN; 
- if (adc_key_in < 650)  return btnLEFT; 
- if (adc_key_in < 850)  return btnSELECT;
-
- return btnNONE;  // when all others fail, return this...
+    adc_key_in = analogRead(0);      // read the value from the sensor 
+    // buttons when read are centered at these values: 0, 144, 329, 504, 741
+    // we add approx 50 to those values and check to see if we are close
+    
+    // We make this the 1st option for speed reasons since it will be the most likely result
+    if (adc_key_in > 1000) return btnNONE; 
+    if (adc_key_in < 50)   return btnRIGHT;  
+    if (adc_key_in < 250)  return btnUP; 
+    if (adc_key_in < 450)  return btnDOWN; 
+    if (adc_key_in < 650)  return btnLEFT; 
+    if (adc_key_in < 850)  return btnSELECT;
+    
+    return btnNONE;  // when all others fail, return this...
 }
 //================================================================
 
@@ -66,32 +66,39 @@ bool isUsingMenu = false;  // whether we are in the time-setting menu
 bool isGameOver = false;
 String playIndicator = "  --  ";  // for the centre of the display when no player is active
 
-class Player {
-  // Represents a player.
-  public:
-    int minutes;              // number of minutes allowed  
-    bool isActive;         // is the player's clock counting down?
-    String menuText;          // text for the time-setting menu
-    long secondsRun;          // seconds run while the player was active
-
-    void IncrementMinutes() {minutes = min(minutes + 1, 99);
-    }
-    void DecrementMinutes() {minutes = max(minutes - 1, 0);
-    }
-    int SecondsRemaining() {
-        // number of seconds remaining on the player's clock
-        int minsAllowed = minutes;
-        int secondsRunSoFar = secondsRun;
-        return minsAllowed * 60 - secondsRunSoFar;
-    }
+class Player 
+{
+    // Represents a player.
+    public:
+        int minutes;              // number of minutes allowed  
+        bool isActive;            // is the player's clock counting down?
+        String menuText;          // text for the time-setting menu
+        long secondsRun;          // seconds run while the player was active
+    
+        void IncrementMinutes() 
+        {
+            minutes = min(minutes + 1, 99);
+        }
+        void DecrementMinutes()
+        {
+            minutes = max(minutes - 1, 0);
+        }
+        int SecondsRemaining() 
+        {
+            // number of seconds remaining on the player's clock
+            int minsAllowed = minutes;
+            int secondsRunSoFar = secondsRun;
+            return minsAllowed * 60 - secondsRunSoFar;
+        }
 };
 
-String timeString(long seconds){
-  // Convert seconds to an MM:SS display.
-  int runMins = seconds / 60;
-  int runSecs = seconds % 60;
-
-  return pad(runMins) + ":" + pad(runSecs);
+String timeString(long seconds)
+// Convert seconds to an MM:SS display.
+{
+    int runMins = seconds / 60;
+    int runSecs = seconds % 60;
+  
+    return pad(runMins) + ":" + pad(runSecs);
 };
 
 String pad(int toPad)
@@ -112,193 +119,187 @@ Player p2 = {5, false, "Player2 mins: ", 0};
 // set a pointer to the first player to be shown in the time-setting menu
 Player* menuPlayer = &p1;
 
-void updateCounters(){
-  // Update the counters for each player
-  if (p0.isActive) {
-    p0.secondsRun += millis()/1000 - (
-      p0.secondsRun + 
-      p1.secondsRun + 
-      p2.secondsRun
-      );
+void updateCounters()
+{
+    // Update the counters for each player
+    if (p0.isActive)
+    {
+        p0.secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
     }
-  if (p1.isActive) {
-    p1.secondsRun += millis()/1000 - (
-      p0.secondsRun + 
-      p1.secondsRun + 
-      p2.secondsRun
-      );
+    if (p1.isActive)
+    {
+        p1.secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
     }
-  if (p2.isActive) {
-    p2.secondsRun += millis()/1000 - (
-      p0.secondsRun + 
-      p1.secondsRun + 
-      p2.secondsRun
-      );
+    if (p2.isActive)
+    {
+        p2.secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
     }
 }
 
 void setup()
 {
- lcd.begin(16, 2);  
- lcd.setCursor(0,0);
- lcd.print("P1 ChessClock P2");
+    lcd.begin(16, 2);  
+    lcd.setCursor(0,0);
+    lcd.print("P1 ChessClock P2");
 }
 
 // Main loop
 void loop()
 {
- updateCounters();  // do this every loop
- lcd_key = read_LCD_buttons();  
- if (isUsingMenu) {
-   switch (lcd_key)               
-   {
-     case btnUP:
-       {
-        // increase minutes
-        menuPlayer->IncrementMinutes();        
-        delay(250);        
-        break;
-       }  
-     case btnDOWN:
-       {
-        // decrease minutes        
-        menuPlayer->DecrementMinutes();        
-        delay(250);        
-        break;
-       }  
-     case btnLEFT:
-       {
-        // set pointer to player 1 as player to change time for
-        menuPlayer = &p1;
-        break;
-       }  
-     case btnRIGHT:
-       {
-        // set pointer to player 2 as player to change time for
-        menuPlayer = &p2;
-        break;
-       }  
-     case btnSELECT:
-       {
-        // return to timer screen
-        isUsingMenu = false;
-        delay(500);  // delay required otherwise the button fires repeatedly
-        break;       
-       }  
-     case btnNONE:
-       {
-        // update menu display
-        lcd.setCursor(0,0);
-        lcd.print("      MENU      ");
-        lcd.setCursor(0,1);
-        String playerMins;
-        if (menuPlayer->minutes < 10) {
-          playerMins = " " + String(menuPlayer->minutes);
-        } else {
-          playerMins = String(menuPlayer->minutes);
-        }
-        lcd.print(menuPlayer->menuText + playerMins);
-        break;       
-       }
-     }
- } else {
-   switch (lcd_key)               
-   {
-     case btnLEFT:
-       {
-        // player 1
-        playIndicator = "  <-  ";
-        p0.isActive = false;
-        p1.isActive = true;
-        p2.isActive = false;
-        lcd.setCursor(5,1);            
-        lcd.print(playIndicator);
-        break;
-       }
-     case btnRIGHT:
-       {
-        // player 2
-        playIndicator = "  ->  ";
-        p0.isActive = false;
-        p1.isActive = false;
-        p2.isActive = true;
-        lcd.setCursor(5,1);        
-        lcd.print(playIndicator);
-        break;
-       }
-     case btnUP:
-       {
-        // pause the timers
-        p0.isActive = true;
-        p1.isActive = false;
-        p2.isActive = false;
-        playIndicator = "  --  ";
-        break;
-       }
-     case btnDOWN:
-       {
-        // not used      
-        break;
-       }
-     case btnSELECT:
-       {
-        if (isGameOver){
-          // select button resets the game
-          p0.secondsRun += (p1.secondsRun + p2.secondsRun);
-          p1.secondsRun = 0;
-          p2.secondsRun = 0;
-          p0.isActive = true;
-          p1.isActive = false;
-          p2.isActive = false;
-          playIndicator = "  --  ";
-          isGameOver = false;
-          delay(500);
-          break;
-        } else {
-          // activate the menu
-          isUsingMenu = true;   
-          p0.isActive = true;
-          p1.isActive = false;
-          p2.isActive = false;
-          delay(500);  // delay required otherwise the button fires repeatedly
-          break;
-        }
-       }
-     case btnNONE:
-       {
-        if (isGameOver) {
-          // do nothing and wait for btnSELECT to reset the game
-          break;  
-        } else {
-          // check if either player is out of time
-          if (p1.SecondsRemaining() <= 0) {  // player 1 lost
-            lcd.setCursor(0,0);
-            lcd.print("   Game Over!   ");
-            lcd.setCursor(0,1);
-            lcd.print(" Player 1 loses ");
-            isGameOver = true;
+    updateCounters();  // do this every loop
+    lcd_key = read_LCD_buttons();  
+    if (isUsingMenu) {
+        switch (lcd_key)               
+        {
+        case btnUP:
+            {
+            // increase minutes
+            menuPlayer->IncrementMinutes();        
+            delay(250);        
             break;
-          } else if (p2.SecondsRemaining() <= 0) {  // player 2 lost
-            lcd.setCursor(0,0);
-            lcd.print("   Game Over!   ");
-            lcd.setCursor(0,1);
-            lcd.print(" Player 2 loses ");
-            isGameOver = true;
+            }  
+        case btnDOWN:
+            {
+            // decrease minutes        
+            menuPlayer->DecrementMinutes();        
+            delay(250);        
             break;
-          } else {
-            // update timer display
+            }  
+        case btnLEFT:
+            {
+            // set pointer to player 1 as player to change time for
+            menuPlayer = &p1;
+            break;
+            }  
+        case btnRIGHT:
+            {
+            // set pointer to player 2 as player to change time for
+            menuPlayer = &p2;
+            break;
+            }  
+        case btnSELECT:
+            {
+            // return to timer screen
+            isUsingMenu = false;
+            delay(500);  // delay required otherwise the button fires repeatedly
+            break;       
+            }  
+        case btnNONE:
+            {
+            // update menu display
             lcd.setCursor(0,0);
-            lcd.print("P1 ChessClock P2");
+            lcd.print("      MENU      ");
             lcd.setCursor(0,1);
-            lcd.print(timeString(p1.SecondsRemaining()));      
+            String playerMins;
+            if (menuPlayer->minutes < 10) {
+                playerMins = " " + String(menuPlayer->minutes);
+            } else {
+                playerMins = String(menuPlayer->minutes);
+            }
+            lcd.print(menuPlayer->menuText + playerMins);
+            break;       
+            }
+        }
+    } else {
+        switch (lcd_key)               
+        {
+        case btnLEFT:
+            {
+            // player 1
+            playIndicator = "  <-  ";
+            p0.isActive = false;
+            p1.isActive = true;
+            p2.isActive = false;
             lcd.setCursor(5,1);            
-            lcd.print(playIndicator);        
-            lcd.setCursor(11,1);
-            lcd.print(timeString(p2.SecondsRemaining()));
-          }
-          break;
-        }       
-       }
-     }
-   }
+            lcd.print(playIndicator);
+            break;
+            }
+        case btnRIGHT:
+            {
+            // player 2
+            playIndicator = "  ->  ";
+            p0.isActive = false;
+            p1.isActive = false;
+            p2.isActive = true;
+            lcd.setCursor(5,1);        
+            lcd.print(playIndicator);
+            break;
+            }
+        case btnUP:
+            {
+            // pause the timers
+            p0.isActive = true;
+            p1.isActive = false;
+            p2.isActive = false;
+            playIndicator = "  --  ";
+            break;
+            }
+        case btnDOWN:
+            {
+            // not used      
+            break;
+            }
+        case btnSELECT:
+            {
+            if (isGameOver){
+                // select button resets the game
+                p0.secondsRun += (p1.secondsRun + p2.secondsRun);
+                p1.secondsRun = 0;
+                p2.secondsRun = 0;
+                p0.isActive = true;
+                p1.isActive = false;
+                p2.isActive = false;
+                playIndicator = "  --  ";
+                isGameOver = false;
+                delay(500);
+                break;
+            } else {
+                // activate the menu
+                isUsingMenu = true;   
+                p0.isActive = true;
+                p1.isActive = false;
+                p2.isActive = false;
+                delay(500);  // delay required otherwise the button fires repeatedly
+                break;
+               }
+            }
+        case btnNONE:
+            {
+            if (isGameOver) {
+                // do nothing and wait for btnSELECT to reset the game
+                break;  
+            } else {
+                // check if either player is out of time
+                if (p1.SecondsRemaining() <= 0) 
+                {  // player 1 lost
+                    lcd.setCursor(0,0);
+                    lcd.print("   Game Over!   ");
+                    lcd.setCursor(0,1);
+                    lcd.print(" Player 1 loses ");
+                    isGameOver = true;
+                    break;
+                } else if (p2.SecondsRemaining() <= 0) 
+                {  // player 2 lost
+                    lcd.setCursor(0,0);
+                    lcd.print("   Game Over!   ");
+                    lcd.setCursor(0,1);
+                    lcd.print(" Player 2 loses ");
+                    isGameOver = true;
+                    break;
+                } else {
+                    // update timer display
+                    lcd.setCursor(0,0);
+                    lcd.print("P1 ChessClock P2");
+                    lcd.setCursor(0,1);
+                    lcd.print(timeString(p1.SecondsRemaining()));      
+                    lcd.setCursor(5,1);            
+                    lcd.print(playIndicator);        
+                    lcd.setCursor(11,1);
+                    lcd.print(timeString(p2.SecondsRemaining()));
+                }
+                break;
+            }       
+        }
+        }
+    }
 }
