@@ -64,15 +64,14 @@ int read_LCD_buttons()
 // Initialise some global parameters
 bool isUsingMenu = false;  // whether we are in the time-setting menu
 bool isGameOver = false;
-String playIndicator = "  --  ";  // for the centre of the display when no player is active
 
 class Player 
 {
     // Represents a player.
     public:
         int minutes;              // number of minutes allowed  
-        bool isActive;            // is the player's clock counting down?
         String menuText;          // text for the time-setting menu
+        String playIndicator;     // indicator for when active
         long secondsRun;          // seconds run while the player was active
     
         void IncrementMinutes() 
@@ -81,7 +80,7 @@ class Player
         }
         void DecrementMinutes()
         {
-            minutes = max(minutes - 1, 0);
+            minutes = max(minutes - 1, 1);
         }
         int SecondsRemaining() 
         {
@@ -112,28 +111,19 @@ String pad(int toPad)
 };
 
 // initialise the players
-Player p0 = {0, true, "", 0};  // dummy player, active when player clocks are not counting down
-Player p1 = {5, false, "Player1 mins: ", 0};
-Player p2 = {5, false, "Player2 mins: ", 0};
+Player p0 = {0, "", "  --  ", 0};  // dummy player, active when player clocks are not counting down
+Player p1 = {5, "Player1 mins: ", "  <-  ", 0};
+Player p2 = {5, "Player2 mins: ", "  ->  ", 0};
 
 // set a pointer to the first player to be shown in the time-setting menu
 Player* menuPlayer = &p1;
+// set the active player pointer to the player to start with
+Player* activePlayer = &p0;
 
-void updateCounters()
+void updateCounter()
 {
-    // Update the counters for each player
-    if (p0.isActive)
-    {
-        p0.secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
-    }
-    if (p1.isActive)
-    {
-        p1.secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
-    }
-    if (p2.isActive)
-    {
-        p2.secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
-    }
+    // Update the counter for the active player
+    activePlayer->secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
 }
 
 void setup()
@@ -146,7 +136,7 @@ void setup()
 // Main loop
 void loop()
 {
-    updateCounters();  // do this every loop
+    updateCounter();  // do this every loop
     lcd_key = read_LCD_buttons();  
     if (isUsingMenu) {
         switch (lcd_key)               
@@ -203,42 +193,19 @@ void loop()
     } else {
         switch (lcd_key)               
         {
-        case btnLEFT:
-            {
-            // player 1
-            playIndicator = "  <-  ";
-            p0.isActive = false;
-            p1.isActive = true;
-            p2.isActive = false;
-            lcd.setCursor(5,1);            
-            lcd.print(playIndicator);
-            break;
+        // player 1
+        case btnLEFT: { activePlayer = &p1; break;
             }
-        case btnRIGHT:
-            {
-            // player 2
-            playIndicator = "  ->  ";
-            p0.isActive = false;
-            p1.isActive = false;
-            p2.isActive = true;
-            lcd.setCursor(5,1);        
-            lcd.print(playIndicator);
-            break;
+        // player 2
+        case btnRIGHT: { activePlayer = &p2; break; 
             }
-        case btnUP:
-            {
-            // pause the timers
-            p0.isActive = true;
-            p1.isActive = false;
-            p2.isActive = false;
-            playIndicator = "  --  ";
-            break;
+        // pause the timers
+        case btnUP: { activePlayer = &p0; break;
             }
-        case btnDOWN:
-            {
-            // not used      
-            break;
+        // not used
+        case btnDOWN: { break;
             }
+        // activate menu (or reset if game is over)
         case btnSELECT:
             {
             if (isGameOver){
@@ -246,19 +213,14 @@ void loop()
                 p0.secondsRun += (p1.secondsRun + p2.secondsRun);
                 p1.secondsRun = 0;
                 p2.secondsRun = 0;
-                p0.isActive = true;
-                p1.isActive = false;
-                p2.isActive = false;
-                playIndicator = "  --  ";
+                activePlayer = &p0;
                 isGameOver = false;
                 delay(500);
                 break;
             } else {
                 // activate the menu
                 isUsingMenu = true;   
-                p0.isActive = true;
-                p1.isActive = false;
-                p2.isActive = false;
+                activePlayer = &p1;
                 delay(500);  // delay required otherwise the button fires repeatedly
                 break;
                }
@@ -293,7 +255,7 @@ void loop()
                     lcd.setCursor(0,1);
                     lcd.print(timeString(p1.SecondsRemaining()));      
                     lcd.setCursor(5,1);            
-                    lcd.print(playIndicator);        
+                    lcd.print(activePlayer->playIndicator);        
                     lcd.setCursor(11,1);
                     lcd.print(timeString(p2.SecondsRemaining()));
                 }
