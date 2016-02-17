@@ -21,9 +21,6 @@ Player1 mins: MM
 Jamie Bull, February 2016
 
 ********************************************************/
-//================================================================
-// This code is from a sample library on how to use the LCD keypad
-// http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_%28SKU:_DFR0009%29
 
 // select the pins used on the LCD panel
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
