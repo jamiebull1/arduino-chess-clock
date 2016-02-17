@@ -62,15 +62,15 @@ int read_LCD_buttons()
 
 // Code below here is mine
 // Initialise some global parameters
-boolean isUsingMenu = false;  // whether we are in the time-setting menu
-boolean isGameOver = false;
+bool isUsingMenu = false;  // whether we are in the time-setting menu
+bool isGameOver = false;
 String playIndicator = "  --  ";  // for the centre of the display when no player is active
 
 class Player {
   // Represents a player.
   public:
     int minutes;              // number of minutes allowed  
-    boolean isActive;         // is the player's clock counting down?
+    bool isActive;         // is the player's clock counting down?
     String menuText;          // text for the time-setting menu
     long secondsRun;          // seconds run while the player was active
 
