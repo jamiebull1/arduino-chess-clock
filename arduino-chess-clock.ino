@@ -28,7 +28,7 @@ Jamie Bull, February 2016
 // select the pins used on the LCD panel
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 // define some values used by the panel and buttons
-int lcd_key     = 0;
+int lcdKey     = 0;
 int adc_key_in  = 0;
 
 enum Button 
@@ -77,10 +77,12 @@ class Player
         void IncrementMinutes() 
         {
             minutes = min(minutes + 1, 99);
+            delay(250);        
         }
         void DecrementMinutes()
         {
             minutes = max(minutes - 1, 1);
+            delay(250);        
         }
         int SecondsRemaining() 
         {
@@ -145,24 +147,14 @@ void setup()
 void loop()
 {
    activePlayer->UpdateCounter(p0, p1, p2);;  // do this every loop
-    lcd_key = read_LCD_buttons();  
+    lcdKey = read_LCD_buttons();  
     if (isUsingMenu) {
-        switch (lcd_key)               
+        switch (lcdKey)                
         {
-        case btnUP:
-            {
-            // increase minutes
-            menuPlayer->IncrementMinutes();        
-            delay(250);        
-            break;
-            }  
+        case btnUP: 
+            { menuPlayer->IncrementMinutes(); break; } // increase minutes
         case btnDOWN:
-            {
-            // decrease minutes        
-            menuPlayer->DecrementMinutes();        
-            delay(250);        
-            break;
-            }  
+            { menuPlayer->DecrementMinutes(); break; } // decrease minutes
         case btnLEFT:
             {
             // set pointer to player 1 as player to change time for
@@ -199,7 +191,7 @@ void loop()
             }
         }
     } else {
-        switch (lcd_key)               
+        switch (lcdKey)               
         {
         case btnLEFT: { activePlayer = &p1; break; } // player 1
         
