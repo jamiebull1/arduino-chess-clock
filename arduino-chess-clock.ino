@@ -89,6 +89,10 @@ class Player
             int secondsRunSoFar = secondsRun;
             return minsAllowed * 60 - secondsRunSoFar;
         }
+        void UpdateCounter(Player p0, Player p1, Player p2)
+        {
+            secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
+        }
 };
 
 String timeString(long seconds)
@@ -120,12 +124,6 @@ Player* menuPlayer = &p1;
 // set the active player pointer to the player to start with
 Player* activePlayer = &p0;
 
-void updateCounter()
-{
-    // Update the counter for the active player
-    activePlayer->secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
-}
-
 void resetGame()
 // reset game to starting state
 {
@@ -146,7 +144,7 @@ void setup()
 // Main loop
 void loop()
 {
-    updateCounter();  // do this every loop
+   activePlayer->UpdateCounter(p0, p1, p2);;  // do this every loop
     lcd_key = read_LCD_buttons();  
     if (isUsingMenu) {
         switch (lcd_key)               
