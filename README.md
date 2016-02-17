@@ -1,7 +1,7 @@
 # arduino-chess-clock
 Chess countdown timer for the Arduino, using an LCD keypad shield.
 
-The LCD keypad handling code is baseed on [a sample](http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_%28SKU:_DFR0009%29) on how to use the LCD keypad.
+The LCD keypad handling code is based on [a sample](http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_%28SKU:_DFR0009%29) on how to use the LCD keypad.
 
 The countdown timer has three screens.
 
