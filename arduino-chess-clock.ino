@@ -88,27 +88,21 @@ class Player {
 
 String timeString(long seconds){
   // Convert seconds to an MM:SS display.
-  int runSecs = seconds % 60;
   int runMins = seconds / 60;
+  int runSecs = seconds % 60;
 
-  // number of seconds for the MM:SS display
-  String displaySeconds;
-  if (runSecs < 10) {
-    displaySeconds = "0" + String(runSecs);
-  } else {
-    displaySeconds = String(runSecs);    
-  }
-  // number of minutes for the MM:SS display
-  String displayMinutes;
-  if (runMins < 10) {
-    displayMinutes = "0" + String(runMins);
-  } else {
-    displayMinutes = String(runMins);    
-  }
-  // Create and return the formatted string
-  String displayString = displayMinutes + ":" + displaySeconds;
-  return displayString;
-}
+  return pad(runMins) + ":" + pad(runSecs);
+};
+
+String pad(int toPad)
+// Zero-pad to ensure two chars in the string for mins/secs
+{
+    if (toPad < 10) {
+        return "0" + String(toPad);
+    } else {
+        return String(toPad);
+    }
+};
 
 // initialise the players
 Player p0 = {0, true, "", 0};  // dummy player, active when player clocks are not counting down
