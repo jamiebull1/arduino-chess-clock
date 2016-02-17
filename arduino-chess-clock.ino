@@ -126,6 +126,16 @@ void updateCounter()
     activePlayer->secondsRun += millis()/1000 - (p0.secondsRun + p1.secondsRun + p2.secondsRun);
 }
 
+void resetGame()
+// reset game to starting state
+{
+    p0.secondsRun += (p1.secondsRun + p2.secondsRun);
+    p1.secondsRun = 0;
+    p2.secondsRun = 0;
+    activePlayer = &p0;
+    isGameOver = false;
+}
+
 void setup()
 {
     lcd.begin(16, 2);  
@@ -193,39 +203,28 @@ void loop()
     } else {
         switch (lcd_key)               
         {
-        // player 1
-        case btnLEFT: { activePlayer = &p1; break;
-            }
-        // player 2
-        case btnRIGHT: { activePlayer = &p2; break; 
-            }
-        // pause the timers
-        case btnUP: { activePlayer = &p0; break;
-            }
-        // not used
-        case btnDOWN: { break;
-            }
-        // activate menu (or reset if game is over)
-        case btnSELECT:
+        case btnLEFT: { activePlayer = &p1; break; } // player 1
+        
+        case btnRIGHT: { activePlayer = &p2; break; } // player 2
+        
+        case btnUP: { activePlayer = &p0; break; } // pause the timers
+        
+        case btnDOWN: { break; } // not used
+        
+        case btnSELECT: // activate menu (or reset if game is over)
             {
-            if (isGameOver){
-                // select button resets the game
-                p0.secondsRun += (p1.secondsRun + p2.secondsRun);
-                p1.secondsRun = 0;
-                p2.secondsRun = 0;
-                activePlayer = &p0;
-                isGameOver = false;
-                delay(500);
-                break;
+            if (isGameOver)
+            {
+                resetGame();
             } else {
                 // activate the menu
                 isUsingMenu = true;   
-                activePlayer = &p1;
-                delay(500);  // delay required otherwise the button fires repeatedly
-                break;
-               }
+                activePlayer = &p0;
             }
-        case btnNONE:
+            delay(500);  // delay required otherwise the button fires repeatedly
+            break;
+            }
+        case btnNONE:  // update each loop
             {
             if (isGameOver) {
                 // do nothing and wait for btnSELECT to reset the game
