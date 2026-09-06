@@ -65,4 +65,16 @@ Stockfish backfill (~10–15 min); later runs only analyse new games and are qui
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+Copyright © 2026 Jamie Bull.
+
+Licensed under the **GNU General Public License v3.0 or later (GPL-3.0-or-later)** —
+see [LICENSE](LICENSE). This project uses [python-chess](https://github.com/niklasf/python-chess)
+(GPL-3.0-or-later) as a library, so the combined work is distributed under the GPL.
+[Stockfish](https://stockfishchess.org/) (GPL-3.0) is invoked as a separate program.
+
+This program is free software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later version. It is distributed in the
+hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details.

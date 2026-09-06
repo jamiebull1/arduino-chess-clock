@@ -8,8 +8,11 @@ version = "0.1.0"
 description = "Analyse chess.com games for recurring weaknesses and publish progress reports to GitHub Pages."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = { text = "GPL-3.0-or-later" }
 authors = [{ name = "Jamie Bull" }]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
 dependencies = [
     "chess>=1.11",
     "requests>=2.31",
