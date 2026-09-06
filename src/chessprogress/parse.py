@@ -68,6 +68,7 @@ class Game:
     opponent_rating: int | None
     eco: str | None
     opening: str | None
+    eco_url: str | None
     ply_count: int
     pgn: str
     moves: list[Move] = field(default_factory=list)
@@ -132,6 +133,7 @@ def normalise_game(raw: dict, username: str) -> Game | None:
 
     accuracies = raw.get("accuracies") or {}
     accuracy = accuracies.get(color)
+    eco_url = raw.get("eco") or (game.headers.get("ECOUrl") if game else None)
 
     return Game(
         uuid=raw.get("uuid", raw.get("url", "")),
@@ -149,7 +151,8 @@ def normalise_game(raw: dict, username: str) -> Game | None:
         opponent=opp.get("username", ""),
         opponent_rating=opp.get("rating"),
         eco=(game.headers.get("ECO") if game else None),
-        opening=_opening_from_url(raw.get("eco") or (game.headers.get("ECOUrl") if game else None)),
+        opening=_opening_from_url(eco_url),
+        eco_url=eco_url,
         ply_count=len(moves),
         pgn=pgn_text,
         moves=moves,

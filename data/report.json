@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T16:19:02+00:00",
+  "generated_at": "2026-09-06T16:51:24+00:00",
   "username": "rimanish",
   "profile": {
     "name": "Jamie Bull",
@@ -674,398 +674,262 @@
   "openings": {
     "as_white": [
       {
+        "color": "white",
         "name": "Kings Pawn Opening Kings Knight Variation",
         "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
         "games": 7,
         "w": 4,
         "l": 3,
         "d": 0,
         "score_pct": 57.1,
-        "avg_cpl": 96.3
+        "avg_cpl": 98.1
       },
       {
+        "color": "white",
         "name": "Italian Game",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Italian-Game",
         "games": 6,
         "w": 4,
         "l": 2,
         "d": 0,
         "score_pct": 66.7,
-        "avg_cpl": 72.7
+        "avg_cpl": 73.1
       },
       {
+        "color": "white",
         "name": "Four Knights Game Italian Variation",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
         "games": 5,
         "w": 2,
         "l": 2,
         "d": 1,
         "score_pct": 50.0,
-        "avg_cpl": 153.2
+        "avg_cpl": 151.7
       },
       {
+        "color": "white",
         "name": "Philidor Defense 3.Bc4",
         "eco": "C41",
+        "eco_url": "https://www.chess.com/openings/Philidor-Defense-3.Bc4",
         "games": 4,
         "w": 2,
         "l": 2,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 111.3
+        "avg_cpl": 114.1
       },
       {
+        "color": "white",
         "name": "French Defense Knight Variation",
         "eco": "C00",
+        "eco_url": "https://www.chess.com/openings/French-Defense-Knight-Variation",
         "games": 3,
         "w": 1,
         "l": 2,
         "d": 0,
         "score_pct": 33.3,
-        "avg_cpl": 148.6
+        "avg_cpl": 150.3
       },
       {
+        "color": "white",
         "name": "Sicilian Defense Old Sicilian Variation 3.Bc4 e6 4.Nc3",
         "eco": "B30",
+        "eco_url": "https://www.chess.com/openings/Sicilian-Defense-Old-Sicilian-Variation-3.Bc4-e6-4.Nc3",
         "games": 2,
         "w": 1,
         "l": 1,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 96.3
+        "avg_cpl": 92.3
       },
       {
+        "color": "white",
         "name": "Italian Game Two Knights Defense 4.O O",
         "eco": "C55",
+        "eco_url": "https://www.chess.com/openings/Italian-Game-Two-Knights-Defense-4.O-O",
         "games": 2,
         "w": 2,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 48.5
+        "avg_cpl": 45.0
       },
       {
+        "color": "white",
         "name": "Giuoco Piano Game Four Knights Game 5.O O",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game-5.O-O",
         "games": 2,
         "w": 2,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 66.9
+        "avg_cpl": 65.8
       },
       {
+        "color": "white",
         "name": "Queens Pawn Opening Chigorin Variation 2...Nf6",
         "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Chigorin-Variation-2...Nf6",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 140.3
+        "avg_cpl": 140.1
       },
       {
+        "color": "white",
         "name": "Pirc Defense Main Line",
         "eco": "B07",
+        "eco_url": "https://www.chess.com/openings/Pirc-Defense-Main-Line",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 89.5
+        "avg_cpl": 87.8
       },
       {
+        "color": "white",
         "name": "Englund Gambit",
         "eco": "A40",
+        "eco_url": "https://www.chess.com/openings/Englund-Gambit",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 108.4
+        "avg_cpl": 111.1
       },
       {
+        "color": "white",
         "name": "Indian Game East Indian Colle System 4...O O 5.O O",
         "eco": "A48",
+        "eco_url": "https://www.chess.com/openings/Indian-Game-East-Indian-Colle-System-4...O-O-5.O-O",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 69.7
+        "avg_cpl": 68.4
       },
       {
+        "color": "white",
         "name": "Sicilian Defense Old Sicilian Variation 3.Bc4",
         "eco": "B30",
+        "eco_url": "https://www.chess.com/openings/Sicilian-Defense-Old-Sicilian-Variation-3.Bc4",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 95.9
+        "avg_cpl": 94.9
       },
       {
+        "color": "white",
         "name": "French Defense Exchange Variation 3...exd5 4.Bd3 Nc6 5.Nf3",
         "eco": "C01",
+        "eco_url": "https://www.chess.com/openings/French-Defense-Exchange-Variation-3...exd5-4.Bd3-Nc6-5.Nf3",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 88.3
+        "avg_cpl": 91.4
       },
       {
+        "color": "white",
         "name": "Alekhines Defense Scandinavian Variation",
         "eco": "B02",
+        "eco_url": "https://www.chess.com/openings/Alekhines-Defense-Scandinavian-Variation",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 119.8
+        "avg_cpl": 147.6
       },
       {
+        "color": "white",
         "name": "Italian Game Two Knights Modern Bishops Opening 4...d5",
         "eco": "C55",
+        "eco_url": "https://www.chess.com/openings/Italian-Game-Two-Knights-Modern-Bishops-Opening-4...d5",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 64.9
+        "avg_cpl": 66.7
       },
       {
+        "color": "white",
         "name": "Scotch Game Scotch Gambit 4...d6 5.Nxd4",
         "eco": "C45",
+        "eco_url": "https://www.chess.com/openings/Scotch-Game-Scotch-Gambit-4...d6-5.Nxd4",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 57.4
+        "avg_cpl": 53.1
       },
       {
+        "color": "white",
         "name": "Giuoco Piano Game",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 207.4
+        "avg_cpl": 211.4
       },
       {
+        "color": "white",
         "name": "Scandinavian Defense Closed 2...d4",
         "eco": "B01",
+        "eco_url": "https://www.chess.com/openings/Scandinavian-Defense-Closed-2...d4",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 58.2
+        "avg_cpl": 62.4
       },
       {
+        "color": "white",
         "name": "Kings Pawn Opening",
         "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 109.1
+        "avg_cpl": 106.5
       },
       {
+        "color": "white",
         "name": "Three Knights Opening 3...d6 4.d4 Bg4",
         "eco": "C46",
+        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...d6-4.d4-Bg4",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 201.9
+        "avg_cpl": 209.6
       },
       {
+        "color": "white",
         "name": "Queens Pawn Opening",
         "eco": "A40",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 63.6
-      },
-      {
-        "name": "French Defense Normal Variation 2...d5 3.Nc3",
-        "eco": "C10",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 28.4
-      },
-      {
-        "name": "Modern Defense with 1 e4 2.d4 Bg7 3.Nf3 d6",
-        "eco": "B06",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 78.3
-      },
-      {
-        "name": "Owens Defense 2.d4 Bb7 3.Nc3",
-        "eco": "B00",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 74.1
-      },
-      {
-        "name": "French Defense Normal Variation",
-        "eco": "C00",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 57.0
-      },
-      {
-        "name": "Philidor Defense 3.d4",
-        "eco": "C41",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 182.1
-      },
-      {
-        "name": "Four Knights Game Scotch Variation",
-        "eco": "C47",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 59.5
-      },
-      {
-        "name": "Giuoco Piano Game Four Knights Game",
-        "eco": "C50",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 101.2
-      },
-      {
-        "name": "Sicilian Defense French Variation 3.d4",
-        "eco": "B40",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 103.1
-      },
-      {
-        "name": "Scandinavian Defense Closed 2...dxe4 3.Nxe4 Nf6",
-        "eco": "B01",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 149.6
-      },
-      {
-        "name": "Vienna Game",
-        "eco": "C25",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 50.2
-      },
-      {
-        "name": "Owens Defense 2.d4 Bb7 3.Nc3 e6 4.Nf3",
-        "eco": "B00",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 63.6
-      },
-      {
-        "name": "Caro Kann Defense 2.d4 d5 3.Nc3",
-        "eco": "B15",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 104.0
-      },
-      {
-        "name": "Scotch Game Scotch Gambit 4...d6 5.Nxd4 Nf6 6.Nc3",
-        "eco": "C45",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 47.1
-      },
-      {
-        "name": "Scotch Game Steinitz Variation 5.Nc3",
-        "eco": "C45",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 69.4
-      },
-      {
-        "name": "Petrovs Defense",
-        "eco": "C42",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 79.5
-      },
-      {
-        "name": "Giuoco Piano Game 4.O O",
-        "eco": "C50",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 165.9
-      },
-      {
-        "name": "Caro Kann Defense Gurgenidze System 4.Nf3 Bg7 5.Be2 Bg4",
-        "eco": "B15",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 81.0
-      },
-      {
-        "name": "Kings Pawn Opening Lemming Defense",
-        "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening",
         "games": 1,
         "w": 1,
         "l": 0,
@@ -1074,68 +938,298 @@
         "avg_cpl": 61.4
       },
       {
+        "color": "white",
+        "name": "French Defense Normal Variation 2...d5 3.Nc3",
+        "eco": "C10",
+        "eco_url": "https://www.chess.com/openings/French-Defense-Normal-Variation-2...d5-3.Nc3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 31.4
+      },
+      {
+        "color": "white",
+        "name": "Modern Defense with 1 e4 2.d4 Bg7 3.Nf3 d6",
+        "eco": "B06",
+        "eco_url": "https://www.chess.com/openings/Modern-Defense-with-1-e4-2.d4-Bg7-3.Nf3-d6",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 76.9
+      },
+      {
+        "color": "white",
+        "name": "Owens Defense 2.d4 Bb7 3.Nc3",
+        "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Owens-Defense-2.d4-Bb7-3.Nc3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 81.5
+      },
+      {
+        "color": "white",
+        "name": "French Defense Normal Variation",
+        "eco": "C00",
+        "eco_url": "https://www.chess.com/openings/French-Defense-Normal-Variation",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 57.1
+      },
+      {
+        "color": "white",
+        "name": "Philidor Defense 3.d4",
+        "eco": "C41",
+        "eco_url": "https://www.chess.com/openings/Philidor-Defense-3.d4",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 191.3
+      },
+      {
+        "color": "white",
+        "name": "Four Knights Game Scotch Variation",
+        "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Scotch-Variation",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 52.4
+      },
+      {
+        "color": "white",
+        "name": "Giuoco Piano Game Four Knights Game",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 96.8
+      },
+      {
+        "color": "white",
+        "name": "Sicilian Defense French Variation 3.d4",
+        "eco": "B40",
+        "eco_url": "https://www.chess.com/openings/Sicilian-Defense-French-Variation-3.d4",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 97.2
+      },
+      {
+        "color": "white",
+        "name": "Scandinavian Defense Closed 2...dxe4 3.Nxe4 Nf6",
+        "eco": "B01",
+        "eco_url": "https://www.chess.com/openings/Scandinavian-Defense-Closed-2...dxe4-3.Nxe4-Nf6",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 151.7
+      },
+      {
+        "color": "white",
+        "name": "Vienna Game",
+        "eco": "C25",
+        "eco_url": "https://www.chess.com/openings/Vienna-Game",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 53.6
+      },
+      {
+        "color": "white",
+        "name": "Owens Defense 2.d4 Bb7 3.Nc3 e6 4.Nf3",
+        "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Owens-Defense-2.d4-Bb7-3.Nc3-e6-4.Nf3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 78.8
+      },
+      {
+        "color": "white",
+        "name": "Caro Kann Defense 2.d4 d5 3.Nc3",
+        "eco": "B15",
+        "eco_url": "https://www.chess.com/openings/Caro-Kann-Defense-2.d4-d5-3.Nc3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 105.8
+      },
+      {
+        "color": "white",
+        "name": "Scotch Game Scotch Gambit 4...d6 5.Nxd4 Nf6 6.Nc3",
+        "eco": "C45",
+        "eco_url": "https://www.chess.com/openings/Scotch-Game-Scotch-Gambit-4...d6-5.Nxd4-Nf6-6.Nc3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 43.7
+      },
+      {
+        "color": "white",
+        "name": "Scotch Game Steinitz Variation 5.Nc3",
+        "eco": "C45",
+        "eco_url": "https://www.chess.com/openings/Scotch-Game-Steinitz-Variation-5.Nc3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 73.5
+      },
+      {
+        "color": "white",
+        "name": "Petrovs Defense",
+        "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 83.3
+      },
+      {
+        "color": "white",
+        "name": "Giuoco Piano Game 4.O O",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-4.O-O",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 162.3
+      },
+      {
+        "color": "white",
+        "name": "Caro Kann Defense Gurgenidze System 4.Nf3 Bg7 5.Be2 Bg4",
+        "eco": "B15",
+        "eco_url": "https://www.chess.com/openings/Caro-Kann-Defense-Gurgenidze-System-4.Nf3-Bg7-5.Be2-Bg4",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 72.0
+      },
+      {
+        "color": "white",
+        "name": "Kings Pawn Opening Lemming Defense",
+        "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Lemming-Defense",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 58.1
+      },
+      {
+        "color": "white",
         "name": "Three Knights Opening 3...Bc5",
         "eco": "C46",
+        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...Bc5",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 105.4
+        "avg_cpl": 107.2
       },
       {
+        "color": "white",
         "name": "Pirc Defense Modern Defense Geller System 2...Nf6 3.Nc3 e5 4.Bc4",
         "eco": "B07",
+        "eco_url": "https://www.chess.com/openings/Pirc-Defense-Modern-Defense-Geller-System-2...Nf6-3.Nc3-e5-4.Bc4",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 18.2
+        "avg_cpl": 20.2
       },
       {
+        "color": "white",
         "name": "Pirc Defense Modern Defense Geller System",
         "eco": "B07",
+        "eco_url": "https://www.chess.com/openings/Pirc-Defense-Modern-Defense-Geller-System",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 17.1
+        "avg_cpl": 19.1
       },
       {
+        "color": "white",
         "name": "Italian Game 3...d6 4.O O",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Italian-Game-3...d6-4.O-O",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 89.0
+        "avg_cpl": 91.7
       },
       {
+        "color": "white",
         "name": "Owens Defense 2.d4",
         "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Owens-Defense-2.d4",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 67.6
+        "avg_cpl": 68.8
       },
       {
+        "color": "white",
         "name": "Scandinavian Defense Closed",
         "eco": "B01",
+        "eco_url": "https://www.chess.com/openings/Scandinavian-Defense-Closed",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 29.6
+        "avg_cpl": 27.2
       },
       {
+        "color": "white",
         "name": "Undefined",
         "eco": "A00",
+        "eco_url": "https://www.chess.com/openings/Undefined",
         "games": 1,
         "w": 1,
         "l": 0,
@@ -1144,476 +1238,570 @@
         "avg_cpl": 0.0
       },
       {
+        "color": "white",
         "name": "Caro Kann Defense Main Line 4...Nf6",
         "eco": "B15",
+        "eco_url": "https://www.chess.com/openings/Caro-Kann-Defense-Main-Line-4...Nf6",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 55.8
+        "avg_cpl": 58.2
       },
       {
+        "color": "white",
         "name": "Giuoco Piano Game Giuoco Pianissimo Variation",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Giuoco-Pianissimo-Variation",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 50.2
+        "avg_cpl": 57.7
       }
     ],
     "as_black": [
       {
+        "color": "black",
         "name": "Petrovs Defense Classical Variation",
         "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Classical-Variation",
         "games": 7,
         "w": 4,
         "l": 3,
         "d": 0,
         "score_pct": 57.1,
-        "avg_cpl": 92.2
+        "avg_cpl": 97.5
       },
       {
+        "color": "black",
         "name": "Kings Pawn Opening 1...e5",
         "eco": "C20",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-1...e5",
         "games": 7,
         "w": 4,
         "l": 2,
         "d": 1,
         "score_pct": 64.3,
-        "avg_cpl": 110.4
+        "avg_cpl": 110.7
       },
       {
+        "color": "black",
         "name": "Four Knights Game Scotch Variation",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Scotch-Variation",
         "games": 4,
         "w": 1,
         "l": 2,
         "d": 1,
         "score_pct": 37.5,
-        "avg_cpl": 71.7
+        "avg_cpl": 72.5
       },
       {
+        "color": "black",
         "name": "Nimzowitsch Defense Kennedy Linksspringer Variation",
         "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Nimzowitsch-Defense-Kennedy-Linksspringer-Variation",
         "games": 3,
         "w": 1,
         "l": 2,
         "d": 0,
         "score_pct": 33.3,
-        "avg_cpl": 88.9
+        "avg_cpl": 83.4
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening 1...d5",
         "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-1...d5",
         "games": 3,
         "w": 2,
         "l": 1,
         "d": 0,
         "score_pct": 66.7,
-        "avg_cpl": 76.8
+        "avg_cpl": 69.3
       },
       {
+        "color": "black",
         "name": "Van t Kruijs Opening 1...e5",
         "eco": "A00",
+        "eco_url": "https://www.chess.com/openings/Van-t-Kruijs-Opening-1...e5",
         "games": 2,
         "w": 1,
         "l": 1,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 104.5
+        "avg_cpl": 107.5
       },
       {
+        "color": "black",
         "name": "Four Knights Game",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game",
         "games": 2,
         "w": 1,
         "l": 1,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 61.5
+        "avg_cpl": 61.6
       },
       {
+        "color": "black",
         "name": "Giuoco Piano Game Four Knights Game 5.O O",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game-5.O-O",
         "games": 2,
         "w": 1,
         "l": 1,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 97.5
+        "avg_cpl": 98.5
       },
       {
+        "color": "black",
         "name": "Bishops Opening Berlin Defense 3.d3 Bc5",
         "eco": "C24",
+        "eco_url": "https://www.chess.com/openings/Bishops-Opening-Berlin-Defense-3.d3-Bc5",
         "games": 2,
         "w": 1,
         "l": 1,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 64.8
+        "avg_cpl": 67.0
       },
       {
+        "color": "black",
         "name": "Petrovs Defense",
         "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense",
         "games": 2,
         "w": 1,
         "l": 0,
         "d": 1,
         "score_pct": 75.0,
-        "avg_cpl": 95.5
+        "avg_cpl": 100.1
       },
       {
+        "color": "black",
         "name": "Giuoco Piano Game Four Knights Game",
         "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game",
         "games": 2,
         "w": 2,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 82.3
+        "avg_cpl": 85.1
       },
       {
+        "color": "black",
         "name": "Bishops Opening Berlin Defense 3.d3 d5 4.exd5 Nxd5",
         "eco": "C24",
+        "eco_url": "https://www.chess.com/openings/Bishops-Opening-Berlin-Defense-3.d3-d5-4.exd5-Nxd5",
         "games": 2,
         "w": 2,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 68.1
+        "avg_cpl": 69.2
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening Chigorin Variation 2...e6 3.Bf4",
         "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Chigorin-Variation-2...e6-3.Bf4",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 220.8
+        "avg_cpl": 217.1
       },
       {
+        "color": "black",
         "name": "Reti Opening 1...d5",
         "eco": "A06",
+        "eco_url": "https://www.chess.com/openings/Reti-Opening-1...d5",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 151.8
+        "avg_cpl": 149.9
       },
       {
+        "color": "black",
         "name": "Scotch Game",
         "eco": "C45",
+        "eco_url": "https://www.chess.com/openings/Scotch-Game",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 237.8
+        "avg_cpl": 239.7
       },
       {
+        "color": "black",
         "name": "Four Knights Game Italian Variation",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 213.2
+        "avg_cpl": 211.1
       },
       {
+        "color": "black",
         "name": "Bishops Opening Berlin Defense 3.d3 d5 4.exd5 Nxd5 5.Nf3",
         "eco": "C24",
+        "eco_url": "https://www.chess.com/openings/Bishops-Opening-Berlin-Defense-3.d3-d5-4.exd5-Nxd5-5.Nf3",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 49.6
+        "avg_cpl": 40.7
       },
       {
+        "color": "black",
         "name": "Bishops Opening Berlin Vienna Hybrid Variation 4...Bc5 5.Nf3",
         "eco": "C28",
+        "eco_url": "https://www.chess.com/openings/Bishops-Opening-Berlin-Vienna-Hybrid-Variation-4...Bc5-5.Nf3",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 105.8
+        "avg_cpl": 107.5
       },
       {
+        "color": "black",
         "name": "Petrovs Defense 3.d3 Nc6",
         "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-3.d3-Nc6",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 131.1
+        "avg_cpl": 127.7
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening English Rat Defense 3.Nf3 Nc6",
         "eco": "A41",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-English-Rat-Defense-3.Nf3-Nc6",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 69.9
+        "avg_cpl": 66.0
       },
       {
+        "color": "black",
         "name": "English Opening Four Knights Nimzowitsch Variation 4...Bc5",
         "eco": "A28",
+        "eco_url": "https://www.chess.com/openings/English-Opening-Four-Knights-Nimzowitsch-Variation-4...Bc5",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 65.5
+        "avg_cpl": 63.8
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening Mikenas Defense",
         "eco": "A40",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Mikenas-Defense",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 72.8
+        "avg_cpl": 80.7
       },
       {
+        "color": "black",
         "name": "Four Knights Game Glek Variation 4...Bc5 5.Bg2",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Glek-Variation-4...Bc5-5.Bg2",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 73.9
+        "avg_cpl": 78.6
       },
       {
+        "color": "black",
         "name": "Colle System 3...e6",
         "eco": "D05",
+        "eco_url": "https://www.chess.com/openings/Colle-System-3...e6",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 122.7
+        "avg_cpl": 136.5
       },
       {
+        "color": "black",
         "name": "London System 3...Bf5",
         "eco": "D02",
+        "eco_url": "https://www.chess.com/openings/London-System-3...Bf5",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 83.9
+        "avg_cpl": 60.8
       },
       {
+        "color": "black",
         "name": "London System 3...Bf5 4.e3 e6 5.c4",
         "eco": "D02",
+        "eco_url": "https://www.chess.com/openings/London-System-3...Bf5-4.e3-e6-5.c4",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 57.1
+        "avg_cpl": 59.0
       },
       {
+        "color": "black",
         "name": "Kings Pawn Opening Kings Knight Variation",
         "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 93.2
+        "avg_cpl": 106.8
       },
       {
+        "color": "black",
         "name": "Kings Pawn Opening Kings Knight Variation 2...Nc6 3.d3",
         "eco": "C44",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation-2...Nc6-3.d3",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 135.0
+        "avg_cpl": 133.8
       },
       {
+        "color": "black",
         "name": "Indian Game Knights Variation 2...e6 3.Nc3 d5",
         "eco": "A46",
+        "eco_url": "https://www.chess.com/openings/Indian-Game-Knights-Variation-2...e6-3.Nc3-d5",
         "games": 1,
         "w": 0,
         "l": 1,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 67.4
+        "avg_cpl": 66.0
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening Zukertort Chigorin Variation",
         "eco": "D02",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Zukertort-Chigorin-Variation",
         "games": 1,
         "w": 0,
         "l": 0,
         "d": 1,
         "score_pct": 50.0,
-        "avg_cpl": 51.7
+        "avg_cpl": 61.3
       },
       {
+        "color": "black",
         "name": "Four Knights Game 4.Be2",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-4.Be2",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 18.3
+        "avg_cpl": 22.9
       },
       {
+        "color": "black",
         "name": "Trompowsky Attack 2...d5",
         "eco": "A45",
+        "eco_url": "https://www.chess.com/openings/Trompowsky-Attack-2...d5",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 45.9
+        "avg_cpl": 45.4
       },
       {
+        "color": "black",
         "name": "Kings Pawn Opening Leonardis Variation 2...Nf6",
         "eco": "C20",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Leonardis-Variation-2...Nf6",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 167.1
+        "avg_cpl": 154.3
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening Chigorin Variation",
         "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Chigorin-Variation",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 41.0
+        "avg_cpl": 44.0
       },
       {
+        "color": "black",
         "name": "Petrovs Defense Three Knights Game",
         "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Three-Knights-Game",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 44.8
+        "avg_cpl": 40.3
       },
       {
+        "color": "black",
         "name": "Four Knights Game Glek Variation 4...Bc5 5.Bg2 d6 6.d3",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Glek-Variation-4...Bc5-5.Bg2-d6-6.d3",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 63.1
+        "avg_cpl": 62.9
       },
       {
+        "color": "black",
         "name": "Kings Pawn Opening",
         "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 57.9
+        "avg_cpl": 56.9
       },
       {
+        "color": "black",
         "name": "Four Knights Game Spanish Variation Ranken Variation",
         "eco": "C48",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Spanish-Variation-Ranken-Variation",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 77.3
+        "avg_cpl": 79.8
       },
       {
+        "color": "black",
         "name": "Giuoco Piano Game Main Line Giuoco Pianissimo Variation 5...O O 6.Bg5",
         "eco": "C53",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Main-Line-Giuoco-Pianissimo-Variation-5...O-O-6.Bg5",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 91.6
+        "avg_cpl": 121.1
       },
       {
+        "color": "black",
         "name": "Center Game",
         "eco": "C21",
+        "eco_url": "https://www.chess.com/openings/Center-Game",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 42.4
+        "avg_cpl": 37.6
       },
       {
+        "color": "black",
         "name": "Kings Indian Attack Yugoslav Variation...4.d4 Bf5 5.O O e6",
         "eco": "A07",
+        "eco_url": "https://www.chess.com/openings/Kings-Indian-Attack-Yugoslav-Variation...4.d4-Bf5-5.O-O-e6",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 17.9
+        "avg_cpl": 19.0
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening 1...d5 2.e3 Nf6",
         "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-1...d5-2.e3-Nf6",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 120.2
+        "avg_cpl": 119.3
       },
       {
+        "color": "black",
         "name": "Bishops Opening Berlin Vienna Hybrid Variation 4...Bc5 5.f4 d6",
         "eco": "C28",
+        "eco_url": "https://www.chess.com/openings/Bishops-Opening-Berlin-Vienna-Hybrid-Variation-4...Bc5-5.f4-d6",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 84.3
+        "avg_cpl": 84.7
       },
       {
+        "color": "black",
         "name": "Van Geet Opening Reversed Nimzowitsch Variation",
         "eco": "A00",
+        "eco_url": "https://www.chess.com/openings/Van-Geet-Opening-Reversed-Nimzowitsch-Variation",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 45.6
+        "avg_cpl": 46.1
       },
       {
+        "color": "black",
         "name": "Queens Pawn Opening Mikenas Defense 2.Nf3",
         "eco": "A40",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Mikenas-Defense-2.Nf3",
         "games": 1,
         "w": 1,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 41.0
+        "avg_cpl": 45.4
       }
     ],
     "weak_spots": [
@@ -1621,1005 +1809,1336 @@
         "color": "white",
         "name": "French Defense Knight Variation",
         "eco": "C00",
+        "eco_url": "https://www.chess.com/openings/French-Defense-Knight-Variation",
         "games": 3,
         "w": 1,
         "l": 2,
         "d": 0,
         "score_pct": 33.3,
-        "avg_cpl": 148.6
+        "avg_cpl": 150.3
       },
       {
         "color": "black",
         "name": "Nimzowitsch Defense Kennedy Linksspringer Variation",
         "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Nimzowitsch-Defense-Kennedy-Linksspringer-Variation",
         "games": 3,
         "w": 1,
         "l": 2,
         "d": 0,
         "score_pct": 33.3,
-        "avg_cpl": 88.9
+        "avg_cpl": 83.4
       },
       {
         "color": "black",
         "name": "Four Knights Game Scotch Variation",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Scotch-Variation",
         "games": 4,
         "w": 1,
         "l": 2,
         "d": 1,
         "score_pct": 37.5,
-        "avg_cpl": 71.7
+        "avg_cpl": 72.5
       },
       {
         "color": "white",
         "name": "Four Knights Game Italian Variation",
         "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
         "games": 5,
         "w": 2,
         "l": 2,
         "d": 1,
         "score_pct": 50.0,
-        "avg_cpl": 153.2
+        "avg_cpl": 151.7
       },
       {
         "color": "white",
         "name": "Philidor Defense 3.Bc4",
         "eco": "C41",
+        "eco_url": "https://www.chess.com/openings/Philidor-Defense-3.Bc4",
         "games": 4,
         "w": 2,
         "l": 2,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 111.3
+        "avg_cpl": 114.1
       },
       {
         "color": "black",
         "name": "Petrovs Defense Classical Variation",
         "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Classical-Variation",
         "games": 7,
         "w": 4,
         "l": 3,
         "d": 0,
         "score_pct": 57.1,
-        "avg_cpl": 92.2
+        "avg_cpl": 97.5
       },
       {
         "color": "white",
         "name": "Kings Pawn Opening Kings Knight Variation",
         "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
         "games": 7,
         "w": 4,
         "l": 3,
         "d": 0,
         "score_pct": 57.1,
-        "avg_cpl": 96.3
+        "avg_cpl": 98.1
       },
       {
         "color": "black",
         "name": "Kings Pawn Opening 1...e5",
         "eco": "C20",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-1...e5",
         "games": 7,
         "w": 4,
         "l": 2,
         "d": 1,
         "score_pct": 64.3,
-        "avg_cpl": 110.4
+        "avg_cpl": 110.7
+      }
+    ],
+    "strong_spots": [
+      {
+        "color": "white",
+        "name": "Italian Game",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Italian-Game",
+        "games": 6,
+        "w": 4,
+        "l": 2,
+        "d": 0,
+        "score_pct": 66.7,
+        "avg_cpl": 73.1
+      },
+      {
+        "color": "black",
+        "name": "Queens Pawn Opening 1...d5",
+        "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-1...d5",
+        "games": 3,
+        "w": 2,
+        "l": 1,
+        "d": 0,
+        "score_pct": 66.7,
+        "avg_cpl": 69.3
+      },
+      {
+        "color": "black",
+        "name": "Kings Pawn Opening 1...e5",
+        "eco": "C20",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-1...e5",
+        "games": 7,
+        "w": 4,
+        "l": 2,
+        "d": 1,
+        "score_pct": 64.3,
+        "avg_cpl": 110.7
+      },
+      {
+        "color": "black",
+        "name": "Petrovs Defense Classical Variation",
+        "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Classical-Variation",
+        "games": 7,
+        "w": 4,
+        "l": 3,
+        "d": 0,
+        "score_pct": 57.1,
+        "avg_cpl": 97.5
+      },
+      {
+        "color": "white",
+        "name": "Kings Pawn Opening Kings Knight Variation",
+        "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
+        "games": 7,
+        "w": 4,
+        "l": 3,
+        "d": 0,
+        "score_pct": 57.1,
+        "avg_cpl": 98.1
+      },
+      {
+        "color": "white",
+        "name": "Four Knights Game Italian Variation",
+        "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
+        "games": 5,
+        "w": 2,
+        "l": 2,
+        "d": 1,
+        "score_pct": 50.0,
+        "avg_cpl": 151.7
+      },
+      {
+        "color": "white",
+        "name": "Philidor Defense 3.Bc4",
+        "eco": "C41",
+        "eco_url": "https://www.chess.com/openings/Philidor-Defense-3.Bc4",
+        "games": 4,
+        "w": 2,
+        "l": 2,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 114.1
+      },
+      {
+        "color": "black",
+        "name": "Four Knights Game Scotch Variation",
+        "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Scotch-Variation",
+        "games": 4,
+        "w": 1,
+        "l": 2,
+        "d": 1,
+        "score_pct": 37.5,
+        "avg_cpl": 72.5
       }
     ]
   },
   "tactics": {
-    "acpl": 88.8,
+    "acpl": 89.7,
     "total_moves": 3902,
-    "blunders": 304,
-    "mistakes": 541,
-    "inaccuracies": 460,
-    "blunder_rate": 2.13,
+    "blunders": 314,
+    "mistakes": 536,
+    "inaccuracies": 454,
+    "blunder_rate": 2.2,
     "analysed_games": 143,
     "by_phase": {
       "opening": {
         "moves": 1390,
-        "cpl_sum": 87717.0,
+        "cpl_sum": 88218.0,
         "blunder": 62,
-        "acpl": 63.1,
+        "acpl": 63.5,
         "blunder_rate": 4.5
       },
       "middlegame": {
         "moves": 1412,
-        "cpl_sum": 158093.0,
-        "blunder": 143,
-        "acpl": 112.0,
-        "blunder_rate": 10.1
+        "cpl_sum": 158811.0,
+        "blunder": 154,
+        "acpl": 112.5,
+        "blunder_rate": 10.9
       },
       "endgame": {
         "moves": 1100,
-        "cpl_sum": 100724.0,
-        "blunder": 99,
-        "acpl": 91.6,
-        "blunder_rate": 9.0
+        "cpl_sum": 102813.0,
+        "blunder": 98,
+        "acpl": 93.5,
+        "blunder_rate": 8.9
       }
     },
     "acpl_trend": [
       {
         "date": "2026-08-15",
-        "acpl": 140.3,
-        "rolling": 140.3
+        "acpl": 140.1,
+        "rolling": 140.1
       },
       {
         "date": "2026-08-15",
-        "acpl": 89.5,
-        "rolling": 114.9
+        "acpl": 87.8,
+        "rolling": 113.9
       },
       {
         "date": "2026-08-17",
-        "acpl": 220.8,
-        "rolling": 150.2
+        "acpl": 217.1,
+        "rolling": 148.3
       },
       {
         "date": "2026-08-17",
-        "acpl": 108.4,
-        "rolling": 139.8
+        "acpl": 111.1,
+        "rolling": 139.0
       },
       {
         "date": "2026-08-17",
-        "acpl": 259.3,
+        "acpl": 262.4,
         "rolling": 163.7
       },
       {
         "date": "2026-08-17",
-        "acpl": 63.6,
-        "rolling": 147.0
+        "acpl": 61.4,
+        "rolling": 146.7
       },
       {
         "date": "2026-08-18",
-        "acpl": 99.1,
-        "rolling": 140.1
+        "acpl": 88.4,
+        "rolling": 138.3
       },
       {
         "date": "2026-08-18",
-        "acpl": 28.4,
-        "rolling": 126.2
+        "acpl": 31.4,
+        "rolling": 125.0
       },
       {
         "date": "2026-08-18",
-        "acpl": 151.8,
-        "rolling": 129.0
+        "acpl": 149.9,
+        "rolling": 127.7
       },
       {
         "date": "2026-08-18",
-        "acpl": 69.7,
-        "rolling": 123.1
+        "acpl": 68.4,
+        "rolling": 121.8
       },
       {
         "date": "2026-08-18",
-        "acpl": 18.3,
-        "rolling": 110.9
+        "acpl": 22.9,
+        "rolling": 110.1
       },
       {
         "date": "2026-08-18",
-        "acpl": 78.3,
-        "rolling": 109.8
+        "acpl": 76.9,
+        "rolling": 109.0
       },
       {
         "date": "2026-08-19",
-        "acpl": 128.7,
-        "rolling": 100.6
+        "acpl": 127.6,
+        "rolling": 100.0
       },
       {
         "date": "2026-08-19",
-        "acpl": 52.1,
-        "rolling": 94.9
+        "acpl": 54.9,
+        "rolling": 94.4
       },
       {
         "date": "2026-08-19",
-        "acpl": 74.1,
-        "rolling": 76.4
+        "acpl": 81.5,
+        "rolling": 76.3
       },
       {
         "date": "2026-08-19",
-        "acpl": 168.8,
-        "rolling": 86.9
+        "acpl": 169.2,
+        "rolling": 87.1
       },
       {
         "date": "2026-08-19",
-        "acpl": 81.4,
-        "rolling": 85.2
+        "acpl": 83.7,
+        "rolling": 86.6
       },
       {
         "date": "2026-08-19",
-        "acpl": 57.0,
-        "rolling": 88.0
+        "acpl": 57.1,
+        "rolling": 89.2
       },
       {
         "date": "2026-08-19",
-        "acpl": 182.1,
-        "rolling": 91.0
+        "acpl": 191.3,
+        "rolling": 93.3
       },
       {
         "date": "2026-08-19",
-        "acpl": 237.8,
-        "rolling": 107.9
+        "acpl": 239.7,
+        "rolling": 110.5
       },
       {
         "date": "2026-08-19",
-        "acpl": 21.0,
-        "rolling": 108.1
+        "acpl": 24.9,
+        "rolling": 110.7
       },
       {
         "date": "2026-08-19",
-        "acpl": 45.9,
-        "rolling": 104.9
+        "acpl": 45.4,
+        "rolling": 107.5
       },
       {
         "date": "2026-08-19",
-        "acpl": 59.5,
-        "rolling": 98.0
+        "acpl": 52.4,
+        "rolling": 100.0
       },
       {
         "date": "2026-08-20",
-        "acpl": 101.2,
-        "rolling": 102.9
+        "acpl": 96.8,
+        "rolling": 104.2
       },
       {
         "date": "2026-08-20",
-        "acpl": 81.0,
-        "rolling": 103.6
+        "acpl": 85.2,
+        "rolling": 104.6
       },
       {
         "date": "2026-08-20",
-        "acpl": 41.8,
-        "rolling": 90.9
+        "acpl": 42.6,
+        "rolling": 91.9
       },
       {
         "date": "2026-08-20",
-        "acpl": 123.2,
+        "acpl": 121.4,
+        "rolling": 95.7
+      },
+      {
+        "date": "2026-08-20",
+        "acpl": 144.6,
+        "rolling": 104.4
+      },
+      {
+        "date": "2026-08-20",
+        "acpl": 97.2,
         "rolling": 95.0
       },
       {
         "date": "2026-08-20",
-        "acpl": 138.0,
+        "acpl": 58.4,
+        "rolling": 76.9
+      },
+      {
+        "date": "2026-08-20",
+        "acpl": 151.7,
+        "rolling": 89.6
+      },
+      {
+        "date": "2026-08-20",
+        "acpl": 23.4,
+        "rolling": 87.4
+      },
+      {
+        "date": "2026-08-20",
+        "acpl": 211.1,
         "rolling": 103.2
       },
       {
         "date": "2026-08-20",
-        "acpl": 103.1,
-        "rolling": 95.2
+        "acpl": 53.6,
+        "rolling": 98.9
       },
       {
         "date": "2026-08-20",
-        "acpl": 60.8,
-        "rolling": 77.5
-      },
-      {
-        "date": "2026-08-20",
-        "acpl": 149.6,
-        "rolling": 90.4
-      },
-      {
-        "date": "2026-08-20",
-        "acpl": 26.2,
-        "rolling": 88.4
-      },
-      {
-        "date": "2026-08-20",
-        "acpl": 213.2,
-        "rolling": 103.8
-      },
-      {
-        "date": "2026-08-20",
-        "acpl": 50.2,
-        "rolling": 98.7
-      },
-      {
-        "date": "2026-08-20",
-        "acpl": 49.6,
-        "rolling": 95.6
+        "acpl": 40.7,
+        "rolling": 94.5
       },
       {
         "date": "2026-08-21",
-        "acpl": 107.7,
-        "rolling": 102.2
+        "acpl": 98.6,
+        "rolling": 100.1
       },
       {
         "date": "2026-08-24",
-        "acpl": 98.8,
-        "rolling": 99.7
+        "acpl": 93.9,
+        "rolling": 97.3
       },
       {
         "date": "2026-08-25",
-        "acpl": 75.4,
-        "rolling": 93.5
+        "acpl": 80.1,
+        "rolling": 90.9
       },
       {
         "date": "2026-08-26",
-        "acpl": 62.9,
-        "rolling": 89.4
+        "acpl": 67.4,
+        "rolling": 87.9
       },
       {
         "date": "2026-08-26",
-        "acpl": 63.6,
-        "rolling": 89.7
+        "acpl": 78.8,
+        "rolling": 89.9
       },
       {
         "date": "2026-08-26",
-        "acpl": 50.4,
-        "rolling": 79.8
+        "acpl": 47.8,
+        "rolling": 79.5
       },
       {
         "date": "2026-08-26",
-        "acpl": 104.0,
-        "rolling": 87.6
+        "acpl": 105.8,
+        "rolling": 87.8
       },
       {
         "date": "2026-08-26",
-        "acpl": 47.1,
+        "acpl": 43.7,
         "rolling": 71.0
       },
       {
         "date": "2026-08-26",
-        "acpl": 69.4,
-        "rolling": 72.9
+        "acpl": 73.5,
+        "rolling": 73.0
       },
       {
         "date": "2026-08-26",
-        "acpl": 167.1,
-        "rolling": 84.6
-      },
-      {
-        "date": "2026-08-26",
-        "acpl": 196.0,
-        "rolling": 93.5
-      },
-      {
-        "date": "2026-08-26",
-        "acpl": 41.0,
-        "rolling": 87.7
-      },
-      {
-        "date": "2026-08-26",
-        "acpl": 43.9,
-        "rolling": 84.5
-      },
-      {
-        "date": "2026-08-26",
-        "acpl": 120.4,
-        "rolling": 90.3
-      },
-      {
-        "date": "2026-08-27",
-        "acpl": 44.8,
-        "rolling": 88.4
-      },
-      {
-        "date": "2026-08-27",
-        "acpl": 105.8,
-        "rolling": 93.9
-      },
-      {
-        "date": "2026-08-27",
-        "acpl": 210.2,
-        "rolling": 104.6
-      },
-      {
-        "date": "2026-08-27",
-        "acpl": 123.4,
-        "rolling": 112.2
-      },
-      {
-        "date": "2026-08-28",
-        "acpl": 131.1,
-        "rolling": 118.4
-      },
-      {
-        "date": "2026-08-28",
-        "acpl": 92.0,
-        "rolling": 110.9
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 79.5,
-        "rolling": 99.2
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 48.8,
-        "rolling": 100.0
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 69.9,
-        "rolling": 102.6
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 132.4,
-        "rolling": 103.8
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 105.0,
-        "rolling": 109.8
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 165.9,
-        "rolling": 115.8
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 40.1,
-        "rolling": 98.8
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 139.2,
-        "rolling": 100.4
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 72.9,
-        "rolling": 94.6
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 63.1,
-        "rolling": 91.7
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 81.0,
-        "rolling": 91.8
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 86.5,
-        "rolling": 95.6
-      },
-      {
-        "date": "2026-08-29",
-        "acpl": 61.4,
-        "rolling": 94.8
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 57.9,
-        "rolling": 87.3
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 25.1,
-        "rolling": 79.3
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 77.3,
-        "rolling": 70.5
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 63.9,
-        "rolling": 72.8
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 91.6,
-        "rolling": 68.1
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 74.9,
-        "rolling": 68.3
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 42.4,
-        "rolling": 66.2
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 154.7,
-        "rolling": 73.6
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 122.1,
-        "rolling": 77.1
-      },
-      {
-        "date": "2026-08-30",
-        "acpl": 105.4,
-        "rolling": 81.5
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 103.9,
-        "rolling": 86.1
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 18.2,
-        "rolling": 85.4
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 67.7,
-        "rolling": 84.5
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 17.1,
-        "rolling": 79.8
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 108.7,
-        "rolling": 81.5
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 95.9,
-        "rolling": 83.6
-      },
-      {
-        "date": "2026-08-31",
-        "acpl": 65.5,
-        "rolling": 85.9
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 72.8,
-        "rolling": 77.7
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 48.1,
-        "rolling": 70.3
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 107.0,
-        "rolling": 70.5
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 123.6,
-        "rolling": 72.5
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 73.9,
-        "rolling": 78.0
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 59.2,
-        "rolling": 77.2
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 93.8,
-        "rolling": 84.8
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 88.3,
-        "rolling": 82.8
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 17.9,
-        "rolling": 75.0
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 89.0,
-        "rolling": 77.4
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 120.2,
-        "rolling": 82.1
-      },
-      {
-        "date": "2026-09-01",
-        "acpl": 70.8,
+        "acpl": 154.3,
         "rolling": 84.4
       },
       {
-        "date": "2026-09-01",
-        "acpl": 50.6,
+        "date": "2026-08-26",
+        "acpl": 196.9,
+        "rolling": 94.2
+      },
+      {
+        "date": "2026-08-26",
+        "acpl": 44.0,
+        "rolling": 89.2
+      },
+      {
+        "date": "2026-08-26",
+        "acpl": 43.7,
+        "rolling": 85.6
+      },
+      {
+        "date": "2026-08-26",
+        "acpl": 110.4,
+        "rolling": 89.9
+      },
+      {
+        "date": "2026-08-27",
+        "acpl": 40.3,
+        "rolling": 86.0
+      },
+      {
+        "date": "2026-08-27",
+        "acpl": 107.5,
+        "rolling": 92.0
+      },
+      {
+        "date": "2026-08-27",
+        "acpl": 211.5,
+        "rolling": 102.6
+      },
+      {
+        "date": "2026-08-27",
+        "acpl": 110.4,
+        "rolling": 109.2
+      },
+      {
+        "date": "2026-08-28",
+        "acpl": 127.7,
+        "rolling": 114.7
+      },
+      {
+        "date": "2026-08-28",
+        "acpl": 100.1,
+        "rolling": 109.2
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 83.3,
+        "rolling": 97.9
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 40.5,
+        "rolling": 97.5
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 66.0,
+        "rolling": 99.8
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 133.1,
+        "rolling": 102.0
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 96.1,
+        "rolling": 107.6
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 162.3,
+        "rolling": 113.1
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 45.8,
+        "rolling": 96.5
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 136.2,
+        "rolling": 99.1
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 74.0,
+        "rolling": 93.7
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 62.9,
+        "rolling": 90.0
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 72.0,
+        "rolling": 88.9
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 86.8,
+        "rolling": 93.5
+      },
+      {
+        "date": "2026-08-29",
+        "acpl": 58.1,
+        "rolling": 92.7
+      },
+      {
+        "date": "2026-08-30",
+        "acpl": 56.9,
+        "rolling": 85.1
+      },
+      {
+        "date": "2026-08-30",
+        "acpl": 32.4,
         "rolling": 78.7
       },
       {
-        "date": "2026-09-01",
-        "acpl": 67.6,
-        "rolling": 73.1
+        "date": "2026-08-30",
+        "acpl": 79.8,
+        "rolling": 70.5
       },
       {
-        "date": "2026-09-02",
-        "acpl": 122.7,
-        "rolling": 78.0
+        "date": "2026-08-30",
+        "acpl": 64.0,
+        "rolling": 72.3
       },
       {
-        "date": "2026-09-02",
-        "acpl": 29.6,
-        "rolling": 75.1
+        "date": "2026-08-30",
+        "acpl": 121.1,
+        "rolling": 70.8
       },
       {
-        "date": "2026-09-02",
-        "acpl": 84.3,
-        "rolling": 74.1
+        "date": "2026-08-30",
+        "acpl": 78.2,
+        "rolling": 71.2
       },
       {
-        "date": "2026-09-03",
-        "acpl": 140.7,
-        "rolling": 79.3
+        "date": "2026-08-30",
+        "acpl": 37.6,
+        "rolling": 68.7
       },
       {
-        "date": "2026-09-03",
-        "acpl": 74.3,
+        "date": "2026-08-30",
+        "acpl": 161.2,
+        "rolling": 77.6
+      },
+      {
+        "date": "2026-08-30",
+        "acpl": 123.1,
+        "rolling": 81.2
+      },
+      {
+        "date": "2026-08-30",
+        "acpl": 107.2,
+        "rolling": 86.2
+      },
+      {
+        "date": "2026-08-31",
+        "acpl": 105.9,
+        "rolling": 91.0
+      },
+      {
+        "date": "2026-08-31",
+        "acpl": 20.2,
+        "rolling": 89.8
+      },
+      {
+        "date": "2026-08-31",
+        "acpl": 72.5,
+        "rolling": 89.1
+      },
+      {
+        "date": "2026-08-31",
+        "acpl": 19.1,
+        "rolling": 84.6
+      },
+      {
+        "date": "2026-08-31",
+        "acpl": 107.9,
+        "rolling": 83.3
+      },
+      {
+        "date": "2026-08-31",
+        "acpl": 94.9,
         "rolling": 85.0
       },
       {
+        "date": "2026-08-31",
+        "acpl": 63.8,
+        "rolling": 87.6
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 80.7,
+        "rolling": 79.5
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 49.5,
+        "rolling": 72.2
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 106.3,
+        "rolling": 72.1
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 128.5,
+        "rolling": 74.3
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 78.6,
+        "rolling": 80.2
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 64.1,
+        "rolling": 79.3
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 107.3,
+        "rolling": 88.2
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 91.4,
+        "rolling": 86.5
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 19.0,
+        "rolling": 78.9
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 91.7,
+        "rolling": 81.7
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 119.3,
+        "rolling": 85.6
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 69.6,
+        "rolling": 87.6
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 61.2,
+        "rolling": 83.1
+      },
+      {
+        "date": "2026-09-01",
+        "acpl": 68.8,
+        "rolling": 77.1
+      },
+      {
+        "date": "2026-09-02",
+        "acpl": 136.5,
+        "rolling": 82.9
+      },
+      {
+        "date": "2026-09-02",
+        "acpl": 27.2,
+        "rolling": 79.2
+      },
+      {
+        "date": "2026-09-02",
+        "acpl": 84.7,
+        "rolling": 76.9
+      },
+      {
         "date": "2026-09-03",
-        "acpl": 69.0,
+        "acpl": 152.3,
         "rolling": 83.0
       },
       {
         "date": "2026-09-03",
-        "acpl": 85.1,
-        "rolling": 79.5
+        "acpl": 71.7,
+        "rolling": 88.3
       },
       {
         "date": "2026-09-03",
-        "acpl": 177.9,
-        "rolling": 90.2
+        "acpl": 56.1,
+        "rolling": 84.7
       },
       {
         "date": "2026-09-03",
-        "acpl": 119.8,
-        "rolling": 97.1
+        "acpl": 85.5,
+        "rolling": 81.4
       },
       {
         "date": "2026-09-03",
-        "acpl": 75.6,
-        "rolling": 97.9
+        "acpl": 187.1,
+        "rolling": 93.1
+      },
+      {
+        "date": "2026-09-03",
+        "acpl": 147.6,
+        "rolling": 101.8
+      },
+      {
+        "date": "2026-09-03",
+        "acpl": 70.3,
+        "rolling": 101.9
       },
       {
         "date": "2026-09-03",
         "acpl": 0.0,
-        "rolling": 85.6
+        "rolling": 88.2
       },
       {
         "date": "2026-09-03",
-        "acpl": 83.9,
-        "rolling": 91.1
+        "acpl": 60.8,
+        "rolling": 91.6
       },
       {
         "date": "2026-09-03",
-        "acpl": 100.3,
-        "rolling": 92.7
+        "acpl": 99.4,
+        "rolling": 93.1
       },
       {
         "date": "2026-09-03",
-        "acpl": 84.4,
-        "rolling": 87.0
+        "acpl": 86.0,
+        "rolling": 86.4
       },
       {
         "date": "2026-09-03",
-        "acpl": 102.1,
-        "rolling": 89.8
+        "acpl": 98.3,
+        "rolling": 89.1
       },
       {
         "date": "2026-09-03",
-        "acpl": 39.4,
-        "rolling": 86.8
+        "acpl": 33.8,
+        "rolling": 86.9
       },
       {
         "date": "2026-09-03",
-        "acpl": 24.8,
-        "rolling": 80.8
+        "acpl": 29.3,
+        "rolling": 81.3
       },
       {
         "date": "2026-09-03",
-        "acpl": 64.9,
-        "rolling": 69.5
+        "acpl": 66.7,
+        "rolling": 69.2
       },
       {
         "date": "2026-09-03",
-        "acpl": 59.5,
-        "rolling": 63.5
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 45.6,
+        "acpl": 59.9,
         "rolling": 60.5
       },
       {
         "date": "2026-09-04",
-        "acpl": 55.8,
-        "rolling": 66.1
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 41.0,
-        "rolling": 61.8
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 57.1,
-        "rolling": 57.5
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 57.4,
-        "rolling": 54.8
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 20.8,
-        "rolling": 46.6
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 325.3,
-        "rolling": 75.2
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 28.4,
-        "rolling": 75.6
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 207.4,
-        "rolling": 89.8
-      },
-      {
-        "date": "2026-09-04",
-        "acpl": 93.2,
-        "rolling": 93.2
+        "acpl": 46.1,
+        "rolling": 58.0
       },
       {
         "date": "2026-09-04",
         "acpl": 58.2,
-        "rolling": 94.5
+        "rolling": 63.9
       },
       {
         "date": "2026-09-04",
-        "acpl": 133.0,
-        "rolling": 102.2
+        "acpl": 45.4,
+        "rolling": 62.3
       },
       {
         "date": "2026-09-04",
-        "acpl": 162.1,
-        "rolling": 114.3
+        "acpl": 59.0,
+        "rolling": 58.3
       },
       {
         "date": "2026-09-04",
-        "acpl": 109.1,
-        "rolling": 119.5
+        "acpl": 53.1,
+        "rolling": 55.0
       },
       {
         "date": "2026-09-04",
-        "acpl": 135.0,
-        "rolling": 127.2
+        "acpl": 26.1,
+        "rolling": 47.8
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 317.3,
+        "rolling": 76.1
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 26.7,
+        "rolling": 75.8
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 211.4,
+        "rolling": 90.3
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 106.8,
+        "rolling": 95.0
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 62.4,
+        "rolling": 96.6
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 123.8,
+        "rolling": 103.2
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 175.9,
+        "rolling": 116.2
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 106.5,
+        "rolling": 121.0
+      },
+      {
+        "date": "2026-09-04",
+        "acpl": 133.8,
+        "rolling": 129.1
       },
       {
         "date": "2026-09-05",
-        "acpl": 201.9,
-        "rolling": 145.4
+        "acpl": 209.6,
+        "rolling": 147.4
       },
       {
         "date": "2026-09-05",
-        "acpl": 67.4,
-        "rolling": 119.6
+        "acpl": 66.0,
+        "rolling": 122.3
       },
       {
         "date": "2026-09-05",
-        "acpl": 65.8,
-        "rolling": 123.3
+        "acpl": 67.2,
+        "rolling": 126.3
       },
       {
         "date": "2026-09-05",
-        "acpl": 125.7,
-        "rolling": 115.1
+        "acpl": 125.3,
+        "rolling": 117.7
       },
       {
         "date": "2026-09-05",
-        "acpl": 52.6,
-        "rolling": 111.1
+        "acpl": 53.5,
+        "rolling": 112.4
       },
       {
         "date": "2026-09-05",
-        "acpl": 88.2,
-        "rolling": 114.1
+        "acpl": 92.5,
+        "rolling": 115.4
       },
       {
         "date": "2026-09-06",
-        "acpl": 51.7,
-        "rolling": 106.0
+        "acpl": 61.3,
+        "rolling": 109.2
       },
       {
         "date": "2026-09-06",
-        "acpl": 83.3,
-        "rolling": 98.1
+        "acpl": 86.4,
+        "rolling": 100.2
       },
       {
         "date": "2026-09-06",
-        "acpl": 60.9,
-        "rolling": 93.2
+        "acpl": 64.5,
+        "rolling": 96.0
       },
       {
         "date": "2026-09-06",
-        "acpl": 50.2,
-        "rolling": 84.8
+        "acpl": 57.7,
+        "rolling": 88.4
       }
     ],
     "worst_blunders": [
       {
-        "date": "2026-08-19",
-        "url": "https://www.chess.com/game/live/173240747184",
-        "move_no": 16,
-        "san": "Qxa1",
-        "cpl": 2198,
-        "phase": "middlegame",
-        "color": "black",
-        "opponent": "KhBarq6",
-        "opponent_rating": 572
-      },
-      {
+        "ply": 77,
+        "move_no": 39,
+        "phase": "endgame",
+        "side": "white",
+        "cpl": 2237,
+        "eval_before": 737,
+        "eval_after": -1500,
+        "fen_before": "1Q6/6pk/p2Q4/4P2p/4bP2/6KP/PP4P1/7q w - - 1 39",
+        "played_san": "f5",
+        "played_uci": "f4f5",
+        "best_san": "Qd2",
+        "best_uci": "d6d2",
+        "context": [
+          "Qd6",
+          "Qh1+",
+          "Kxg3",
+          "h5",
+          "b8=Q",
+          "Be4"
+        ],
         "date": "2026-08-27",
         "url": "https://www.chess.com/game/live/173608543608",
-        "move_no": 39,
-        "san": "f5",
-        "cpl": 2194,
-        "phase": "endgame",
-        "color": "white",
         "opponent": "Jabatino",
         "opponent_rating": 722
       },
       {
+        "ply": 32,
+        "move_no": 16,
+        "phase": "middlegame",
+        "side": "black",
+        "cpl": 2195,
+        "eval_before": 695,
+        "eval_after": -1500,
+        "fen_before": "r4rk1/pp3ppp/8/2n2QN1/8/8/PqP2PPP/RN2K2R b KQ - 0 16",
+        "played_san": "Qxa1",
+        "played_uci": "b2a1",
+        "best_san": "Rfe8+",
+        "best_uci": "f8e8",
+        "context": [
+          "Bf5",
+          "Bxf5",
+          "Nxf5",
+          "Qxd5",
+          "Qxb2",
+          "Qxf5"
+        ],
+        "date": "2026-08-19",
+        "url": "https://www.chess.com/game/live/173240747184",
+        "opponent": "KhBarq6",
+        "opponent_rating": 572
+      },
+      {
+        "ply": 47,
+        "move_no": 24,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 2074,
+        "eval_before": 574,
+        "eval_after": -1500,
+        "fen_before": "r5r1/1bp1k3/p6p/2p1B1N1/5P2/8/P1P3PP/3R1RK1 w - - 0 24",
+        "played_san": "Nh7",
+        "played_uci": "g5h7",
+        "best_san": "Nf3",
+        "best_uci": "g5f3",
+        "context": [
+          "Ng5",
+          "Rg8",
+          "Rd1+",
+          "Ke7",
+          "f4",
+          "h6"
+        ],
         "date": "2026-09-04",
         "url": "https://www.chess.com/game/live/174000189528",
-        "move_no": 24,
-        "san": "Nh7",
-        "cpl": 2075,
-        "phase": "middlegame",
-        "color": "white",
         "opponent": "Hani-9",
         "opponent_rating": 796
       },
       {
+        "ply": 30,
+        "move_no": 15,
+        "phase": "middlegame",
+        "side": "black",
+        "cpl": 2034,
+        "eval_before": 534,
+        "eval_after": -1500,
+        "fen_before": "r1bq2k1/pppn1ppp/8/6NQ/5B2/2n3P1/P1P1rP1P/1R3K1R b - - 1 15",
+        "played_san": "g6",
+        "played_uci": "g7g6",
+        "best_san": "Nf6",
+        "best_uci": "d7f6",
+        "context": [
+          "Nxc3",
+          "Qh5",
+          "Re8+",
+          "Be2",
+          "Rxe2+",
+          "Kf1"
+        ],
         "date": "2026-08-17",
         "url": "https://www.chess.com/game/live/173142307844",
-        "move_no": 15,
-        "san": "g6",
-        "cpl": 2048,
-        "phase": "middlegame",
-        "color": "black",
         "opponent": "sarahzu93",
         "opponent_rating": 560
       },
       {
+        "ply": 39,
+        "move_no": 20,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 2002,
+        "eval_before": 502,
+        "eval_after": -1500,
+        "fen_before": "r5r1/1bpk1NBp/p7/2p5/8/8/P1P2PPP/4RRK1 w - - 1 20",
+        "played_san": "Be5",
+        "played_uci": "g7e5",
+        "best_san": "Re3",
+        "best_uci": "e1e3",
+        "context": [
+          "Nxe5",
+          "Kd8",
+          "Nxf7+",
+          "Kd7",
+          "Bxg7",
+          "Rhg8"
+        ],
+        "date": "2026-09-04",
+        "url": "https://www.chess.com/game/live/174000189528",
+        "opponent": "Hani-9",
+        "opponent_rating": 796
+      },
+      {
+        "ply": 37,
+        "move_no": 19,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 1965,
+        "eval_before": 1500,
+        "eval_after": -465,
+        "fen_before": "rn5k/pb1q1r1p/1p4RB/1p1p3n/6Q1/2P5/PPP2PPP/5RK1 w - - 1 19",
+        "played_san": "Qd4+",
+        "played_uci": "g4d4",
+        "best_san": "Rg8#",
+        "best_uci": "g6g8",
+        "context": [
+          "Qg4",
+          "g6",
+          "Rxe6",
+          "Qd7",
+          "Rxg6+",
+          "Kh8"
+        ],
         "date": "2026-09-03",
         "url": "https://www.chess.com/game/live/173938696296",
-        "move_no": 19,
-        "san": "Qd4+",
-        "cpl": 1985,
-        "phase": "middlegame",
-        "color": "white",
         "opponent": "Susruta8",
         "opponent_rating": 770
       },
       {
-        "date": "2026-09-04",
-        "url": "https://www.chess.com/game/live/174000189528",
-        "move_no": 20,
-        "san": "Be5",
-        "cpl": 1983,
-        "phase": "middlegame",
-        "color": "white",
-        "opponent": "Hani-9",
-        "opponent_rating": 796
-      },
-      {
+        "ply": 54,
+        "move_no": 27,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 1790,
+        "eval_before": 290,
+        "eval_after": -1500,
+        "fen_before": "2RRbk2/pp3ppp/8/8/5b2/P6P/1P2rPP1/5K2 b - - 4 27",
+        "played_san": "Rxb2",
+        "played_uci": "e2b2",
+        "best_san": "Re7",
+        "best_uci": "e2e7",
+        "context": [
+          "Be8",
+          "a3",
+          "Bd2",
+          "Rdd8",
+          "Bf4",
+          "Kf1"
+        ],
         "date": "2026-09-04",
         "url": "https://www.chess.com/game/live/174008849578",
-        "move_no": 27,
-        "san": "Rxb2",
-        "cpl": 1793,
-        "phase": "endgame",
-        "color": "black",
         "opponent": "ntkmeena",
         "opponent_rating": 787
       },
       {
+        "ply": 37,
+        "move_no": 19,
+        "phase": "endgame",
+        "side": "white",
+        "cpl": 1722,
+        "eval_before": 1500,
+        "eval_after": -222,
+        "fen_before": "2kr4/p1p2ppp/1p2p3/5b2/5r2/1PKB4/P1P2PPP/R2R4 w - - 1 19",
+        "played_san": "f3",
+        "played_uci": "f2f3",
+        "best_san": "Ba6+",
+        "best_uci": "d3a6",
+        "context": [
+          "Bc3",
+          "Rd8+",
+          "Bd3",
+          "Bxc3+",
+          "Kxc3",
+          "Rf4"
+        ],
         "date": "2026-08-20",
         "url": "https://www.chess.com/game/live/173277246292",
-        "move_no": 19,
-        "san": "f3",
-        "cpl": 1725,
-        "phase": "endgame",
-        "color": "white",
         "opponent": "t3mate",
         "opponent_rating": 638
       },
       {
+        "ply": 115,
+        "move_no": 58,
+        "phase": "endgame",
+        "side": "white",
+        "cpl": 1504,
+        "eval_before": 4,
+        "eval_after": -1500,
+        "fen_before": "8/8/p7/3k4/1P1p4/3K4/P7/8 w - - 3 58",
+        "played_san": "b5",
+        "played_uci": "b4b5",
+        "best_san": "a3",
+        "best_uci": "a2a3",
+        "context": [
+          "d4",
+          "cxd4",
+          "b4",
+          "Ke5",
+          "Kd3",
+          "Kd5"
+        ],
+        "date": "2026-09-01",
+        "url": "https://www.chess.com/game/live/173852317854",
+        "opponent": "tarbazspor",
+        "opponent_rating": 782
+      },
+      {
+        "ply": 126,
+        "move_no": 63,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 1500,
+        "eval_before": 1500,
+        "eval_after": 0,
+        "fen_before": "8/8/8/6p1/3q4/6k1/8/4K3 b - - 7 63",
+        "played_san": "Qd3",
+        "played_uci": "d4d3",
+        "best_san": "Kf3",
+        "best_uci": "g3f3",
+        "context": [
+          "Kg3",
+          "Ke3",
+          "Qd5",
+          "Ke2",
+          "Qd4",
+          "Ke1"
+        ],
         "date": "2026-09-01",
         "url": "https://www.chess.com/game/live/173862569386",
-        "move_no": 63,
-        "san": "Qd3",
-        "cpl": 1500,
-        "phase": "endgame",
-        "color": "black",
         "opponent": "albi_tp",
         "opponent_rating": 776
       },
       {
+        "ply": 72,
+        "move_no": 36,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 1500,
+        "eval_before": 1500,
+        "eval_after": 0,
+        "fen_before": "4r3/5Qpk/8/8/3P2P1/P1P4P/1B2p1K1/4q3 b - - 1 36",
+        "played_san": "Re3",
+        "played_uci": "e8e3",
+        "best_san": "Qh1+",
+        "best_uci": "e1h1",
+        "context": [
+          "e2",
+          "Re1",
+          "Qg3+",
+          "Kh1",
+          "Qxe1+",
+          "Kg2"
+        ],
         "date": "2026-09-02",
         "url": "https://www.chess.com/game/live/173897389358",
-        "move_no": 36,
-        "san": "Re3",
-        "cpl": 1500,
-        "phase": "endgame",
-        "color": "black",
         "opponent": "nisargam_patel",
         "opponent_rating": 803
       },
       {
-        "date": "2026-09-03",
-        "url": "https://www.chess.com/game/live/173921766356",
+        "ply": 152,
         "move_no": 76,
-        "san": "Ke7",
-        "cpl": 1500,
         "phase": "endgame",
-        "color": "black",
-        "opponent": "yejiishere",
-        "opponent_rating": 794
-      },
-      {
+        "side": "black",
+        "cpl": 1500,
+        "eval_before": 0,
+        "eval_after": -1500,
+        "fen_before": "5k2/5PR1/8/5K2/8/8/8/8 b - - 4 76",
+        "played_san": "Ke7",
+        "played_uci": "f8e7",
+        "best_san": "Kxg7",
+        "best_uci": "f8g7",
+        "context": [
+          "Ke8",
+          "f7+",
+          "Ke7",
+          "Kg6",
+          "Kf8",
+          "Kf5"
+        ],
         "date": "2026-09-03",
         "url": "https://www.chess.com/game/live/173921766356",
-        "move_no": 78,
-        "san": "Ke7",
-        "cpl": 1500,
-        "phase": "endgame",
-        "color": "black",
         "opponent": "yejiishere",
         "opponent_rating": 794
       },
       {
+        "ply": 156,
+        "move_no": 78,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 1500,
+        "eval_before": 0,
+        "eval_after": -1500,
+        "fen_before": "5k2/5PR1/8/5K2/8/8/8/8 b - - 8 78",
+        "played_san": "Ke7",
+        "played_uci": "f8e7",
+        "best_san": "Kxg7",
+        "best_uci": "f8g7",
+        "context": [
+          "Kf8",
+          "Kf5",
+          "Ke7",
+          "Ke5",
+          "Kf8",
+          "Kf5"
+        ],
+        "date": "2026-09-03",
+        "url": "https://www.chess.com/game/live/173921766356",
+        "opponent": "yejiishere",
+        "opponent_rating": 794
+      },
+      {
+        "ply": 65,
+        "move_no": 33,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 1500,
+        "eval_before": 0,
+        "eval_after": -1500,
+        "fen_before": "6r1/1bp1k3/p6p/2p1B1N1/5P2/8/r6P/3R1R1K w - - 10 33",
+        "played_san": "Kg1",
+        "played_uci": "h1g1",
+        "best_san": "Kg1",
+        "best_uci": "h1g1",
+        "context": [
+          "Kh1",
+          "Ra2+",
+          "Kg1",
+          "Rg2+",
+          "Kh1",
+          "Ra2+"
+        ],
         "date": "2026-09-04",
         "url": "https://www.chess.com/game/live/174000189528",
-        "move_no": 33,
-        "san": "Kg1",
-        "cpl": 1500,
-        "phase": "middlegame",
-        "color": "white",
         "opponent": "Hani-9",
         "opponent_rating": 796
       },
       {
+        "ply": 31,
+        "move_no": 16,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 1431,
+        "eval_before": 272,
+        "eval_after": -1159,
+        "fen_before": "r3kb1r/p5pp/2p2pn1/8/BnQ1P1q1/P1N5/1PP2PbP/R1BR2K1 w kq - 2 16",
+        "played_san": "Ne2",
+        "played_uci": "c3e2",
+        "best_san": "Bxc6+",
+        "best_uci": "a4c6",
+        "context": [
+          "Qc4",
+          "Bxf3",
+          "a3",
+          "Bxg2",
+          "Rd1",
+          "Qg4"
+        ],
         "date": "2026-09-05",
         "url": "https://www.chess.com/game/live/174011967872",
-        "move_no": 16,
-        "san": "Ne2",
-        "cpl": 1437,
-        "phase": "middlegame",
-        "color": "white",
         "opponent": "celadorrr",
         "opponent_rating": 785
-      },
-      {
-        "date": "2026-08-26",
-        "url": "https://www.chess.com/game/live/173574893594",
-        "move_no": 6,
-        "san": "Qd6",
-        "cpl": 1434,
-        "phase": "opening",
-        "color": "black",
-        "opponent": "amiralipromax",
-        "opponent_rating": 692
       }
     ]
   },

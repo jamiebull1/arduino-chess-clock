@@ -13,10 +13,12 @@ Pulls my [chess.com](https://www.chess.com/member/rimanish) games, runs a
 
 - **Overview** — rating trend, record, and a top list of your biggest weak spots.
 - **Openings** — win rate and average centipawn loss per opening, as White and
-  Black; openings you keep losing are flagged.
+  Black; your best and worst openings are highlighted, and each name links to the
+  chess.com opening page.
 - **Tactics** — average centipawn loss (ACPL), blunder counts and rate, a rolling
-  accuracy trend, blunder rate by game phase, and your worst blunders with a
-  direct "review" link into the game on chess.com.
+  accuracy trend, blunder rate by game phase, and **blunder cards**: a board diagram
+  of each worst mistake with the move you played (red) vs. Stockfish's better move
+  (green), the run-up moves, and a review link into the game.
 - **Endgames / conversion** — how often winning positions (Stockfish eval ≥ +2)
   were actually won, games thrown from winning, games saved from losing, results
   by game length, and losses on time.

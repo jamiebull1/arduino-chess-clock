@@ -4,9 +4,31 @@ from __future__ import annotations
 import json
 import shutil
 
+import chess
+import chess.svg
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .config import Config
+
+_BEST_COLOR = "#2f855a"    # green arrow = engine's best move
+_PLAYED_COLOR = "#c53030"  # red arrow = move actually played
+
+
+def _board_svg(blunder: dict) -> str:
+    """Render the position before a blunder, with best (green) and played (red) arrows."""
+    try:
+        board = chess.Board(blunder["fen_before"])
+    except (ValueError, KeyError):
+        return ""
+    arrows = []
+    for key, color in (("best_uci", _BEST_COLOR), ("played_uci", _PLAYED_COLOR)):
+        uci = blunder.get(key)
+        if uci:
+            mv = chess.Move.from_uci(uci)
+            arrows.append(chess.svg.Arrow(mv.from_square, mv.to_square, color=color))
+    orientation = chess.WHITE if blunder.get("side") == "white" else chess.BLACK
+    return chess.svg.board(board=board, arrows=arrows, orientation=orientation,
+                           size=340, coordinates=True)
 
 _PAGES = {
     "index.html": "index",
@@ -40,11 +62,17 @@ def render(cfg: Config, report: dict | None = None) -> None:
     (site / "data" / "report.json").write_text(json.dumps(report, indent=2))
     (site / ".nojekyll").write_text("")  # serve files/dirs starting with _ untouched
 
-    env = _env(cfg)
+    # data_json (for the charts) stays free of the bulky SVG strings; the
+    # template context gets a copy with a rendered board per blunder.
     data_json = json.dumps(report)
+    ctx = json.loads(data_json)
+    for blunder in ctx["tactics"]["worst_blunders"]:
+        blunder["board_svg"] = _board_svg(blunder)
+
+    env = _env(cfg)
     for template_name, page in _PAGES.items():
         html = env.get_template(template_name).render(
-            report=report, page=page, data_json=data_json, title=cfg.site["title"],
+            report=ctx, page=page, data_json=data_json, title=cfg.site["title"],
         )
         (site / template_name).write_text(html)
     print(f"  rendered {len(_PAGES)} pages to {site}")

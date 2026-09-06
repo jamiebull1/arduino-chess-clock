@@ -17,15 +17,14 @@
 <h2>Rating trend</h2>
 <div class="panel"><div class="chart-box"><canvas id="ratingChart"></canvas></div></div>
 
-<h2>Biggest weak spots</h2>
-{% if report.openings.weak_spots %}
+{% macro spot_table(rows) %}
 <div class="panel table-scroll">
   <table>
     <thead><tr><th>Opening</th><th>Colour</th><th class="num">Games</th><th class="num">Score</th><th class="num">Avg CPL</th></tr></thead>
     <tbody>
-    {% for w in report.openings.weak_spots %}
+    {% for w in rows %}
       <tr>
-        <td>{{ w.name }}{% if w.eco %} <span class="note">({{ w.eco }})</span>{% endif %}</td>
+        <td>{% if w.eco_url %}<a href="{{ w.eco_url }}" target="_blank" rel="noopener">{{ w.name }}</a>{% else %}{{ w.name }}{% endif %}{% if w.eco %} <span class="note">({{ w.eco }})</span>{% endif %}</td>
         <td>{{ w.color }}</td>
         <td class="num">{{ w.games }}</td>
         <td class="num">{{ w.score_pct | pct }}</td>
@@ -34,11 +33,21 @@
     {% endfor %}
     </tbody>
   </table>
-  <p class="note">Openings you play at least 3 times, worst scoring first. See <a href="openings.html">Openings</a> for the full breakdown.</p>
 </div>
+{% endmacro %}
+
+<h2>Biggest weak spots</h2>
+{% if report.openings.weak_spots %}
+{{ spot_table(report.openings.weak_spots[:5]) }}
 {% else %}
 <p class="note">Not enough repeated openings yet to flag weak spots.</p>
 {% endif %}
+
+{% if report.openings.strong_spots %}
+<h2>Best openings</h2>
+{{ spot_table(report.openings.strong_spots[:5]) }}
+{% endif %}
+<p class="note">Openings played at least 3 times. See <a href="openings.html">Openings</a> for the full breakdown, and <a href="tactics.html">Tactics</a> for your worst blunders with the better move.</p>
 
 <h2>Recent games</h2>
 <div class="panel table-scroll">

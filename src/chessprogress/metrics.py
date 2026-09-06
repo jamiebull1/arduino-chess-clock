@@ -67,45 +67,44 @@ def _overview(cfg: Config, games: list[Game]) -> dict:
 
 def _openings(games: list[Game], analyses: dict) -> dict:
     groups: dict[tuple[str, str], dict] = defaultdict(
-        lambda: {"games": 0, "w": 0, "l": 0, "d": 0, "cpl_sum": 0.0, "cpl_n": 0, "eco": ""}
+        lambda: {"games": 0, "w": 0, "l": 0, "d": 0, "cpl_sum": 0.0, "cpl_n": 0, "eco": "", "eco_url": None}
     )
     for g in games:
         name = g.opening or "Unknown opening"
         grp = groups[(g.color, name)]
         grp["games"] += 1
         grp["eco"] = g.eco or grp["eco"]
+        grp["eco_url"] = g.eco_url or grp["eco_url"]
         grp[{"win": "w", "loss": "l", "draw": "d"}[g.outcome]] += 1
         a = analyses.get(g.uuid)
         if a:
             grp["cpl_sum"] += a["acpl"]
             grp["cpl_n"] += 1
 
-    def rows(color: str) -> list[dict]:
-        out = []
-        for (c, name), grp in groups.items():
-            if c != color:
-                continue
-            out.append({
-                "name": name, "eco": grp["eco"], "games": grp["games"],
-                "w": grp["w"], "l": grp["l"], "d": grp["d"],
-                "score_pct": _score_pct(grp["w"], grp["l"], grp["d"]),
-                "avg_cpl": round(grp["cpl_sum"] / grp["cpl_n"], 1) if grp["cpl_n"] else None,
-            })
-        return sorted(out, key=lambda r: (-r["games"], r["score_pct"]))
-
-    weak = [
-        {"color": c, **{k: v for k, v in {
-            "name": name, "eco": grp["eco"], "games": grp["games"],
-            "w": grp["w"], "l": grp["l"], "d": grp["d"],
+    def row(color: str, name: str, grp: dict) -> dict:
+        return {
+            "color": color, "name": name, "eco": grp["eco"], "eco_url": grp["eco_url"],
+            "games": grp["games"], "w": grp["w"], "l": grp["l"], "d": grp["d"],
             "score_pct": _score_pct(grp["w"], grp["l"], grp["d"]),
             "avg_cpl": round(grp["cpl_sum"] / grp["cpl_n"], 1) if grp["cpl_n"] else None,
-        }.items()}}
-        for (c, name), grp in groups.items()
-        if grp["games"] >= _MIN_OPENING_GAMES
-    ]
-    weak.sort(key=lambda r: (r["score_pct"], -r["games"]))
+        }
 
-    return {"as_white": rows("white"), "as_black": rows("black"), "weak_spots": weak[:8]}
+    all_rows = [row(c, name, grp) for (c, name), grp in groups.items()]
+
+    def by_color(color: str) -> list[dict]:
+        rows = [r for r in all_rows if r["color"] == color]
+        return sorted(rows, key=lambda r: (-r["games"], r["score_pct"]))
+
+    repeated = [r for r in all_rows if r["games"] >= _MIN_OPENING_GAMES]
+    weak = sorted(repeated, key=lambda r: (r["score_pct"], -r["games"]))[:8]
+    strong = sorted(repeated, key=lambda r: (-r["score_pct"], -r["games"]))[:8]
+
+    return {
+        "as_white": by_color("white"),
+        "as_black": by_color("black"),
+        "weak_spots": weak,
+        "strong_spots": strong,
+    }
 
 
 def _tactics(cfg: Config, games: list[Game], analyses: dict) -> dict:
@@ -128,13 +127,11 @@ def _tactics(cfg: Config, games: list[Game], analyses: dict) -> dict:
             phase[p]["cpl_sum"] += pv["cpl_sum"]
             phase[p]["blunder"] += pv["blunder"]
         trend.append({"date": g.date, "acpl": a["acpl"]})
-        for mv in a["player_moves"]:
-            if mv["cpl"] >= cfg.thresholds["blunder_cp"]:
-                worst.append({
-                    "date": g.date, "url": g.url, "move_no": mv["move_no"], "san": mv["san"],
-                    "cpl": mv["cpl"], "phase": mv["phase"], "color": g.color,
-                    "opponent": g.opponent, "opponent_rating": g.opponent_rating,
-                })
+        for b in a.get("blunders", []):
+            worst.append({
+                **b, "date": g.date, "url": g.url,
+                "opponent": g.opponent, "opponent_rating": g.opponent_rating,
+            })
 
     # rolling 10-game ACPL average
     window, rolled = [], []
