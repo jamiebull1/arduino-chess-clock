@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T20:39:40+00:00",
+  "generated_at": "2026-09-06T20:43:09+00:00",
   "username": "rimanish",
   "profile": {
     "name": "Jamie Bull",
@@ -699,7 +699,7 @@
         "l": 3,
         "d": 0,
         "score_pct": 62.5,
-        "avg_cpl": 66.5
+        "avg_cpl": 66.3
       },
       {
         "color": "white",
@@ -759,7 +759,7 @@
         "l": 2,
         "d": 0,
         "score_pct": 0.0,
-        "avg_cpl": 103.8
+        "avg_cpl": 105.4
       },
       {
         "color": "white",
@@ -1829,7 +1829,7 @@
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 113.6
+        "avg_cpl": 119.6
       }
     ],
     "weak_spots": [
@@ -1927,7 +1927,7 @@
         "l": 3,
         "d": 0,
         "score_pct": 62.5,
-        "avg_cpl": 66.5
+        "avg_cpl": 66.3
       }
     ],
     "strong_spots": [
@@ -1965,7 +1965,7 @@
         "l": 3,
         "d": 0,
         "score_pct": 62.5,
-        "avg_cpl": 66.5
+        "avg_cpl": 66.3
       },
       {
         "color": "black",
@@ -2030,34 +2030,34 @@
     ]
   },
   "tactics": {
-    "acpl": 87.1,
+    "acpl": 87.2,
     "total_moves": 4071,
-    "blunders": 310,
-    "mistakes": 565,
+    "blunders": 311,
+    "mistakes": 563,
     "inaccuracies": 473,
-    "blunder_rate": 2.11,
+    "blunder_rate": 2.12,
     "analysed_games": 147,
     "by_phase": {
       "opening": {
         "moves": 1430,
-        "cpl_sum": 89884.0,
-        "blunder": 65,
+        "cpl_sum": 89981.0,
+        "blunder": 64,
         "acpl": 62.9,
         "blunder_rate": 4.5
       },
       "middlegame": {
         "moves": 1477,
-        "cpl_sum": 161005.0,
-        "blunder": 147,
-        "acpl": 109.0,
+        "cpl_sum": 161281.0,
+        "blunder": 148,
+        "acpl": 109.2,
         "blunder_rate": 10.0
       },
       "endgame": {
         "moves": 1164,
-        "cpl_sum": 103606.0,
-        "blunder": 98,
+        "cpl_sum": 103571.0,
+        "blunder": 99,
         "acpl": 89.0,
-        "blunder_rate": 8.4
+        "blunder_rate": 8.5
       }
     },
     "acpl_trend": [
@@ -2778,23 +2778,23 @@
       },
       {
         "date": "2026-09-06",
-        "acpl": 99.0,
-        "rolling": 74.7
+        "acpl": 102.3,
+        "rolling": 75.0
       },
       {
         "date": "2026-09-06",
-        "acpl": 39.1,
+        "acpl": 36.0,
         "rolling": 72.0
       },
       {
         "date": "2026-09-06",
-        "acpl": 113.6,
-        "rolling": 76.5
+        "acpl": 119.6,
+        "rolling": 77.1
       },
       {
         "date": "2026-09-06",
-        "acpl": 64.4,
-        "rolling": 71.3
+        "acpl": 66.5,
+        "rolling": 72.1
       }
     ],
     "worst_blunders": [
@@ -3191,10 +3191,10 @@
     ]
   },
   "endgames": {
-    "winning_reached": 119,
+    "winning_reached": 120,
     "winning_converted": 80,
-    "thrown_from_winning": 39,
-    "conversion_pct": 67.2,
+    "thrown_from_winning": 40,
+    "conversion_pct": 66.7,
     "losing_reached": 91,
     "saved_from_losing": 34,
     "save_pct": 37.4,
@@ -3418,13 +3418,39 @@
         "outcome": "win"
       },
       {
+        "ply": 67,
+        "move_no": 34,
+        "phase": "endgame",
+        "side": "white",
+        "cpl": 21,
+        "eval_before": -45,
+        "eval_after": -66,
+        "fen_before": "r7/7p/8/8/4b1P1/8/P2kBK1P/2N5 w - - 3 34",
+        "played_san": "Nb3+",
+        "played_uci": "c1b3",
+        "context": [
+          "Nc1",
+          "Kc3",
+          "g4",
+          "Be4",
+          "Kf2",
+          "Kd2"
+        ],
+        "gap": 359,
+        "date": "2026-09-06",
+        "url": "https://www.chess.com/game/live/174094917134",
+        "opponent": "3MR1i",
+        "opponent_rating": 824,
+        "outcome": "loss"
+      },
+      {
         "ply": 57,
         "move_no": 29,
         "phase": "endgame",
         "side": "white",
-        "cpl": 0,
-        "eval_before": -49,
-        "eval_after": -38,
+        "cpl": 3,
+        "eval_before": -46,
+        "eval_after": -49,
         "fen_before": "7r/7p/8/p1k2b2/2N5/8/P3B1PP/6K1 w - - 2 29",
         "played_san": "Nxa5",
         "played_uci": "c4a5",
@@ -3437,32 +3463,6 @@
           "Kc5"
         ],
         "gap": 345,
-        "date": "2026-09-06",
-        "url": "https://www.chess.com/game/live/174094917134",
-        "opponent": "3MR1i",
-        "opponent_rating": 824,
-        "outcome": "loss"
-      },
-      {
-        "ply": 67,
-        "move_no": 34,
-        "phase": "endgame",
-        "side": "white",
-        "cpl": 0,
-        "eval_before": -59,
-        "eval_after": -47,
-        "fen_before": "r7/7p/8/8/4b1P1/8/P2kBK1P/2N5 w - - 3 34",
-        "played_san": "Nb3+",
-        "played_uci": "c1b3",
-        "context": [
-          "Nc1",
-          "Kc3",
-          "g4",
-          "Be4",
-          "Kf2",
-          "Kd2"
-        ],
-        "gap": 341,
         "date": "2026-09-06",
         "url": "https://www.chess.com/game/live/174094917134",
         "opponent": "3MR1i",
@@ -3877,6 +3877,90 @@
           "brilliant": 0,
           "great": 0,
           "blunder": 2
+        }
+      },
+      {
+        "uuid": "21b18308-aa16-11f1-b4a6-d9079701000f",
+        "url": "https://www.chess.com/game/live/174090448578",
+        "date": "2026-09-06",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 785,
+        "opponent": "dojafat123",
+        "opponent_rating": 809,
+        "eco": "B00",
+        "opening": "Kings Pawn Opening",
+        "ply_count": 96,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 4
+        }
+      },
+      {
+        "uuid": "a2de4a19-aa18-11f1-bb1f-e68c2101000f",
+        "url": "https://www.chess.com/game/live/174091189684",
+        "date": "2026-09-06",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 793,
+        "opponent": "soloner21",
+        "opponent_rating": 772,
+        "eco": "C50",
+        "opening": "Italian Game",
+        "ply_count": 63,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 1
+        }
+      },
+      {
+        "uuid": "7f45b297-aa22-11f1-9f37-3022bd01000f",
+        "url": "https://www.chess.com/game/live/174094072666",
+        "date": "2026-09-06",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 801,
+        "opponent": "romeo66412",
+        "opponent_rating": 785,
+        "eco": "A01",
+        "opening": "Nimzowitsch Larsen Attack Modern Variation",
+        "ply_count": 50,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 4
+        }
+      },
+      {
+        "uuid": "7d506a55-aa25-11f1-8acf-f45fe701000f",
+        "url": "https://www.chess.com/game/live/174094917134",
+        "date": "2026-09-06",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 793,
+        "opponent": "3MR1i",
+        "opponent_rating": 824,
+        "eco": "C50",
+        "opening": "Italian Game",
+        "ply_count": 128,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 4,
+          "blunder": 5
         }
       },
       {
