@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block subtitle %} — Tactics{% endblock %}
+{% set t = report.tactics %}
+{% block content %}
+<h1>Tactics &amp; blunders</h1>
+<p class="sub">Move quality from a Stockfish pass over {{ t.analysed_games }} games. A blunder loses ≥300 centipawns (≈3 pawns); lower ACPL is better.</p>
+
+<div class="cards">
+  <div class="card"><div class="label">Avg centipawn loss</div><div class="value">{{ t.acpl | num }}</div></div>
+  <div class="card"><div class="label">Blunders / game</div><div class="value">{{ t.blunder_rate | num }}</div></div>
+  <div class="card"><div class="label">Blunders</div><div class="value">{{ t.blunders }}</div></div>
+  <div class="card"><div class="label">Mistakes</div><div class="value">{{ t.mistakes }}</div></div>
+  <div class="card"><div class="label">Inaccuracies</div><div class="value">{{ t.inaccuracies }}</div></div>
+</div>
+
+<h2>Accuracy trend (rolling 10-game ACPL)</h2>
+<div class="panel"><div class="chart-box"><canvas id="acplChart"></canvas></div></div>
+
+<h2>Where mistakes happen</h2>
+<div class="panel"><div class="chart-box"><canvas id="phaseChart"></canvas></div>
+  <p class="note">Blunder rate (% of your moves) by game phase — shows whether you go wrong in the opening, middlegame, or endgame.</p>
+</div>
+
+<h2>Worst blunders</h2>
+<div class="panel table-scroll">
+  <table>
+    <thead><tr><th>Date</th><th class="num">Move</th><th>Played</th><th class="num">CP lost</th><th>Phase</th><th>Colour</th><th>Opponent</th><th></th></tr></thead>
+    <tbody>
+    {% for b in t.worst_blunders %}
+      <tr>
+        <td>{{ b.date }}</td>
+        <td class="num">{{ b.move_no }}</td>
+        <td>{{ b.san }}</td>
+        <td class="num">{{ b.cpl }}</td>
+        <td>{{ b.phase }}</td>
+        <td>{{ b.color }}</td>
+        <td>{{ b.opponent }}{% if b.opponent_rating %} <span class="note">({{ b.opponent_rating }})</span>{% endif %}</td>
+        <td><a href="{{ b.url }}" target="_blank" rel="noopener">review</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note">Click “review” to open the game on chess.com at the point it went wrong.</p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+window.initCharts = function () {
+  const trend = REPORT.tactics.acpl_trend;
+  new Chart(document.getElementById('acplChart'), {
+    type: 'line',
+    data: {
+      labels: trend.map(p => p.date),
+      datasets: [
+        { label: 'Rolling ACPL', data: trend.map(p => p.rolling), borderColor: cssVar('--accent'),
+          backgroundColor: 'transparent', tension: .25, pointRadius: 0, borderWidth: 2 },
+        { label: 'Per game', data: trend.map(p => p.acpl), borderColor: cssVar('--border'),
+          backgroundColor: 'transparent', tension: 0, pointRadius: 0, borderWidth: 1 },
+      ],
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      scales: { x: { ticks: { maxTicksLimit: 8 } }, y: { beginAtZero: true, title: { display: true, text: 'centipawns' } } } },
+  });
+
+  const ph = REPORT.tactics.by_phase;
+  const phases = ['opening', 'middlegame', 'endgame'];
+  new Chart(document.getElementById('phaseChart'), {
+    type: 'bar',
+    data: {
+      labels: phases.map(p => p[0].toUpperCase() + p.slice(1)),
+      datasets: [{ label: 'Blunder rate %', data: phases.map(p => ph[p].blunder_rate),
+        backgroundColor: cssVar('--bad') }],
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: '% of your moves' } } } },
+  });
+};
+</script>
+{% endblock %}

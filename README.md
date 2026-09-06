@@ -1,12 +1,63 @@
-# arduino-chess-clock
-Chess countdown timer for the Arduino, using an LCD keypad shield.
+# chess-progress
 
-The LCD keypad handling code is based on [a sample](http://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_%28SKU:_DFR0009%29) on how to use the LCD keypad.
+Pulls my [chess.com](https://www.chess.com/member/rimanish) games, runs a
+**Stockfish** analysis pass over every game, and publishes progress reports to
+**GitHub Pages** — so I can see how I'm doing against my recurring weaknesses.
 
-The countdown timer has three screens.
+**Live site:** https://jamiebull1.github.io/arduino-chess-clock/
 
-1. A timer screen to show the remaining time for each player.
+> The repo keeps its original `arduino-chess-clock` name/URL for now; it can be
+> renamed on GitHub later (that changes the Pages URL).
 
-2. A menu screen for setting the number of minutes available for each player.
+## What it reports
 
-3. A game over screen, displayed when either player runs out of time.
+- **Overview** — rating trend, record, and a top list of your biggest weak spots.
+- **Openings** — win rate and average centipawn loss per opening, as White and
+  Black; openings you keep losing are flagged.
+- **Tactics** — average centipawn loss (ACPL), blunder counts and rate, a rolling
+  accuracy trend, blunder rate by game phase, and your worst blunders with a
+  direct "review" link into the game on chess.com.
+- **Endgames / conversion** — how often winning positions (Stockfish eval ≥ +2)
+  were actually won, games thrown from winning, games saved from losing, results
+  by game length, and losses on time.
+
+## How it works
+
+`fetch → analyse → metrics → render`
+
+1. **fetch** — chess.com public [Published-Data API](https://www.chess.com/news/view/published-data-api)
+   (no auth). Profile, stats and monthly game archives are cached under `data/games/`.
+2. **analyse** — Stockfish evaluates every position; centipawn loss per move is
+   the drop in the mover's own evaluation. Results are cached one file per game
+   (`data/analysis/<uuid>.json`), so re-runs only analyse *new* games.
+3. **metrics** — aggregates everything into `data/report.json`.
+4. **render** — Jinja2 templates → a static site in `_site/` (charts via Chart.js).
+
+Configuration (username, engine budget, thresholds) lives in [`config.yaml`](config.yaml).
+
+## Run locally
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e .
+sudo apt-get install -y stockfish        # or set engine.path in config.yaml
+
+python -m chessprogress build            # fetch + analyse + metrics + render
+# then open _site/index.html
+```
+
+Sub-commands `fetch`, `analyse`, `metrics`, `render` run the stages individually.
+
+## Automated publishing
+
+`.github/workflows/build.yml` runs the pipeline on every push to `master` (and via
+manual **Run workflow**), commits the refreshed `data/` cache, and deploys `_site/`
+to GitHub Pages.
+
+**One-time setup:** in the repo's **Settings → Pages**, set **Source = GitHub
+Actions**. (This can't be done from code.) After that, the first run does the full
+Stockfish backfill (~10–15 min); later runs only analyse new games and are quick.
+
+## Licence
+
+MIT — see [LICENSE](LICENSE).

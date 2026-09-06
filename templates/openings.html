@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block subtitle %} — Openings{% endblock %}
+{% macro opening_table(rows) %}
+<div class="panel table-scroll">
+  <table>
+    <thead><tr><th>Opening</th><th class="num">Games</th><th class="num">W</th><th class="num">L</th><th class="num">D</th><th>Score</th><th class="num">Avg CPL</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <td>{{ r.name }}{% if r.eco %} <span class="note">({{ r.eco }})</span>{% endif %}</td>
+        <td class="num">{{ r.games }}</td>
+        <td class="num">{{ r.w }}</td><td class="num">{{ r.l }}</td><td class="num">{{ r.d }}</td>
+        <td class="score-cell">
+          <span class="score-track"><span class="score-fill" style="width: {{ r.score_pct }}%; background: {{ 'var(--good)' if r.score_pct >= 50 else 'var(--bad)' }};"></span></span>
+          {{ r.score_pct | pct }}
+        </td>
+        <td class="num">{{ r.avg_cpl | num }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+{% block content %}
+<h1>Openings</h1>
+<p class="sub">Win rate and average centipawn loss by opening. Low score + high CPL = a repertoire hole worth studying.</p>
+
+{% if report.openings.weak_spots %}
+<h2>Weak spots</h2>
+<div class="panel table-scroll">
+  <table class="weak">
+    <thead><tr><th>Opening</th><th>Colour</th><th class="num">Games</th><th class="num">Score</th><th class="num">Avg CPL</th></tr></thead>
+    <tbody>
+    {% for w in report.openings.weak_spots %}
+      <tr>
+        <td>{{ w.name }}{% if w.eco %} <span class="note">({{ w.eco }})</span>{% endif %}</td>
+        <td>{{ w.color }}</td><td class="num">{{ w.games }}</td>
+        <td class="num">{{ w.score_pct | pct }}</td><td class="num">{{ w.avg_cpl | num }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note">Openings played ≥3 times, worst first.</p>
+</div>
+{% endif %}
+
+<h2>As White</h2>
+{{ opening_table(report.openings.as_white) }}
+
+<h2>As Black</h2>
+{{ opening_table(report.openings.as_black) }}
+{% endblock %}

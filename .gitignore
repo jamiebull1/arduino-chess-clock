@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Generated static site (rebuilt from data/ on every run)
+/_site/
+
+# OS
+.DS_Store
