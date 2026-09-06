@@ -22,25 +22,26 @@
 </div>
 
 <h2>Worst blunders</h2>
-<div class="panel table-scroll">
-  <table>
-    <thead><tr><th>Date</th><th class="num">Move</th><th>Played</th><th class="num">CP lost</th><th>Phase</th><th>Colour</th><th>Opponent</th><th></th></tr></thead>
-    <tbody>
-    {% for b in t.worst_blunders %}
-      <tr>
-        <td>{{ b.date }}</td>
-        <td class="num">{{ b.move_no }}</td>
-        <td>{{ b.san }}</td>
-        <td class="num">{{ b.cpl }}</td>
-        <td>{{ b.phase }}</td>
-        <td>{{ b.color }}</td>
-        <td>{{ b.opponent }}{% if b.opponent_rating %} <span class="note">({{ b.opponent_rating }})</span>{% endif %}</td>
-        <td><a href="{{ b.url }}" target="_blank" rel="noopener">review</a></td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
-  <p class="note">Click “review” to open the game on chess.com at the point it went wrong.</p>
+<p class="note">Each card shows the position just before the mistake.
+<span class="legend"><span class="swatch played"></span>your move</span>
+<span class="legend"><span class="swatch best"></span>Stockfish's best move</span>.
+Evaluations are from your point of view, in pawns (+ = you better).</p>
+<div class="blunders">
+{% for b in t.worst_blunders %}
+  <div class="blunder-card">
+    <div class="board">{{ b.board_svg | safe }}</div>
+    <div class="detail">
+      <div class="bmeta">Move {{ b.move_no }} · {{ b.phase }} · as {{ b.side }} · {{ b.date }} · vs {{ b.opponent }}{% if b.opponent_rating %} ({{ b.opponent_rating }}){% endif %}</div>
+      {% if b.context %}<div class="line note">…{% for m in b.context %}{{ m }} {% endfor %}<strong>{{ b.played_san }}</strong>?</div>{% endif %}
+      <div class="verdict">
+        <span class="played-move">{{ b.played_san }}</span>
+        <span class="note">dropped the evaluation from <strong>{{ (b.eval_before / 100.0) | round(1) }}</strong> to <strong>{{ (b.eval_after / 100.0) | round(1) }}</strong> (−{{ b.cpl }}cp)</span>
+        {% if b.best_san %}<div class="best-move">Better: <strong>{{ b.best_san }}</strong></div>{% endif %}
+      </div>
+      <a href="{{ b.url }}" target="_blank" rel="noopener">Review this game on chess.com →</a>
+    </div>
+  </div>
+{% endfor %}
 </div>
 {% endblock %}
 

@@ -86,6 +86,24 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .note { color: var(--muted); font-size: 13px; margin-top: 8px; }
 .weak th { color: var(--bad); }
+.strong th { color: var(--good); }
+
+.legend { display: inline-flex; align-items: center; gap: 5px; margin: 0 10px; }
+.swatch { width: 20px; height: 8px; border-radius: 2px; display: inline-block; }
+.swatch.best { background: var(--good); }
+.swatch.played { background: var(--bad); }
+
+.blunders { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; margin-top: 12px; }
+.blunder-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px;
+}
+.blunder-card .board svg { width: 100%; height: auto; max-width: 340px; margin: 0 auto; display: block; border-radius: 6px; }
+.blunder-card .bmeta { font-size: 12px; color: var(--muted); }
+.blunder-card .line { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; }
+.blunder-card .played-move { font-weight: 700; color: var(--bad); }
+.blunder-card .best-move { margin-top: 4px; color: var(--good); }
+.blunder-card a { font-size: 13px; font-weight: 600; }
 
 footer.site { color: var(--muted); font-size: 12px; padding: 24px 0 40px; text-align: center; }
 .callout { border-left: 3px solid var(--warn); background: rgba(183, 121, 31, .08); padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
