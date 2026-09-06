@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}{% block subtitle %}{% endblock %}</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>&#9822;</text></svg>">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="header-inner">
+    <div class="brand">
+      {{ report.profile.name or report.username }}
+      <small>chess.com/@{{ report.username }} · {{ report.overview.primary_time_class }}
+        {% if report.overview.current_rating %}· {{ report.overview.current_rating }}{% endif %}</small>
+    </div>
+    <nav class="tabs">
+      <a href="index.html" class="{{ 'active' if page == 'index' }}">Overview</a>
+      <a href="openings.html" class="{{ 'active' if page == 'openings' }}">Openings</a>
+      <a href="tactics.html" class="{{ 'active' if page == 'tactics' }}">Tactics</a>
+      <a href="endgames.html" class="{{ 'active' if page == 'endgames' }}">Endgames</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+
+<footer class="site">
+  Generated {{ report.generated_at }} · {{ report.overview.total_games }} games analysed ·
+  built with Stockfish + python-chess
+</footer>
+
+<script>
+const REPORT = {{ data_json | safe }};
+function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+window.addEventListener('DOMContentLoaded', () => {
+  if (!window.Chart) { return; }
+  Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+  Chart.defaults.color = cssVar('--muted');
+  Chart.defaults.borderColor = cssVar('--border');
+  Chart.defaults.plugins.legend.labels.boxWidth = 12;
+  if (window.initCharts) { window.initCharts(); }
+});
+</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

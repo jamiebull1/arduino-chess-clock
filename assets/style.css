@@ -1,0 +1,91 @@
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --border: #e3e6ea;
+  --text: #1a1f26;
+  --muted: #626b78;
+  --accent: #2b6cb0;
+  --good: #2f855a;
+  --bad: #c53030;
+  --draw: #8a94a4;
+  --warn: #b7791f;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 1px 3px rgba(16, 24, 40, .1);
+  --radius: 10px;
+  --maxw: 1040px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f141a; --surface: #171d25; --border: #2a333f;
+    --text: #e7ebf0; --muted: #9aa5b3; --accent: #63a4ff;
+    --good: #48bb78; --bad: #f56565; --draw: #718096; --warn: #ecc94b;
+    --shadow: none;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+header.site {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 10;
+}
+.header-inner { display: flex; align-items: center; gap: 16px; padding: 14px 20px; flex-wrap: wrap; }
+.brand { font-weight: 700; font-size: 17px; }
+.brand small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+nav.tabs { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
+nav.tabs a {
+  padding: 6px 12px; border-radius: 8px; color: var(--muted); font-weight: 600; font-size: 14px;
+}
+nav.tabs a.active { background: var(--accent); color: #fff; }
+nav.tabs a:hover { text-decoration: none; color: var(--text); }
+nav.tabs a.active:hover { color: #fff; }
+
+main { padding: 24px 0 48px; }
+h1 { font-size: 22px; margin: 4px 0 2px; }
+h2 { font-size: 16px; margin: 28px 0 12px; letter-spacing: .01em; }
+.sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; box-shadow: var(--shadow);
+}
+.card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+.card .value { font-size: 26px; font-weight: 700; margin-top: 4px; }
+.card .value small { font-size: 14px; font-weight: 500; color: var(--muted); }
+
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--shadow); margin-top: 14px;
+}
+.chart-box { position: relative; height: 300px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table-scroll { overflow-x: auto; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+tbody tr:hover { background: rgba(127, 127, 127, .06); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.pill.win { background: rgba(47, 133, 90, .15); color: var(--good); }
+.pill.loss { background: rgba(197, 48, 48, .15); color: var(--bad); }
+.pill.draw { background: rgba(138, 148, 164, .18); color: var(--draw); }
+
+.bar { display: inline-block; height: 8px; border-radius: 4px; vertical-align: middle; }
+.score-cell { min-width: 130px; }
+.score-track { background: var(--border); border-radius: 4px; height: 8px; width: 90px; display: inline-block; overflow: hidden; vertical-align: middle; margin-right: 8px; }
+.score-fill { height: 8px; display: block; }
+
+.note { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.weak th { color: var(--bad); }
+
+footer.site { color: var(--muted); font-size: 12px; padding: 24px 0 40px; text-align: center; }
+.callout { border-left: 3px solid var(--warn); background: rgba(183, 121, 31, .08); padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }

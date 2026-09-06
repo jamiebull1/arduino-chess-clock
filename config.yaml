@@ -1,0 +1,33 @@
+# chess-progress configuration
+username: rimanish
+
+engine:
+  # Leave path null to auto-detect: $STOCKFISH_PATH, then `stockfish` on PATH,
+  # then /usr/games/stockfish (Ubuntu apt install location).
+  path: null
+  # Per-position search budget. Use movetime_ms OR depth (movetime wins if both set).
+  movetime_ms: 100
+  depth: null
+  threads: 2
+  hash_mb: 128
+  # Evaluations are clamped to +/- this many centipawns before computing loss,
+  # so a single lost-then-resigned position can't dominate the averages.
+  eval_cap_cp: 1500
+
+thresholds:
+  # Centipawn-loss bands for classifying a move.
+  inaccuracy_cp: 50
+  mistake_cp: 100
+  blunder_cp: 300
+  # A position counts as "winning" (for conversion analysis) at +/- this eval.
+  winning_cp: 200
+
+analysis:
+  # Plies up to this move number are treated as "opening" for phase tagging.
+  opening_moves: 10
+
+site:
+  title: "rimanish — chess.com progress"
+  # Number of most-recent games shown in "recent form" and worst-blunder lists.
+  recent_games: 10
+  worst_blunders: 15

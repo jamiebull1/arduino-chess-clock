@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block subtitle %} — Overview{% endblock %}
+{% set o = report.overview %}
+{% set t = report.tactics %}
+{% block content %}
+<h1>Overview</h1>
+<p class="sub">How your {{ o.primary_time_class }} games are trending, and where the biggest weaknesses are.</p>
+
+<div class="cards">
+  <div class="card"><div class="label">Current rating</div><div class="value">{{ o.current_rating | num }} <small>best {{ o.best_rating | num }}</small></div></div>
+  <div class="card"><div class="label">Record (this data)</div><div class="value">{{ o.wins }}<small>W</small> {{ o.losses }}<small>L</small> {{ o.draws }}<small>D</small></div></div>
+  <div class="card"><div class="label">Score</div><div class="value">{{ o.score_pct | pct }}</div></div>
+  <div class="card"><div class="label">Avg centipawn loss</div><div class="value">{{ t.acpl | num }}</div></div>
+  <div class="card"><div class="label">Blunders / game</div><div class="value">{{ t.blunder_rate | num }}</div></div>
+</div>
+
+<h2>Rating trend</h2>
+<div class="panel"><div class="chart-box"><canvas id="ratingChart"></canvas></div></div>
+
+<h2>Biggest weak spots</h2>
+{% if report.openings.weak_spots %}
+<div class="panel table-scroll">
+  <table>
+    <thead><tr><th>Opening</th><th>Colour</th><th class="num">Games</th><th class="num">Score</th><th class="num">Avg CPL</th></tr></thead>
+    <tbody>
+    {% for w in report.openings.weak_spots %}
+      <tr>
+        <td>{{ w.name }}{% if w.eco %} <span class="note">({{ w.eco }})</span>{% endif %}</td>
+        <td>{{ w.color }}</td>
+        <td class="num">{{ w.games }}</td>
+        <td class="num">{{ w.score_pct | pct }}</td>
+        <td class="num">{{ w.avg_cpl | num }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note">Openings you play at least 3 times, worst scoring first. See <a href="openings.html">Openings</a> for the full breakdown.</p>
+</div>
+{% else %}
+<p class="note">Not enough repeated openings yet to flag weak spots.</p>
+{% endif %}
+
+<h2>Recent games</h2>
+<div class="panel table-scroll">
+  <table>
+    <thead><tr><th>Date</th><th>Result</th><th>Colour</th><th>Opponent</th><th class="num">Opp. rating</th><th></th></tr></thead>
+    <tbody>
+    {% for g in o.recent_form %}
+      <tr>
+        <td>{{ g.date }}</td>
+        <td><span class="pill {{ g.outcome }}">{{ g.outcome }}</span> <span class="note">{{ g.result_reason }}</span></td>
+        <td>{{ g.color }}</td>
+        <td>{{ g.opponent }}</td>
+        <td class="num">{{ g.opponent_rating | num }}</td>
+        <td><a href="{{ g.url }}" target="_blank" rel="noopener">view</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+window.initCharts = function () {
+  const trend = REPORT.overview.rating_trend;
+  new Chart(document.getElementById('ratingChart'), {
+    type: 'line',
+    data: {
+      labels: trend.map(p => p.date),
+      datasets: [{
+        label: 'Rating', data: trend.map(p => p.rating),
+        borderColor: cssVar('--accent'), backgroundColor: 'transparent',
+        tension: .25, pointRadius: 0, borderWidth: 2,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { maxTicksLimit: 8 } }, y: { grace: '5%' } },
+    },
+  });
+};
+</script>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block subtitle %} — Endgames{% endblock %}
+{% set e = report.endgames %}
+{% set tm = report.time %}
+{% block content %}
+<h1>Endgames &amp; conversion</h1>
+<p class="sub">Are you turning winning positions into wins, and salvaging lost ones? Based on the Stockfish evaluation crossing ±2 pawns during the game.</p>
+
+<div class="cards">
+  <div class="card"><div class="label">Winning positions converted</div><div class="value">{{ e.conversion_pct | pct }}<br><small>{{ e.winning_converted }} of {{ e.winning_reached }}</small></div></div>
+  <div class="card"><div class="label">Thrown from winning</div><div class="value">{{ e.thrown_from_winning }}</div></div>
+  <div class="card"><div class="label">Saved from losing</div><div class="value">{{ e.save_pct | pct }}<br><small>{{ e.saved_from_losing }} of {{ e.losing_reached }}</small></div></div>
+  <div class="card"><div class="label">Losses on time</div><div class="value">{{ tm.timeout_rate | pct }}<br><small>{{ tm.timeout_losses }} of {{ tm.total_losses }} losses</small></div></div>
+</div>
+
+{% if e.thrown_from_winning and e.winning_reached %}
+<div class="callout">
+  You reached a clearly winning position in <strong>{{ e.winning_reached }}</strong> games but only converted
+  <strong>{{ e.conversion_pct | pct }}</strong> of them — {{ e.thrown_from_winning }} winning games slipped away.
+  Conversion technique is a high-value area to drill.
+</div>
+{% endif %}
+
+<h2>Results by game length</h2>
+<div class="panel"><div class="chart-box"><canvas id="lengthChart"></canvas></div>
+  <p class="note">Short losses usually mean opening/tactical disasters; losses in long games point to endgame technique or time trouble.</p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+window.initCharts = function () {
+  const rows = REPORT.endgames.results_by_length;
+  new Chart(document.getElementById('lengthChart'), {
+    type: 'bar',
+    data: {
+      labels: rows.map(r => r.bucket),
+      datasets: [
+        { label: 'Wins', data: rows.map(r => r.w), backgroundColor: cssVar('--good'), stack: 's' },
+        { label: 'Draws', data: rows.map(r => r.d), backgroundColor: cssVar('--draw'), stack: 's' },
+        { label: 'Losses', data: rows.map(r => r.l), backgroundColor: cssVar('--bad'), stack: 's' },
+      ],
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, title: { display: true, text: 'games' } } } },
+  });
+};
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{
+"avatar": "https://images.chesscomfiles.com/uploads/v1/user/585217378.a58a04c0.200x200o.699ffb2efd54.jpg",
+"player_id": 585217378,
+"@id": "https://api.chess.com/pub/player/rimanish",
+"url": "https://www.chess.com/member/rimanish",
+"name": "Jamie Bull",
+"username": "rimanish",
+"followers": 2,
+"country": "https://api.chess.com/pub/country/GB",
+"last_online": 1788706047,
+"joined": 1786797309,
+"status": "basic",
+"is_streamer": false,
+"verified": false,
+"league": "Bronze",
+"streaming_platforms": []
+}

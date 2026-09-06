@@ -1,0 +1,6 @@
+# Runtime dependencies. `pip install -e .` (via pyproject.toml) is the
+# authoritative install; this file mirrors it for convenience / CI caching.
+chess>=1.11
+requests>=2.31
+Jinja2>=3.1
+PyYAML>=6.0
