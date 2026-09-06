@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block subtitle %} — Games{% endblock %}
+{% block content %}
+<h1>Game review</h1>
+<p class="sub">Step through your highlight games move by move. The balance-of-power
+trace is Stockfish's evaluation from <strong>White's</strong> point of view;
+brilliant (!!), great (!) and blunder (??) moves are marked. A live in-browser
+Stockfish (WASM) re-checks whatever position you land on — click a piece to
+explore your own lines.</p>
+
+{# Cburnett piece definitions, reused by the interactive board (board.js). #}
+<svg width="0" height="0" aria-hidden="true" style="position:absolute" focusable="false">{{ piece_defs | safe }}</svg>
+
+<div id="noGames" class="callout" hidden>
+  No highlight games yet — once a game has a brilliant, great, or blunder it shows up here.
+</div>
+
+<div class="review" id="review" hidden>
+  <div class="review-top">
+    <label class="picker">Game
+      <select id="gamePicker"></select>
+    </label>
+    <div id="gameMeta" class="gmeta"></div>
+  </div>
+
+  <div class="review-grid">
+    <div class="board-col">
+      <div class="board-wrap">
+        <div class="evalbar" title="White win chance"><div class="evalbar-white" id="evalWhite"></div></div>
+        <svg id="board" class="board" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+      <div class="controls">
+        <button id="btnFirst" title="Start">⏮</button>
+        <button id="btnPrev" title="Back (←)">◀</button>
+        <span id="plyLabel" class="ply-label">start</span>
+        <span id="evalNum" class="eval-num">0.0</span>
+        <button id="btnNext" title="Forward (→)">▶</button>
+        <button id="btnLast" title="End">⏭</button>
+        <button id="btnFlip" title="Flip board">⇅</button>
+      </div>
+      <div id="variationBar" class="variation" hidden>
+        Exploring a variation. <button id="btnReset">Back to game</button>
+      </div>
+      <div id="moveVerdict" class="verdict-line"></div>
+    </div>
+
+    <div class="side-col">
+      <div class="panel engine-panel">
+        <div class="panel-head">Live engine <span id="engineState" class="note">loading…</span></div>
+        <div id="engineEval" class="engine-eval">—</div>
+        <div id="enginePv" class="engine-pv note"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">Balance of power</div>
+        <div class="chart-box" style="height:220px"><canvas id="powerChart"></canvas></div>
+        <div class="marker-legend note">
+          <span class="mk mk-brilliant">★</span> brilliant
+          <span class="mk mk-great">▲</span> great
+          <span class="mk mk-blunder">◆</span> blunder
+          · click the trace to jump
+        </div>
+      </div>
+
+      <div class="panel moves-panel">
+        <div class="panel-head">Moves</div>
+        <div id="moveList" class="move-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.1/chess.min.js" defer></script>
+<script src="assets/board.js" defer></script>
+<script src="assets/review.js" defer></script>
+{% endblock %}

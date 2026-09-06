@@ -19,7 +19,7 @@ import chess.pgn
 from .config import Config, resolve_stockfish
 from .parse import Game
 
-_SCHEMA = 4  # bump to invalidate cached analyses when the method changes
+_SCHEMA = 5  # bump to invalidate cached analyses when the method changes
 _CONTEXT_PLIES = 6  # half-moves of run-up shown on a blunder / highlight card
 _VALUES = {chess.PAWN: 100, chess.KNIGHT: 300, chess.BISHOP: 300, chess.ROOK: 500, chess.QUEEN: 900}
 
@@ -213,6 +213,11 @@ def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> 
     player_evals = [e if player_white else -e for e in evals_white]
     acpl = round(cpl_sum / counts["moves"], 1) if counts["moves"] else 0.0
 
+    # Per-ply data for the interactive game viewer. ``evals`` is White-POV
+    # (length n+1, one per position incl. the final one); ``moves_uci`` is the
+    # move list (length n); ``start_fen`` handles any non-standard setup.
+    start_fen = parsed.board().fen() if parsed else chess.STARTING_FEN
+
     return {
         "schema": _SCHEMA,
         "uuid": game.uuid,
@@ -228,6 +233,9 @@ def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> 
         "min_player_eval": min(player_evals) if player_evals else 0,
         "blunders": blunders,
         "highlights": {"brilliant": brilliant, "great": great},
+        "start_fen": start_fen,
+        "moves_uci": [m.uci() for m in node_moves],
+        "evals": evals_white,
     }
 
 
