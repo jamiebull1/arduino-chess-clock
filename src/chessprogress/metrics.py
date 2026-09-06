@@ -226,6 +226,28 @@ def _highlights(cfg: Config, games: list[Game], analyses: dict) -> dict:
     }
 
 
+def _viewer(games: list[Game], analyses: dict) -> dict:
+    """Metadata for the interactive game viewer's picker: one entry per
+    "highlight game" — a game whose analysis has a brilliant, great, or blunder.
+    The heavy per-ply move/eval data lives in per-game files written by render."""
+    out = []
+    for g in games:
+        a = analyses.get(g.uuid)
+        if not a or not a.get("moves_uci"):
+            continue  # needs per-ply data (schema 5+) for the viewer to replay
+        h = a.get("highlights") or {}
+        counts = {
+            "brilliant": len(h.get("brilliant", [])),
+            "great": len(h.get("great", [])),
+            "blunder": len(a.get("blunders", [])),
+        }
+        if not any(counts.values()):
+            continue
+        out.append({**g.as_meta(), "counts": counts})
+    out.sort(key=lambda r: r["date"], reverse=True)
+    return {"games": out}
+
+
 def _time(games: list[Game]) -> dict:
     losses = [g for g in games if g.outcome == "loss"]
     timeouts = [g for g in losses if g.result_reason == "timeout"]
@@ -257,6 +279,7 @@ def build_report(cfg: Config) -> dict:
         "endgames": _endgames(cfg, games, analyses),
         "highlights": _highlights(cfg, games, analyses),
         "time": _time(games),
+        "viewer": _viewer(games, analyses),
     }
 
     cfg.paths.data.mkdir(parents=True, exist_ok=True)
