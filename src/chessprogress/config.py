@@ -29,6 +29,19 @@ _DEFAULTS: dict[str, Any] = {
         "winning_cp": 200,
     },
     "analysis": {"opening_moves": 10},
+    "highlights": {
+        "brilliant_max_cpl": 40,
+        "brilliant_min_eval_after": 100,
+        "brilliant_max_eval_before": 250,
+        "sacrifice_min_cp": 200,
+        "max_per_game": 2,
+        "great_max_cpl": 30,
+        "great_gap_cp": 250,
+        "great_max_eval_before": 300,
+        "great_min_eval_before": -400,
+        "verify_movetime_ms": 300,
+        "line_plies": 6,
+    },
     "site": {
         "title": "chess.com progress",
         "recent_games": 10,
@@ -80,6 +93,10 @@ class Config:
     @property
     def analysis(self) -> dict:
         return self.raw["analysis"]
+
+    @property
+    def highlights(self) -> dict:
+        return self.raw["highlights"]
 
     @property
     def site(self) -> dict:

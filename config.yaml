@@ -26,6 +26,24 @@ analysis:
   # Plies up to this move number are treated as "opening" for phase tagging.
   opening_moves: 10
 
+highlights:
+  # "Brilliant" (!!): a near-best move that sacrifices material yet keeps a good
+  # position, and wasn't played from an already-winning one.
+  brilliant_max_cpl: 40        # move must be within this centipawn loss of best
+  brilliant_min_eval_after: 100  # position must stay at least this good (player POV)
+  brilliant_max_eval_before: 250 # skip sacs when already clearly winning
+  max_per_game: 2                # cap highlights of each type per game (avoid endgame floods)
+  sacrifice_min_cp: 200        # net material given up on the best line (exchange / a piece)
+  # "Great" (!): a near-best, non-obvious only-good-move (not a plain recapture,
+  # not from an already-decided position).
+  great_max_cpl: 30
+  great_gap_cp: 250            # second-best move must be at least this much worse
+  great_max_eval_before: 300   # not already winning
+  great_min_eval_before: -400  # ... but a move that saves a lost game still counts
+  # Candidate re-check (deeper) to cut false positives from the fast first pass.
+  verify_movetime_ms: 300
+  line_plies: 6               # half-moves of the best line walked for sacrifice detection
+
 site:
   title: "rimanish — chess.com progress"
   # Number of most-recent games shown in "recent form" and worst-blunder lists.

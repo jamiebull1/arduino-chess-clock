@@ -30,11 +30,27 @@ def _board_svg(blunder: dict) -> str:
     return chess.svg.board(board=board, arrows=arrows, orientation=orientation,
                            size=340, coordinates=True)
 
+
+def _highlight_svg(item: dict) -> str:
+    """Render a highlight position with a single green arrow on the played move."""
+    try:
+        board = chess.Board(item["fen_before"])
+    except (ValueError, KeyError):
+        return ""
+    arrows = []
+    if item.get("played_uci"):
+        mv = chess.Move.from_uci(item["played_uci"])
+        arrows.append(chess.svg.Arrow(mv.from_square, mv.to_square, color=_BEST_COLOR))
+    orientation = chess.WHITE if item.get("side") == "white" else chess.BLACK
+    return chess.svg.board(board=board, arrows=arrows, orientation=orientation,
+                           size=340, coordinates=True)
+
 _PAGES = {
     "index.html": "index",
     "openings.html": "openings",
     "tactics.html": "tactics",
     "endgames.html": "endgames",
+    "highlights.html": "highlights",
 }
 
 
@@ -68,6 +84,8 @@ def render(cfg: Config, report: dict | None = None) -> None:
     ctx = json.loads(data_json)
     for blunder in ctx["tactics"]["worst_blunders"]:
         blunder["board_svg"] = _board_svg(blunder)
+    for item in ctx["highlights"]["brilliant"] + ctx["highlights"]["great"]:
+        item["board_svg"] = _highlight_svg(item)
 
     env = _env(cfg)
     for template_name, page in _PAGES.items():

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block subtitle %} — Highlights{% endblock %}
+{% set h = report.highlights %}
+{% macro hcard(x, badge, reason) %}
+  <div class="blunder-card">
+    <div class="board">{{ x.board_svg | safe }}</div>
+    <div class="detail">
+      <div class="bmeta"><span class="badge">{{ badge }}</span> Move {{ x.move_no }} · {{ x.phase }} · as {{ x.side }} · {{ x.date }} · vs {{ x.opponent }}{% if x.opponent_rating %} ({{ x.opponent_rating }}){% endif %}</div>
+      {% if x.context %}<div class="line note">…{% for m in x.context %}{{ m }} {% endfor %}<strong class="good-move">{{ x.played_san }}{{ badge }}</strong></div>{% endif %}
+      <div class="verdict">{{ reason }}</div>
+      <a href="{{ x.url }}" target="_blank" rel="noopener">Review this game on chess.com →</a>
+    </div>
+  </div>
+{% endmacro %}
+{% block content %}
+<h1>Highlights</h1>
+<p class="sub">Your best moves, a build-time take on chess.com's Brilliant (!!) and Great (!)
+labels — found by Stockfish, not chess.com, so they won't match exactly.
+<span class="legend"><span class="swatch best"></span>the move</span></p>
+
+<div class="cards">
+  <div class="card"><div class="label">Brilliant moves !!</div><div class="value">{{ h.brilliant_count }}</div></div>
+  <div class="card"><div class="label">Great moves !</div><div class="value">{{ h.great_count }}</div></div>
+</div>
+
+<h2>Brilliant moves <span class="note">!! — sound sacrifices</span></h2>
+{% if h.brilliant %}
+<div class="blunders">
+{% for x in h.brilliant %}
+{{ hcard(x, "!!", "Sacrificed ~%d cp of material and the position held at %.1f (best play). A good sacrifice." % (x.sac_cp, x.eval_after / 100.0)) }}
+{% endfor %}
+</div>
+{% else %}
+<p class="note">No brilliant moves detected yet — a brilliancy needs a sound sacrifice from a not-yet-winning position. Keep looking for them!</p>
+{% endif %}
+
+<h2>Great moves <span class="note">! — the only good move</span></h2>
+{% if h.great %}
+<div class="blunders">
+{% for x in h.great %}
+{{ hcard(x, "!", "The only good move here — the next-best was %d cp worse." % x.gap) }}
+{% endfor %}
+</div>
+{% else %}
+<p class="note">No great moves detected yet — this fires when there's exactly one good move in a balanced position and you find it.</p>
+{% endif %}
+{% endblock %}

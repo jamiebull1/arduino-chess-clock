@@ -198,6 +198,34 @@ def _endgames(cfg: Config, games: list[Game], analyses: dict) -> dict:
     }
 
 
+def _highlights(cfg: Config, games: list[Game], analyses: dict) -> dict:
+    """Aggregate highlights, post-filtering and capping per game so a single
+    winning endgame can't flood 'great' and already-won sacs aren't 'brilliant'."""
+    max_before = cfg.highlights["brilliant_max_eval_before"]
+    per_game = cfg.highlights["max_per_game"]
+    brilliant, great = [], []
+    for g in games:
+        a = analyses.get(g.uuid)
+        if not a:
+            continue
+        h = a.get("highlights") or {}
+        meta = {"date": g.date, "url": g.url, "opponent": g.opponent,
+                "opponent_rating": g.opponent_rating, "outcome": g.outcome}
+        # brilliant: drop those from already-winning positions, keep the biggest sacs
+        b_game = sorted((b for b in h.get("brilliant", []) if b["eval_before"] <= max_before),
+                        key=lambda b: -b["sac_cp"])[:per_game]
+        # great: keep the clearest only-moves (biggest gap)
+        g_game = sorted(h.get("great", []), key=lambda b: -b["gap"])[:per_game]
+        brilliant.extend({**b, **meta} for b in b_game)
+        great.extend({**b, **meta} for b in g_game)
+    brilliant.sort(key=lambda r: r["date"], reverse=True)
+    great.sort(key=lambda r: r["date"], reverse=True)
+    return {
+        "brilliant_count": len(brilliant), "great_count": len(great),
+        "brilliant": brilliant, "great": great,
+    }
+
+
 def _time(games: list[Game]) -> dict:
     losses = [g for g in games if g.outcome == "loss"]
     timeouts = [g for g in losses if g.result_reason == "timeout"]
@@ -227,6 +255,7 @@ def build_report(cfg: Config) -> dict:
         "openings": _openings(games, analyses),
         "tactics": _tactics(cfg, games, analyses),
         "endgames": _endgames(cfg, games, analyses),
+        "highlights": _highlights(cfg, games, analyses),
         "time": _time(games),
     }
 

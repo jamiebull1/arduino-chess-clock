@@ -12,6 +12,7 @@
   <div class="card"><div class="label">Score</div><div class="value">{{ o.score_pct | pct }}</div></div>
   <div class="card"><div class="label">Avg centipawn loss</div><div class="value">{{ t.acpl | num }}</div></div>
   <div class="card"><div class="label">Blunders / game</div><div class="value">{{ t.blunder_rate | num }}</div></div>
+  <div class="card"><div class="label">Brilliant / Great</div><div class="value">{{ report.highlights.brilliant_count }}<small>!!</small> {{ report.highlights.great_count }}<small>!</small></div></div>
 </div>
 
 <h2>Rating trend</h2>

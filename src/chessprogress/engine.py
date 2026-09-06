@@ -19,30 +19,15 @@ import chess.pgn
 from .config import Config, resolve_stockfish
 from .parse import Game
 
-_SCHEMA = 3  # bump to invalidate cached analyses when the method changes
-_CONTEXT_PLIES = 6  # half-moves of run-up shown on a blunder card
+_SCHEMA = 4  # bump to invalidate cached analyses when the method changes
+_CONTEXT_PLIES = 6  # half-moves of run-up shown on a blunder / highlight card
+_VALUES = {chess.PAWN: 100, chess.KNIGHT: 300, chess.BISHOP: 300, chess.ROOK: 500, chess.QUEEN: 900}
 
 
 def _limit(engine_cfg: dict) -> chess.engine.Limit:
     if engine_cfg.get("depth"):
         return chess.engine.Limit(depth=int(engine_cfg["depth"]))
     return chess.engine.Limit(time=int(engine_cfg["movetime_ms"]) / 1000.0)
-
-
-def _analyse_position(engine: chess.engine.SimpleEngine, board: chess.Board,
-                      limit: chess.engine.Limit, cap: int) -> tuple[int, chess.Move | None]:
-    """Return (White-POV centipawns, engine's best move) for a position."""
-    if board.is_game_over():
-        # Terminal node: settle the score without asking the engine.
-        outcome = board.outcome()
-        if outcome is None or outcome.winner is None:
-            return 0, None
-        return (cap if outcome.winner == chess.WHITE else -cap), None
-    info = engine.analyse(board, limit)
-    cp = info["score"].white().score(mate_score=100000)
-    pv = info.get("pv")
-    best = pv[0] if pv else None
-    return max(-cap, min(cap, int(cp))), best
 
 
 def _phase(move_no: int, board: chess.Board, opening_moves: int) -> str:
@@ -55,6 +40,56 @@ def _phase(move_no: int, board: chess.Board, opening_moves: int) -> str:
     return "endgame" if non_pawn <= 6 else "middlegame"
 
 
+def _clamp(cp: int, cap: int) -> int:
+    return max(-cap, min(cap, int(cp)))
+
+
+def _analyse_multi(engine: chess.engine.SimpleEngine, board: chess.Board,
+                   limit: chess.engine.Limit, cap: int, multipv: int
+                   ) -> tuple[int, chess.Move | None, int | None]:
+    """Return (best White-POV cp, best move, second-best White-POV cp or None)."""
+    if board.is_game_over():
+        outcome = board.outcome()
+        if outcome is None or outcome.winner is None:
+            return 0, None, None
+        return (cap if outcome.winner == chess.WHITE else -cap), None, None
+    info = engine.analyse(board, limit, multipv=multipv)
+    lines = info if isinstance(info, list) else [info]
+    best = lines[0]
+    best_cp = _clamp(best["score"].white().score(mate_score=100000), cap)
+    best_mv = (best.get("pv") or [None])[0]
+    second_cp = (_clamp(lines[1]["score"].white().score(mate_score=100000), cap)
+                 if len(lines) > 1 else None)
+    return best_cp, best_mv, second_cp
+
+
+def _eval_pv_deep(engine: chess.engine.SimpleEngine, board: chess.Board,
+                  limit: chess.engine.Limit, cap: int) -> tuple[int, list[chess.Move]]:
+    """Deeper single-line analysis: (White-POV cp, principal variation)."""
+    if board.is_game_over():
+        outcome = board.outcome()
+        term = 0 if (outcome is None or outcome.winner is None) else (cap if outcome.winner == chess.WHITE else -cap)
+        return term, []
+    info = engine.analyse(board, limit)
+    return _clamp(info["score"].white().score(mate_score=100000), cap), list(info.get("pv") or [])
+
+
+def _material(board: chess.Board, player_white: bool) -> int:
+    """Signed material (player minus opponent), in centipawns."""
+    total = 0
+    for piece in board.piece_map().values():
+        value = _VALUES.get(piece.piece_type, 0)
+        total += value if (piece.color == chess.WHITE) == player_white else -value
+    return total
+
+
+def _captured_value(board: chess.Board, move: chess.Move) -> int:
+    if board.is_en_passant(move):
+        return 100
+    piece = board.piece_at(move.to_square)
+    return _VALUES.get(piece.piece_type, 0) if piece else 0
+
+
 def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> dict:
     thresholds = cfg.thresholds
     cap = int(cfg.engine["eval_cap_cp"])
@@ -62,19 +97,32 @@ def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> 
     opening_moves = int(cfg.analysis["opening_moves"])
     player_white = game.color == "white"
 
+    hl = cfg.highlights
+    vlimit = chess.engine.Limit(time=int(hl["verify_movetime_ms"]) / 1000.0)
+
+    def to_player(cp_white: int) -> int:
+        return cp_white if player_white else -cp_white
+
     parsed = chess.pgn.read_game(io.StringIO(game.pgn))
     node_moves = list(parsed.mainline_moves()) if parsed else []
 
+    # Forward pass: evaluate every position once. Player-to-move positions get
+    # multipv=2 so we also learn the second-best eval (for "only good move").
     board = chess.Board()
-    cp, best = _analyse_position(engine, board, limit, cap)
-    evals_white, best_moves = [cp], [best]
+    evals_white: list[int] = []
+    best_moves: list[chess.Move | None] = []
+    second_white: list[int | None] = []
     boards_meta: list[tuple[int, str]] = []  # (move_no, phase) before each ply
-    for move in node_moves:
-        boards_meta.append((board.fullmove_number, _phase(board.fullmove_number, board, opening_moves)))
-        board.push(move)
-        cp, best = _analyse_position(engine, board, limit, cap)
+    n = len(node_moves)
+    for i in range(n + 1):
+        is_player = ((i % 2 == 0) == player_white)
+        cp, best, second = _analyse_multi(engine, board, limit, cap, 2 if (is_player and i < n) else 1)
         evals_white.append(cp)
         best_moves.append(best)
+        second_white.append(second)
+        if i < n:
+            boards_meta.append((board.fullmove_number, _phase(board.fullmove_number, board, opening_moves)))
+            board.push(node_moves[i])
 
     counts = {"blunder": 0, "mistake": 0, "inaccuracy": 0, "moves": 0}
     by_phase: dict[str, dict] = {
@@ -82,6 +130,8 @@ def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> 
     }
     cpl_sum = 0
     blunders: list[dict] = []
+    brilliant: list[dict] = []
+    great: list[dict] = []
 
     replay = chess.Board()
     sans: list[str] = []
@@ -91,36 +141,70 @@ def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> 
         cpl = max(0, (before - after) if mover_white else (after - before))
         san = replay.san(move)
         fen_before = replay.fen()
+        move_no, phase = boards_meta[idx]
 
         if mover_white != player_white:
             replay.push(move)
             sans.append(san)
             continue  # opponent's move
 
-        move_no, phase = boards_meta[idx]
         counts["moves"] += 1
         cpl_sum += cpl
         by_phase[phase]["moves"] += 1
         by_phase[phase]["cpl_sum"] += cpl
+
+        def card(extra: dict) -> dict:
+            return {
+                "ply": idx + 1, "move_no": move_no, "phase": phase, "side": game.color,
+                "cpl": cpl, "eval_before": to_player(before), "eval_after": to_player(after),
+                "fen_before": fen_before, "played_san": san, "played_uci": move.uci(),
+                "context": sans[-_CONTEXT_PLIES:], **extra,
+            }
+
         if cpl >= thresholds["blunder_cp"]:
             counts["blunder"] += 1
             by_phase[phase]["blunder"] += 1
             best_mv = best_moves[idx]
-            blunders.append({
-                "ply": idx + 1, "move_no": move_no, "phase": phase, "side": game.color,
-                "cpl": cpl,
-                "eval_before": before if player_white else -before,
-                "eval_after": after if player_white else -after,
-                "fen_before": fen_before,
-                "played_san": san, "played_uci": move.uci(),
+            blunders.append(card({
                 "best_san": replay.san(best_mv) if best_mv else None,
                 "best_uci": best_mv.uci() if best_mv else None,
-                "context": sans[-_CONTEXT_PLIES:],
-            })
+            }))
         elif cpl >= thresholds["mistake_cp"]:
             counts["mistake"] += 1
         elif cpl >= thresholds["inaccuracy_cp"]:
             counts["inaccuracy"] += 1
+
+        # Highlights (a near-best move can't also be a blunder). Brilliant wins ties.
+        if cpl <= hl["brilliant_max_cpl"] and to_player(before) <= hl["brilliant_max_eval_before"]:
+            after_board = replay.copy(stack=False)
+            after_board.push(move)
+            offers = any(after_board.is_capture(mv) and _captured_value(after_board, mv) >= 300
+                         for mv in after_board.legal_moves)
+            if offers:
+                cp_after_deep, pv = _eval_pv_deep(engine, after_board, vlimit, cap)
+                if to_player(cp_after_deep) >= hl["brilliant_min_eval_after"]:
+                    mat_before = _material(replay, player_white)
+                    min_mat = _material(after_board, player_white)
+                    walk = after_board.copy(stack=False)
+                    for pm in pv[: hl["line_plies"]]:
+                        walk.push(pm)
+                        min_mat = min(min_mat, _material(walk, player_white))
+                    sac_cp = mat_before - min_mat
+                    if sac_cp >= hl["sacrifice_min_cp"]:
+                        brilliant.append(card({"sac_cp": sac_cp, "eval_after": to_player(cp_after_deep)}))
+                        replay.push(move)
+                        sans.append(san)
+                        continue
+
+        recapture = (replay.is_capture(move) and idx > 0
+                     and node_moves[idx - 1].to_square == move.to_square)
+        if (cpl <= hl["great_max_cpl"] and phase != "opening" and not recapture
+                and hl["great_min_eval_before"] <= to_player(before) <= hl["great_max_eval_before"]
+                and replay.legal_moves.count() > 1 and second_white[idx] is not None
+                and to_player(before) - to_player(second_white[idx]) >= hl["great_gap_cp"]):
+            best_d, _, second_d = _analyse_multi(engine, replay, vlimit, cap, 2)
+            if second_d is not None and to_player(best_d) - to_player(second_d) >= hl["great_gap_cp"]:
+                great.append(card({"gap": to_player(best_d) - to_player(second_d)}))
 
         replay.push(move)
         sans.append(san)
@@ -143,6 +227,7 @@ def analyse_game(game: Game, engine: chess.engine.SimpleEngine, cfg: Config) -> 
         "max_player_eval": max(player_evals) if player_evals else 0,
         "min_player_eval": min(player_evals) if player_evals else 0,
         "blunders": blunders,
+        "highlights": {"brilliant": brilliant, "great": great},
     }
 
 

@@ -19,6 +19,9 @@ Pulls my [chess.com](https://www.chess.com/member/rimanish) games, runs a
   accuracy trend, blunder rate by game phase, and **blunder cards**: a board diagram
   of each worst mistake with the move you played (red) vs. Stockfish's better move
   (green), the run-up moves, and a review link into the game.
+- **Highlights** — a build-time take on chess.com's **Brilliant (!!)** and **Great (!)**
+  labels: sound sacrifices, and only-good-move finds, each on a board. Heuristic, so it
+  won't match chess.com's exactly.
 - **Endgames / conversion** — how often winning positions (Stockfish eval ≥ +2)
   were actually won, games thrown from winning, games saved from losing, results
   by game length, and losses on time.
