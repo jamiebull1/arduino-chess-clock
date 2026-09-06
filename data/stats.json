@@ -1,0 +1,36 @@
+{
+"chess_rapid": {
+"last": {
+"rating": 793,
+"date": 1788705968,
+"rd": 32
+},
+"best": {
+"rating": 808,
+"date": 1788525658,
+"game": "https://www.chess.com/game/live/174083676840"
+},
+"record": {
+"win": 78,
+"loss": 56,
+"draw": 5
+}
+},
+"fide": 0,
+"tactics": {
+"highest": {
+"rating": 1396,
+"date": 1788627506
+},
+"lowest": {
+"rating": 400,
+"date": 1786797338
+}
+},
+"puzzle_rush": {
+"best": {
+"total_attempts": 21,
+"score": 18
+}
+}
+}
