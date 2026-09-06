@@ -104,6 +104,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .blunder-card .played-move { font-weight: 700; color: var(--bad); }
 .blunder-card .best-move { margin-top: 4px; color: var(--good); }
 .blunder-card a { font-size: 13px; font-weight: 600; }
+.blunder-card .good-move { color: var(--good); }
+.badge { display: inline-block; font-weight: 800; color: var(--good); background: rgba(47, 133, 90, .14);
+  border-radius: 5px; padding: 0 5px; margin-right: 4px; }
 
 footer.site { color: var(--muted); font-size: 12px; padding: 24px 0 40px; text-align: center; }
 .callout { border-left: 3px solid var(--warn); background: rgba(183, 121, 31, .08); padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
