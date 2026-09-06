@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T19:22:09+00:00",
+  "generated_at": "2026-09-06T19:28:23+00:00",
   "username": "rimanish",
   "profile": {
     "name": "Jamie Bull",
@@ -12,14 +12,14 @@
     "primary_time_class": "rapid",
     "current_rating": 793,
     "best_rating": 808,
-    "stats_wins": 78,
-    "stats_losses": 56,
+    "stats_wins": 80,
+    "stats_losses": 58,
     "stats_draws": 5,
-    "total_games": 143,
-    "wins": 82,
-    "losses": 56,
+    "total_games": 147,
+    "wins": 84,
+    "losses": 58,
     "draws": 5,
-    "score_pct": 59.1,
+    "score_pct": 58.8,
     "rating_trend": [
       {
         "date": "2026-08-15",
@@ -576,9 +576,61 @@
       {
         "date": "2026-09-06",
         "rating": 793
+      },
+      {
+        "date": "2026-09-06",
+        "rating": 785
+      },
+      {
+        "date": "2026-09-06",
+        "rating": 793
+      },
+      {
+        "date": "2026-09-06",
+        "rating": 801
+      },
+      {
+        "date": "2026-09-06",
+        "rating": 793
       }
     ],
     "recent_form": [
+      {
+        "date": "2026-09-06",
+        "outcome": "loss",
+        "opponent": "3MR1i",
+        "opponent_rating": 824,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/174094917134",
+        "result_reason": "checkmated"
+      },
+      {
+        "date": "2026-09-06",
+        "outcome": "win",
+        "opponent": "romeo66412",
+        "opponent_rating": 785,
+        "color": "black",
+        "url": "https://www.chess.com/game/live/174094072666",
+        "result_reason": "win"
+      },
+      {
+        "date": "2026-09-06",
+        "outcome": "win",
+        "opponent": "soloner21",
+        "opponent_rating": 772,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/174091189684",
+        "result_reason": "win"
+      },
+      {
+        "date": "2026-09-06",
+        "outcome": "loss",
+        "opponent": "dojafat123",
+        "opponent_rating": 809,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/174090448578",
+        "result_reason": "checkmated"
+      },
       {
         "date": "2026-09-06",
         "outcome": "win",
@@ -632,47 +684,23 @@
         "color": "black",
         "url": "https://www.chess.com/game/live/174054457950",
         "result_reason": "checkmated"
-      },
-      {
-        "date": "2026-09-05",
-        "outcome": "win",
-        "opponent": "Rockyrookie1",
-        "opponent_rating": 770,
-        "color": "white",
-        "url": "https://www.chess.com/game/live/174054079698",
-        "result_reason": "win"
-      },
-      {
-        "date": "2026-09-05",
-        "outcome": "draw",
-        "opponent": "gordoaranha",
-        "opponent_rating": 774,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174053593938",
-        "result_reason": "insufficient"
-      },
-      {
-        "date": "2026-09-05",
-        "outcome": "loss",
-        "opponent": "888_Kath",
-        "opponent_rating": 946,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174053137708",
-        "result_reason": "resigned"
-      },
-      {
-        "date": "2026-09-05",
-        "outcome": "loss",
-        "opponent": "celadorrr",
-        "opponent_rating": 785,
-        "color": "white",
-        "url": "https://www.chess.com/game/live/174011967872",
-        "result_reason": "resigned"
       }
     ]
   },
   "openings": {
     "as_white": [
+      {
+        "color": "white",
+        "name": "Italian Game",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Italian-Game",
+        "games": 8,
+        "w": 5,
+        "l": 3,
+        "d": 0,
+        "score_pct": 62.5,
+        "avg_cpl": 64.1
+      },
       {
         "color": "white",
         "name": "Kings Pawn Opening Kings Knight Variation",
@@ -684,18 +712,6 @@
         "d": 0,
         "score_pct": 57.1,
         "avg_cpl": 92.8
-      },
-      {
-        "color": "white",
-        "name": "Italian Game",
-        "eco": "C50",
-        "eco_url": "https://www.chess.com/openings/Italian-Game",
-        "games": 6,
-        "w": 4,
-        "l": 2,
-        "d": 0,
-        "score_pct": 66.7,
-        "avg_cpl": 68.2
       },
       {
         "color": "white",
@@ -732,6 +748,18 @@
         "d": 0,
         "score_pct": 33.3,
         "avg_cpl": 150.1
+      },
+      {
+        "color": "white",
+        "name": "Kings Pawn Opening",
+        "eco": "B00",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening",
+        "games": 2,
+        "w": 0,
+        "l": 2,
+        "d": 0,
+        "score_pct": 0.0,
+        "avg_cpl": 99.6
       },
       {
         "color": "white",
@@ -900,18 +928,6 @@
         "d": 0,
         "score_pct": 0.0,
         "avg_cpl": 60.2
-      },
-      {
-        "color": "white",
-        "name": "Kings Pawn Opening",
-        "eco": "B00",
-        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening",
-        "games": 1,
-        "w": 0,
-        "l": 1,
-        "d": 0,
-        "score_pct": 0.0,
-        "avg_cpl": 100.2
       },
       {
         "color": "white",
@@ -1802,6 +1818,18 @@
         "d": 0,
         "score_pct": 100.0,
         "avg_cpl": 43.8
+      },
+      {
+        "color": "black",
+        "name": "Nimzowitsch Larsen Attack Modern Variation",
+        "eco": "A01",
+        "eco_url": "https://www.chess.com/openings/Nimzowitsch-Larsen-Attack-Modern-Variation",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 113.6
       }
     ],
     "weak_spots": [
@@ -1890,31 +1918,19 @@
         "avg_cpl": 92.8
       },
       {
-        "color": "black",
-        "name": "Kings Pawn Opening 1...e5",
-        "eco": "C20",
-        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-1...e5",
-        "games": 7,
-        "w": 4,
-        "l": 2,
-        "d": 1,
-        "score_pct": 64.3,
-        "avg_cpl": 105.6
-      }
-    ],
-    "strong_spots": [
-      {
         "color": "white",
         "name": "Italian Game",
         "eco": "C50",
         "eco_url": "https://www.chess.com/openings/Italian-Game",
-        "games": 6,
-        "w": 4,
-        "l": 2,
+        "games": 8,
+        "w": 5,
+        "l": 3,
         "d": 0,
-        "score_pct": 66.7,
-        "avg_cpl": 68.2
-      },
+        "score_pct": 62.5,
+        "avg_cpl": 64.1
+      }
+    ],
+    "strong_spots": [
       {
         "color": "black",
         "name": "Queens Pawn Opening 1...d5",
@@ -1938,6 +1954,18 @@
         "d": 1,
         "score_pct": 64.3,
         "avg_cpl": 105.6
+      },
+      {
+        "color": "white",
+        "name": "Italian Game",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Italian-Game",
+        "games": 8,
+        "w": 5,
+        "l": 3,
+        "d": 0,
+        "score_pct": 62.5,
+        "avg_cpl": 64.1
       },
       {
         "color": "black",
@@ -2002,34 +2030,34 @@
     ]
   },
   "tactics": {
-    "acpl": 86.9,
-    "total_moves": 3902,
-    "blunders": 300,
-    "mistakes": 542,
-    "inaccuracies": 438,
-    "blunder_rate": 2.1,
-    "analysed_games": 143,
+    "acpl": 86.4,
+    "total_moves": 4071,
+    "blunders": 313,
+    "mistakes": 564,
+    "inaccuracies": 453,
+    "blunder_rate": 2.13,
+    "analysed_games": 147,
     "by_phase": {
       "opening": {
-        "moves": 1390,
-        "cpl_sum": 86893.0,
-        "blunder": 59,
-        "acpl": 62.5,
-        "blunder_rate": 4.2
+        "moves": 1430,
+        "cpl_sum": 90001.0,
+        "blunder": 63,
+        "acpl": 62.9,
+        "blunder_rate": 4.4
       },
       "middlegame": {
-        "moves": 1412,
-        "cpl_sum": 153119.0,
-        "blunder": 148,
-        "acpl": 108.4,
-        "blunder_rate": 10.5
+        "moves": 1477,
+        "cpl_sum": 160472.0,
+        "blunder": 156,
+        "acpl": 108.6,
+        "blunder_rate": 10.6
       },
       "endgame": {
-        "moves": 1100,
-        "cpl_sum": 98922.0,
-        "blunder": 93,
-        "acpl": 89.9,
-        "blunder_rate": 8.5
+        "moves": 1164,
+        "cpl_sum": 101426.0,
+        "blunder": 94,
+        "acpl": 87.1,
+        "blunder_rate": 8.1
       }
     },
     "acpl_trend": [
@@ -2747,6 +2775,26 @@
         "date": "2026-09-06",
         "acpl": 51.4,
         "rolling": 84.8
+      },
+      {
+        "date": "2026-09-06",
+        "acpl": 99.0,
+        "rolling": 73.3
+      },
+      {
+        "date": "2026-09-06",
+        "acpl": 39.1,
+        "rolling": 70.3
+      },
+      {
+        "date": "2026-09-06",
+        "acpl": 113.6,
+        "rolling": 76.2
+      },
+      {
+        "date": "2026-09-06",
+        "acpl": 64.4,
+        "rolling": 71.1
       }
     ],
     "worst_blunders": [
@@ -3143,13 +3191,13 @@
     ]
   },
   "endgames": {
-    "winning_reached": 117,
-    "winning_converted": 78,
+    "winning_reached": 119,
+    "winning_converted": 80,
     "thrown_from_winning": 39,
-    "conversion_pct": 66.7,
-    "losing_reached": 87,
-    "saved_from_losing": 32,
-    "save_pct": 36.8,
+    "conversion_pct": 67.2,
+    "losing_reached": 91,
+    "saved_from_losing": 34,
+    "save_pct": 37.4,
     "results_by_length": [
       {
         "bucket": "\u226420 moves",
@@ -3160,30 +3208,30 @@
       },
       {
         "bucket": "21\u201340",
-        "w": 38,
+        "w": 40,
         "l": 34,
         "d": 1,
-        "games": 73
+        "games": 75
       },
       {
         "bucket": "41\u201360",
         "w": 6,
-        "l": 8,
+        "l": 9,
         "d": 1,
-        "games": 15
+        "games": 16
       },
       {
         "bucket": "60+",
         "w": 0,
-        "l": 2,
+        "l": 3,
         "d": 3,
-        "games": 5
+        "games": 6
       }
     ]
   },
   "highlights": {
     "brilliant_count": 8,
-    "great_count": 17,
+    "great_count": 19,
     "brilliant": [
       {
         "ply": 38,
@@ -3420,6 +3468,58 @@
         "opponent": "denixertt",
         "opponent_rating": 763,
         "outcome": "draw"
+      },
+      {
+        "ply": 57,
+        "move_no": 29,
+        "phase": "endgame",
+        "side": "white",
+        "cpl": 0,
+        "eval_before": -49,
+        "eval_after": -38,
+        "fen_before": "7r/7p/8/p1k2b2/2N5/8/P3B1PP/6K1 w - - 2 29",
+        "played_san": "Nxa5",
+        "played_uci": "c4a5",
+        "context": [
+          "Re2",
+          "Rxe2",
+          "Bxe2",
+          "a5",
+          "Nc4+",
+          "Kc5"
+        ],
+        "gap": 345,
+        "date": "2026-09-06",
+        "url": "https://www.chess.com/game/live/174094917134",
+        "opponent": "3MR1i",
+        "opponent_rating": 824,
+        "outcome": "loss"
+      },
+      {
+        "ply": 67,
+        "move_no": 34,
+        "phase": "endgame",
+        "side": "white",
+        "cpl": 0,
+        "eval_before": -59,
+        "eval_after": -47,
+        "fen_before": "r7/7p/8/8/4b1P1/8/P2kBK1P/2N5 w - - 3 34",
+        "played_san": "Nb3+",
+        "played_uci": "c1b3",
+        "context": [
+          "Nc1",
+          "Kc3",
+          "g4",
+          "Be4",
+          "Kf2",
+          "Kd2"
+        ],
+        "gap": 341,
+        "date": "2026-09-06",
+        "url": "https://www.chess.com/game/live/174094917134",
+        "opponent": "3MR1i",
+        "opponent_rating": 824,
+        "outcome": "loss"
       },
       {
         "ply": 102,
@@ -3841,7 +3941,7 @@
   },
   "time": {
     "timeout_losses": 5,
-    "total_losses": 56,
-    "timeout_rate": 8.9
+    "total_losses": 58,
+    "timeout_rate": 8.6
   }
 }
