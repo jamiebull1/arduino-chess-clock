@@ -299,8 +299,17 @@
       ? "start" : Math.floor((ply - 1) / 2) + 1 + (ply % 2 ? "." : "…") + " " + sans[ply - 1];
     // Highlight the move the commentary is discussing (the one about to be played).
     document.querySelectorAll("#moveList .mv.active").forEach((n) => n.classList.remove("active"));
-    const active = document.querySelector('#moveList .mv[data-ply="' + (ply + 1) + '"]');
-    if (active) { active.classList.add("active"); active.scrollIntoView({ block: "nearest" }); }
+    const box = $("moveList");
+    const active = box.querySelector('.mv[data-ply="' + (ply + 1) + '"]');
+    if (active) {
+      active.classList.add("active");
+      // Keep the active move visible *within the move list only* — scrollIntoView
+      // also scrolls the page, which on the stacked mobile layout jumps the
+      // viewport away from the board. Adjust just this box's scrollTop.
+      const ar = active.getBoundingClientRect(), br = box.getBoundingClientRect();
+      if (ar.top < br.top) box.scrollTop -= (br.top - ar.top);
+      else if (ar.bottom > br.bottom) box.scrollTop += (ar.bottom - br.bottom);
+    }
   }
 
   // --- running commentary ----------------------------------------------------
