@@ -117,8 +117,16 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 .gmeta { font-size: 13px; color: var(--muted); }
 
-.review-grid { display: grid; grid-template-columns: minmax(300px, 420px) 1fr; gap: 20px; align-items: start; }
+.review-grid { display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 24px; align-items: start; }
 @media (max-width: 820px) { .review-grid { grid-template-columns: 1fr; } }
+
+/* Keep the board a comfortable reading size — the controls, commentary and
+   move list should get the space, not the diagram. */
+.board-col { max-width: 340px; }
+/* Let the 1fr track shrink so Chart.js gets a definite width (otherwise the
+   canvas forces the column — and the page — to overflow horizontally). */
+.side-col { min-width: 0; }
+.side-col canvas { max-width: 100%; }
 
 .board-wrap { display: flex; gap: 8px; align-items: stretch; }
 .board { width: 100%; height: auto; display: block; border-radius: 6px; flex: 1; min-width: 0; }
@@ -143,10 +151,26 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .variation button { font: inherit; font-weight: 600; margin-left: 6px; cursor: pointer;
   background: none; border: 1px solid var(--warn); color: var(--warn); border-radius: 6px; padding: 2px 8px; }
 
-.verdict-line { margin-top: 12px; font-size: 13px; min-height: 20px; }
-.vl-brilliant { color: #0d9488; font-weight: 600; }
-.vl-great { color: var(--accent); font-weight: 600; }
-.vl-blunder { color: var(--bad); font-weight: 600; }
+/* Arrow legend under the board. */
+.arrow-legend { display: flex; align-items: center; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+.arrow-legend .al { display: inline-flex; align-items: center; gap: 6px; }
+.arrow-legend .swatch-arrow { width: 22px; height: 0; border-top: 4px solid var(--muted); border-radius: 2px; }
+.arrow-legend .al-played .swatch-arrow { border-top-color: var(--good); }
+.arrow-legend .al-best .swatch-arrow { border-top-color: var(--accent); }
+
+/* Running commentary panel. */
+.commentary { font-size: 14px; line-height: 1.5; min-height: 66px; }
+.commentary .cm-move { font-weight: 700; }
+.commentary .cm-tag { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .04em; border-radius: 5px; padding: 1px 6px; margin-left: 6px; vertical-align: 1px; }
+.commentary .cm-detail { color: var(--muted); margin-top: 6px; }
+.commentary .cm-best { color: var(--accent); font-weight: 600; }
+.cm-good .cm-tag { background: rgba(47,133,90,.15); color: var(--good); }
+.cm-brilliant .cm-tag { background: rgba(13,148,136,.16); color: #0d9488; }
+.cm-great .cm-tag { background: rgba(43,108,176,.15); color: var(--accent); }
+.cm-inaccuracy .cm-tag { background: rgba(183,121,31,.16); color: var(--warn); }
+.cm-mistake .cm-tag { background: rgba(183,121,31,.2); color: var(--warn); }
+.cm-blunder .cm-tag { background: rgba(197,48,48,.15); color: var(--bad); }
 
 .panel-head { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted);
   font-weight: 700; margin-bottom: 8px; }

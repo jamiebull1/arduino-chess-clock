@@ -25,6 +25,38 @@
   const sideToMove = (fen) => fen.split(" ")[1] || "w";
   const toWhite = (cpStm, fen) => (sideToMove(fen) === "w" ? cpStm : -cpStm);
   const uciSquares = (uci) => [uci.slice(0, 2), uci.slice(2, 4)];
+  const isUci = (u) => !!u && /^[a-h][1-8][a-h][1-8]/.test(u);
+  const arrowFromUci = (uci, color) =>
+    isUci(uci) ? { from: uci.slice(0, 2), to: uci.slice(2, 4), color } : null;
+
+  const PIECE_NAME = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
+  const esc = (s) => String(s).replace(/[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  // SAN of a uci move played from `fen` (null if illegal / chess.js missing).
+  function sanOf(uci, fen) {
+    if (!isUci(uci)) return null;
+    try {
+      const g = new Chess(fen);
+      const mv = g.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] || "q" });
+      return mv ? mv.san : null;
+    } catch (_) { return null; }
+  }
+
+  // A short plain-English note on what a move does (check, capture, …), from
+  // the position `fen`. Kept to a single, directly-observable clause.
+  function moveNote(uci, fen) {
+    try {
+      const g = new Chess(fen);
+      const mv = g.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] || "q" });
+      if (!mv) return "";
+      if (mv.san.indexOf("#") !== -1) return " (delivering mate)";
+      if (mv.san.indexOf("+") !== -1) return " (with check)";
+      if ((mv.flags || "").indexOf("p") !== -1) return " (queening)";
+      if (mv.captured) return " (takes the " + (PIECE_NAME[mv.captured] || "piece") + ")";
+    } catch (_) {}
+    return "";
+  }
 
   // --- state -----------------------------------------------------------------
   let board, chart, engine = null, engineReady = false;
@@ -32,11 +64,15 @@
   let ply = 0, orient = "white";
   let explore = null;                 // chess.js instance when in a variation
   let selected = null;                // selected square in variation mode
-  let render = { fen: null, last: [], arrow: null, targets: [] };
+  let bestNow = null;                 // {uci, san} engine's best for the shown position
+  let render = { fen: null, last: [], targets: [], playedArrow: null, bestArrow: null };
+
+  const GREEN = () => cssVar("--good") || "#2f855a";   // move actually played
+  const BLUE = () => cssVar("--accent") || "#2b6cb0";  // engine's best move
 
   // --- board rendering -------------------------------------------------------
   function renderBoard() {
-    const arrows = render.arrow ? [render.arrow] : [];
+    const arrows = [render.playedArrow, render.bestArrow].filter(Boolean);
     board.setPosition(render.fen, {
       arrows,
       highlight: render.last.concat(render.targets),
@@ -74,7 +110,9 @@
       if (mk) a.classList.add("mv-" + mk.type);
       a.textContent = sans[i] + (mk ? ({ brilliant: "!!", great: "!", blunder: "??" }[mk.type]) : "");
       a.dataset.ply = p;
-      a.addEventListener("click", () => goToPly(p));
+      // Land on the position *before* this move so the commentary previews it
+      // (green = the move played, blue = the engine's best here).
+      a.addEventListener("click", () => goToPly(p - 1));
       box.appendChild(a);
     }
   }
@@ -183,12 +221,17 @@
   function goToPly(k) {
     ply = Math.max(0, Math.min(fens.length - 1, k));
     explore = null; selected = null;
+    bestNow = null;
     $("variationBar").hidden = true;
     render.fen = fens[ply];
     render.last = ply > 0 ? uciSquares(blob.moves_uci[ply - 1]) : [];
     render.targets = [];
-    render.arrow = null;
+    // Green arrow: the move actually played next from this position.
+    render.playedArrow = ply < blob.moves_uci.length
+      ? arrowFromUci(blob.moves_uci[ply], GREEN()) : null;
+    render.bestArrow = null;
     renderBoard();
+    applyBest(null, null);   // draws the best-move arrow + commentary (marker best, if any)
     updateReadouts();
     if (chart) chart.update("none");
     analyse(render.fen);
@@ -200,24 +243,110 @@
     $("evalNum").textContent = fmtEval(cpWhite);
     $("plyLabel").textContent = ply === 0
       ? "start" : Math.floor((ply - 1) / 2) + 1 + (ply % 2 ? "." : "…") + " " + sans[ply - 1];
-    // active move in the list
+    // Highlight the move the commentary is discussing (the one about to be played).
     document.querySelectorAll("#moveList .mv.active").forEach((n) => n.classList.remove("active"));
-    const active = document.querySelector('#moveList .mv[data-ply="' + ply + '"]');
+    const active = document.querySelector('#moveList .mv[data-ply="' + (ply + 1) + '"]');
     if (active) { active.classList.add("active"); active.scrollIntoView({ block: "nearest" }); }
-    // verdict for a marked move
-    const mk = markersByPly[ply];
-    const v = $("moveVerdict");
-    if (mk) {
-      v.className = "verdict-line vl-" + mk.type;
-      v.textContent = verdictText(mk);
-    } else { v.className = "verdict-line"; v.textContent = ""; }
   }
 
-  function verdictText(m) {
-    const ev = (m.eval_before / 100).toFixed(1) + " → " + (m.eval_after / 100).toFixed(1) + " (your POV)";
-    if (m.type === "brilliant") return `Brilliant!! ${m.played_san} — sound sacrifice (~${m.sac_cp}cp), held at ${ev}.`;
-    if (m.type === "great") return `Great! ${m.played_san} — the only good move (next best ${m.gap}cp worse).`;
-    return `Blunder?? ${m.played_san} dropped ${ev}${m.best_san ? "; better was " + m.best_san : ""}.`;
+  // --- running commentary ----------------------------------------------------
+  // Record the engine's (or a marker's) best move for the shown position, redraw
+  // the best-move arrow, and refresh the commentary. Called once per position
+  // (marker best) and again when the live engine reports (non-marker positions).
+  function applyBest(uci, san) {
+    if (uci && bestNow && bestNow.uci === uci) return;   // unchanged — avoid redraw churn
+    bestNow = uci ? { uci: uci, san: san } : null;
+
+    // On the main line a blunder marker carries the authoritative best move
+    // (consistent with the eval trace); otherwise trust the live engine.
+    let showUci = uci, showSan = san;
+    if (!explore) {
+      const um = markersByPly[ply + 1];
+      if (um && um.best_uci) { showUci = um.best_uci; showSan = um.best_san; }
+    }
+    const played = explore ? null : blob.moves_uci[ply];
+    render.bestArrow = (isUci(showUci) && showUci !== played)
+      ? arrowFromUci(showUci, BLUE()) : null;
+    board.setArrows([render.playedArrow, render.bestArrow].filter(Boolean));
+    renderCommentary();
+  }
+
+  function renderCommentary() {
+    const box = $("commentary");
+    const n = blob.moves_uci.length;
+
+    if (explore) {
+      box.className = "commentary";
+      box.innerHTML = '<div class="cm-detail">Exploring your own line — the '
+        + '<span class="cm-best">blue arrow</span> is the engine\'s best move here. '
+        + 'Use “Back to game” to return to the running commentary.</div>';
+      return;
+    }
+    if (ply >= n) {   // final position, nothing to play next
+      box.className = "commentary";
+      const res = { win: "You won", loss: "You lost", draw: "Drawn" }[blob.outcome] || "Game over";
+      box.innerHTML = '<div><span class="cm-move">End of game.</span></div>'
+        + '<div class="cm-detail">' + res + '. Final evaluation ' + fmtEval(blob.evals[ply])
+        + ' (White +). Step back through the moves to review the play.</div>';
+      return;
+    }
+
+    const k = ply;
+    const whiteToMove = (k % 2 === 0);
+    const mover = whiteToMove ? "White" : "Black";
+    const playedSan = sans[k];
+    const playedUci = blob.moves_uci[k];
+    const evalBefore = blob.evals[k];        // White POV, best play at this point
+    const evalAfter = blob.evals[k + 1];     // White POV after the played move
+    const lossMover = Math.max(0, whiteToMove ? evalBefore - evalAfter : evalAfter - evalBefore);
+    const moveNo = (Math.floor(k / 2) + 1) + (whiteToMove ? "." : "…");
+    const th = blob.thresholds || { inaccuracy: 50, mistake: 100, blunder: 300 };
+    const um = markersByPly[k + 1];
+
+    // Classify: positive highlights win, then centipawn-loss bands.
+    let cls, tag;
+    if (um && um.type === "brilliant") { cls = "brilliant"; tag = "Brilliant !!"; }
+    else if (um && um.type === "great") { cls = "great"; tag = "Great !"; }
+    else if (lossMover >= th.blunder) { cls = "blunder"; tag = "Blunder"; }
+    else if (lossMover >= th.mistake) { cls = "mistake"; tag = "Mistake"; }
+    else if (lossMover >= th.inaccuracy) { cls = "inaccuracy"; tag = "Inaccuracy"; }
+    else { cls = "good"; tag = "Best move"; }
+
+    const bestUci = (um && um.best_uci) || (bestNow && bestNow.uci) || null;
+    const bestSan = (um && um.best_san) || (bestNow && bestNow.san) || null;
+    const isBest = !bestUci || bestUci === playedUci;
+    if (cls === "good" && !isBest) tag = "Solid";   // fine, but not the engine's pick
+
+    let detail;
+    if (cls === "brilliant") {
+      detail = "A sound sacrifice — the engine agrees it keeps the advantage.";
+    } else if (cls === "great") {
+      detail = "The only move that holds here; the alternatives are clearly worse.";
+    } else if (isBest) {
+      detail = (bestUci ? mover + " plays the engine's top choice." : mover + " plays a strong move.")
+        + " Evaluation " + fmtEval(evalAfter) + " (White +).";
+    } else if (cls === "good") {
+      // A fine move that just isn't the engine's first pick — no real loss.
+      detail = "A solid choice." + (bestSan
+        ? ' The engine narrowly preferred <span class="cm-best">' + esc(bestSan) + "</span>"
+          + moveNote(bestUci, fens[k]) + ", worth about the same (" + fmtEval(evalAfter) + ", White +)."
+        : " Evaluation " + fmtEval(evalAfter) + " (White +).");
+    } else {
+      detail = mover + "’s move loses " + (lossMover / 100).toFixed(1) + ".";
+      if (bestSan) {
+        detail += ' Stronger was <span class="cm-best">' + esc(bestSan) + "</span>"
+          + moveNote(bestUci, fens[k]) + ", holding the eval near " + fmtEval(evalBefore)
+          + " instead of " + fmtEval(evalAfter) + " (White +).";
+      } else {
+        detail += " The engine prefers another move (eval " + fmtEval(evalBefore)
+          + " → " + fmtEval(evalAfter) + ", White +).";
+      }
+    }
+
+    box.className = "commentary cm-" + cls;
+    box.innerHTML = '<div><span class="cm-move">' + moveNo + " " + esc(playedSan)
+      + '</span><span class="cm-tag">' + tag + '</span></div>'
+      + '<div class="cm-detail">' + detail + "</div>";
   }
 
   // --- live engine -----------------------------------------------------------
@@ -244,21 +373,18 @@
     if (line.indexOf("info ") === 0 && line.indexOf(" pv ") !== -1 && line.indexOf(" score ") !== -1) {
       lastInfo = parseInfo(line);
       showEngine();
-      updateEngineArrow(lastInfo.pv[0]);
+      engineBest(lastInfo.pv[0]);
     } else if (line.indexOf("bestmove ") === 0) {
-      updateEngineArrow(line.split(" ")[1]);
+      engineBest(line.split(" ")[1]);
     }
   }
 
-  // Draw the engine's current best move as a green arrow, but only while the
-  // analysed position is still the one on the board (guards against stale hits).
-  function updateEngineArrow(uci) {
-    // ignore "(none)" from terminal positions and anything not a real move
-    if (!uci || !/^[a-h][1-8][a-h][1-8]/.test(uci) || curFen !== render.fen) return;
-    const next = { from: uci.slice(0, 2), to: uci.slice(2, 4), color: cssVar("--good") || "#2f855a" };
-    if (render.arrow && render.arrow.from === next.from && render.arrow.to === next.to) return;
-    render.arrow = next;
-    board.setArrows([next]);
+  // Feed the engine's current best move into the board + commentary, but only
+  // while the analysed position is still the one on the board (guards against
+  // stale hits). A blunder marker's best move takes precedence (see applyBest).
+  function engineBest(uci) {
+    if (!isUci(uci) || curFen !== render.fen) return;   // ignore "(none)" / stale
+    applyBest(uci, sanOf(uci, render.fen));
   }
 
   function parseInfo(line) {
@@ -327,11 +453,14 @@
       return;
     }
     explore = g;
+    bestNow = null;
     render.fen = g.fen();
     render.last = [mv.from, mv.to];
-    render.arrow = null;
+    render.playedArrow = null;   // no "played" move off the main line
+    render.bestArrow = null;     // the live engine fills this in for the new position
     $("variationBar").hidden = false;
     renderBoard();
+    renderCommentary();
     analyse(render.fen);
   }
 

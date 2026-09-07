@@ -2,11 +2,13 @@
 {% block subtitle %} — Games{% endblock %}
 {% block content %}
 <h1>Game review</h1>
-<p class="sub">Step through your highlight games move by move. The balance-of-power
-trace is Stockfish's evaluation from <strong>White's</strong> point of view;
-brilliant (!!), great (!) and blunder (??) moves are marked. A live in-browser
-Stockfish (WASM) re-checks whatever position you land on — click a piece to
-explore your own lines.</p>
+<p class="sub">Step through your highlight games move by move. At each position the
+<span style="color:var(--good);font-weight:600">green arrow</span> is the move actually
+played next and the <span style="color:var(--accent);font-weight:600">blue arrow</span> is
+Stockfish's best move there — the <strong>Commentary</strong> panel explains the difference.
+The balance-of-power trace is the evaluation from <strong>White's</strong> point of view;
+brilliant (!!), great (!) and blunder (??) moves are marked. A live in-browser Stockfish
+(WASM) re-checks whatever position you land on — click a piece to explore your own lines.</p>
 
 {# Cburnett piece definitions, reused by the interactive board (board.js). #}
 <svg width="0" height="0" aria-hidden="true" style="position:absolute" focusable="false">{{ piece_defs | safe }}</svg>
@@ -41,10 +43,18 @@ explore your own lines.</p>
       <div id="variationBar" class="variation" hidden>
         Exploring a variation. <button id="btnReset">Back to game</button>
       </div>
-      <div id="moveVerdict" class="verdict-line"></div>
+      <div class="arrow-legend note">
+        <span class="al al-played"><span class="swatch-arrow"></span> move played</span>
+        <span class="al al-best"><span class="swatch-arrow"></span> engine's best</span>
+      </div>
     </div>
 
     <div class="side-col">
+      <div class="panel commentary-panel">
+        <div class="panel-head">Commentary</div>
+        <div id="commentary" class="commentary"></div>
+      </div>
+
       <div class="panel engine-panel">
         <div class="panel-head">Live engine <span id="engineState" class="note">loading…</span></div>
         <div id="engineEval" class="engine-eval">—</div>

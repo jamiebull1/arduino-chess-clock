@@ -49,7 +49,7 @@ def _markers(analysis: dict) -> list[dict]:
     return out
 
 
-def _write_viewer_games(site, report: dict, analyses: dict) -> int:
+def _write_viewer_games(site, report: dict, analyses: dict, thresholds: dict) -> int:
     """One JSON per highlight game with the per-ply moves/evals/markers the
     interactive viewer replays. Metadata comes from report['viewer']['games']."""
     games_dir = site / "data" / "games"
@@ -66,6 +66,13 @@ def _write_viewer_games(site, report: dict, analyses: dict) -> int:
             "moves_uci": a["moves_uci"],
             "evals": a["evals"],
             "markers": _markers(a),
+            # Centipawn-loss bands so the viewer's running commentary classifies
+            # moves the same way the rest of the site does.
+            "thresholds": {
+                "inaccuracy": thresholds["inaccuracy_cp"],
+                "mistake": thresholds["mistake_cp"],
+                "blunder": thresholds["blunder_cp"],
+            },
         }
         (games_dir / f"{meta['uuid']}.json").write_text(json.dumps(blob))
         written += 1
@@ -148,7 +155,7 @@ def render(cfg: Config, report: dict | None = None) -> None:
 
     # Per-game move/eval data for the interactive viewer (highlight games only).
     analyses = load_analyses(cfg)
-    n_games = _write_viewer_games(site, report, analyses)
+    n_games = _write_viewer_games(site, report, analyses, cfg.thresholds)
     piece_defs = _piece_defs()
 
     env = _env(cfg)
