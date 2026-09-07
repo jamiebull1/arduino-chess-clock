@@ -1,8 +1,8 @@
 {
 "chess_rapid": {
 "last": {
-"rating": 784,
-"date": 1788815898,
+"rating": 792,
+"date": 1788821036,
 "rd": 30
 },
 "best": {
@@ -11,8 +11,8 @@
 "game": "https://www.chess.com/game/live/174136541928"
 },
 "record": {
-"win": 86,
-"loss": 67,
+"win": 88,
+"loss": 68,
 "draw": 6
 }
 },

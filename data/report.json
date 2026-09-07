@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T21:35:23+00:00",
+  "generated_at": "2026-09-07T22:46:55+00:00",
   "username": "rimanish",
   "profile": {
     "name": "Jamie Bull",
@@ -10,16 +10,16 @@
   },
   "overview": {
     "primary_time_class": "rapid",
-    "current_rating": 784,
+    "current_rating": 792,
     "best_rating": 808,
-    "stats_wins": 86,
-    "stats_losses": 67,
+    "stats_wins": 88,
+    "stats_losses": 68,
     "stats_draws": 6,
-    "total_games": 163,
-    "wins": 90,
-    "losses": 67,
+    "total_games": 166,
+    "wins": 92,
+    "losses": 68,
     "draws": 6,
-    "score_pct": 57.1,
+    "score_pct": 57.2,
     "rating_trend": [
       {
         "date": "2026-08-15",
@@ -656,9 +656,48 @@
       {
         "date": "2026-09-07",
         "rating": 784
+      },
+      {
+        "date": "2026-09-07",
+        "rating": 792
+      },
+      {
+        "date": "2026-09-07",
+        "rating": 784
+      },
+      {
+        "date": "2026-09-07",
+        "rating": 792
       }
     ],
     "recent_form": [
+      {
+        "date": "2026-09-07",
+        "outcome": "win",
+        "opponent": "Kirill_Petik",
+        "opponent_rating": 756,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/174149685312",
+        "result_reason": "win"
+      },
+      {
+        "date": "2026-09-07",
+        "outcome": "loss",
+        "opponent": "BigJoshPapa",
+        "opponent_rating": 818,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/174148896216",
+        "result_reason": "resigned"
+      },
+      {
+        "date": "2026-09-07",
+        "outcome": "win",
+        "opponent": "IvnVazquez",
+        "opponent_rating": 788,
+        "color": "black",
+        "url": "https://www.chess.com/game/live/174148559598",
+        "result_reason": "win"
+      },
       {
         "date": "2026-09-07",
         "outcome": "loss",
@@ -721,38 +760,23 @@
         "color": "white",
         "url": "https://www.chess.com/game/live/174133309400",
         "result_reason": "win"
-      },
-      {
-        "date": "2026-09-07",
-        "outcome": "loss",
-        "opponent": "khanbk30",
-        "opponent_rating": 771,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174133253422",
-        "result_reason": "resigned"
-      },
-      {
-        "date": "2026-09-07",
-        "outcome": "draw",
-        "opponent": "Wes-Knapp",
-        "opponent_rating": 787,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174131483522",
-        "result_reason": "repetition"
-      },
-      {
-        "date": "2026-09-07",
-        "outcome": "loss",
-        "opponent": "myself_phanaesh",
-        "opponent_rating": 796,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174131149446",
-        "result_reason": "checkmated"
       }
     ]
   },
   "openings": {
     "as_white": [
+      {
+        "color": "white",
+        "name": "Kings Pawn Opening Kings Knight Variation",
+        "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
+        "games": 8,
+        "w": 4,
+        "l": 4,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 100.5
+      },
       {
         "color": "white",
         "name": "Italian Game",
@@ -764,18 +788,6 @@
         "d": 0,
         "score_pct": 62.5,
         "avg_cpl": 66.3
-      },
-      {
-        "color": "white",
-        "name": "Kings Pawn Opening Kings Knight Variation",
-        "eco": "C40",
-        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
-        "games": 7,
-        "w": 4,
-        "l": 3,
-        "d": 0,
-        "score_pct": 57.1,
-        "avg_cpl": 94.7
       },
       {
         "color": "white",
@@ -848,6 +860,18 @@
         "d": 0,
         "score_pct": 50.0,
         "avg_cpl": 104.6
+      },
+      {
+        "color": "white",
+        "name": "Three Knights Opening 3...d6 4.d4 Bg4",
+        "eco": "C46",
+        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...d6-4.d4-Bg4",
+        "games": 2,
+        "w": 1,
+        "l": 1,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 123.0
       },
       {
         "color": "white",
@@ -1004,18 +1028,6 @@
         "d": 0,
         "score_pct": 0.0,
         "avg_cpl": 60.5
-      },
-      {
-        "color": "white",
-        "name": "Three Knights Opening 3...d6 4.d4 Bg4",
-        "eco": "C46",
-        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...d6-4.d4-Bg4",
-        "games": 1,
-        "w": 0,
-        "l": 1,
-        "d": 0,
-        "score_pct": 0.0,
-        "avg_cpl": 207.4
       },
       {
         "color": "white",
@@ -2038,6 +2050,18 @@
         "d": 0,
         "score_pct": 100.0,
         "avg_cpl": 51.9
+      },
+      {
+        "color": "black",
+        "name": "Nimzowitsch Larsen Attack Modern Variation 2.Bb2 Nc6 3.e3 d6 4.Nf3",
+        "eco": "A01",
+        "eco_url": "https://www.chess.com/openings/Nimzowitsch-Larsen-Attack-Modern-Variation-2.Bb2-Nc6-3.e3-d6-4.Nf3",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 92.7
       }
     ],
     "weak_spots": [
@@ -2091,6 +2115,18 @@
       },
       {
         "color": "white",
+        "name": "Kings Pawn Opening Kings Knight Variation",
+        "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
+        "games": 8,
+        "w": 4,
+        "l": 4,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 100.5
+      },
+      {
+        "color": "white",
         "name": "Four Knights Game Italian Variation",
         "eco": "C47",
         "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
@@ -2100,18 +2136,6 @@
         "d": 1,
         "score_pct": 50.0,
         "avg_cpl": 150.7
-      },
-      {
-        "color": "white",
-        "name": "Kings Pawn Opening Kings Knight Variation",
-        "eco": "C40",
-        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
-        "games": 7,
-        "w": 4,
-        "l": 3,
-        "d": 0,
-        "score_pct": 57.1,
-        "avg_cpl": 94.7
       },
       {
         "color": "white",
@@ -2200,18 +2224,6 @@
         "avg_cpl": 94.5
       },
       {
-        "color": "white",
-        "name": "Kings Pawn Opening Kings Knight Variation",
-        "eco": "C40",
-        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
-        "games": 7,
-        "w": 4,
-        "l": 3,
-        "d": 0,
-        "score_pct": 57.1,
-        "avg_cpl": 94.7
-      },
-      {
         "color": "black",
         "name": "Petrovs Defense Classical Variation",
         "eco": "C42",
@@ -2222,6 +2234,18 @@
         "d": 0,
         "score_pct": 50.0,
         "avg_cpl": 99.9
+      },
+      {
+        "color": "white",
+        "name": "Kings Pawn Opening Kings Knight Variation",
+        "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
+        "games": 8,
+        "w": 4,
+        "l": 4,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 100.5
       },
       {
         "color": "white",
@@ -2238,34 +2262,34 @@
     ]
   },
   "tactics": {
-    "acpl": 88.7,
-    "total_moves": 4521,
-    "blunders": 356,
-    "mistakes": 615,
-    "inaccuracies": 527,
-    "blunder_rate": 2.18,
-    "analysed_games": 163,
+    "acpl": 88.8,
+    "total_moves": 4593,
+    "blunders": 361,
+    "mistakes": 621,
+    "inaccuracies": 540,
+    "blunder_rate": 2.17,
+    "analysed_games": 166,
     "by_phase": {
       "opening": {
-        "moves": 1585,
-        "cpl_sum": 98941.0,
+        "moves": 1615,
+        "cpl_sum": 100093.0,
         "blunder": 74,
-        "acpl": 62.4,
-        "blunder_rate": 4.7
+        "acpl": 62.0,
+        "blunder_rate": 4.6
       },
       "middlegame": {
-        "moves": 1641,
-        "cpl_sum": 183757.0,
-        "blunder": 170,
-        "acpl": 112.0,
+        "moves": 1671,
+        "cpl_sum": 187256.0,
+        "blunder": 173,
+        "acpl": 112.1,
         "blunder_rate": 10.4
       },
       "endgame": {
-        "moves": 1295,
-        "cpl_sum": 118305.0,
-        "blunder": 112,
-        "acpl": 91.4,
-        "blunder_rate": 8.6
+        "moves": 1307,
+        "cpl_sum": 120568.0,
+        "blunder": 114,
+        "acpl": 92.2,
+        "blunder_rate": 8.7
       }
     },
     "acpl_trend": [
@@ -3083,6 +3107,21 @@
         "date": "2026-09-07",
         "acpl": 284.6,
         "rolling": 133.6
+      },
+      {
+        "date": "2026-09-07",
+        "acpl": 92.7,
+        "rolling": 122.7
+      },
+      {
+        "date": "2026-09-07",
+        "acpl": 141.0,
+        "rolling": 125.3
+      },
+      {
+        "date": "2026-09-07",
+        "acpl": 38.6,
+        "rolling": 106.8
       }
     ],
     "worst_blunders": [
@@ -3479,27 +3518,27 @@
     ]
   },
   "endgames": {
-    "winning_reached": 133,
-    "winning_converted": 86,
-    "thrown_from_winning": 47,
+    "winning_reached": 136,
+    "winning_converted": 88,
+    "thrown_from_winning": 48,
     "conversion_pct": 64.7,
-    "losing_reached": 103,
+    "losing_reached": 104,
     "saved_from_losing": 37,
-    "save_pct": 35.9,
+    "save_pct": 35.6,
     "results_by_length": [
       {
         "bucket": "\u226420 moves",
-        "w": 41,
+        "w": 42,
         "l": 15,
         "d": 0,
-        "games": 56
+        "games": 57
       },
       {
         "bucket": "21\u201340",
-        "w": 43,
-        "l": 38,
+        "w": 44,
+        "l": 39,
         "d": 1,
-        "games": 82
+        "games": 84
       },
       {
         "bucket": "41\u201360",
@@ -3518,7 +3557,7 @@
     ]
   },
   "highlights": {
-    "brilliant_count": 7,
+    "brilliant_count": 8,
     "great_count": 18,
     "brilliant": [
       {
@@ -3546,6 +3585,32 @@
         "opponent": "MayoMiravalles",
         "opponent_rating": 763,
         "outcome": "win"
+      },
+      {
+        "ply": 17,
+        "move_no": 9,
+        "phase": "opening",
+        "side": "white",
+        "cpl": 8,
+        "eval_before": 175,
+        "eval_after": 147,
+        "fen_before": "r1b1k2r/pppp1ppp/1b5n/4q3/4P3/2N1B3/PPP1BPPP/R2QK2R w KQkq - 0 9",
+        "played_san": "Qd2",
+        "played_uci": "d1d2",
+        "context": [
+          "Be2",
+          "Nc6",
+          "Be3",
+          "Nxe5",
+          "dxe5",
+          "Qxe5"
+        ],
+        "sac_cp": 300,
+        "date": "2026-09-07",
+        "url": "https://www.chess.com/game/live/174148896216",
+        "opponent": "BigJoshPapa",
+        "opponent_rating": 818,
+        "outcome": "loss"
       },
       {
         "ply": 13,
@@ -4177,8 +4242,8 @@
   },
   "time": {
     "timeout_losses": 7,
-    "total_losses": 67,
-    "timeout_rate": 10.4
+    "total_losses": 68,
+    "timeout_rate": 10.3
   },
   "viewer": {
     "games": [
@@ -4390,6 +4455,48 @@
           "brilliant": 0,
           "great": 0,
           "blunder": 4
+        }
+      },
+      {
+        "uuid": "5cec5a0b-ab07-11f1-8cd6-ece1e601000f",
+        "url": "https://www.chess.com/game/live/174148559598",
+        "date": "2026-09-07",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 792,
+        "opponent": "IvnVazquez",
+        "opponent_rating": 788,
+        "eco": "A01",
+        "opening": "Nimzowitsch Larsen Attack Modern Variation 2.Bb2 Nc6 3.e3 d6 4.Nf3",
+        "ply_count": 62,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 2
+        }
+      },
+      {
+        "uuid": "f92eaea8-ab08-11f1-a51b-ebd42201000f",
+        "url": "https://www.chess.com/game/live/174148896216",
+        "date": "2026-09-07",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "resigned",
+        "player_rating": 784,
+        "opponent": "BigJoshPapa",
+        "opponent_rating": 818,
+        "eco": "C40",
+        "opening": "Kings Pawn Opening Kings Knight Variation",
+        "ply_count": 48,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 1,
+          "great": 0,
+          "blunder": 3
         }
       },
       {
