@@ -112,11 +112,9 @@
       icons += "</span>";
     }
     icons += "</span>";
-    const pts = sumVals(list);
-    const ptsHtml = pts ? '<span class="cap-pts">' + pts + " pts</span>" : "";
     const ahead = (net > 0 && capturer === "w") || (net < 0 && capturer === "b");
     const advHtml = ahead ? '<span class="cap-adv">+' + Math.abs(net) + "</span>" : "";
-    return icons + ptsHtml + advHtml;
+    return icons + advHtml;
   }
 
   function renderCaptured() {
