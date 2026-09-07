@@ -27,10 +27,12 @@ brilliant (!!), great (!) and blunder (??) moves are marked. A live in-browser S
 
   <div class="review-grid">
     <div class="board-col">
+      <div class="captured" id="capTop" aria-label="pieces captured by the top player"></div>
       <div class="board-wrap">
         <div class="evalbar" title="White win chance"><div class="evalbar-white" id="evalWhite"></div></div>
         <svg id="board" class="board" xmlns="http://www.w3.org/2000/svg"></svg>
       </div>
+      <div class="captured" id="capBottom" aria-label="pieces captured by the bottom player"></div>
       <div class="controls">
         <button id="btnFirst" title="Start">⏮</button>
         <button id="btnPrev" title="Back (←)">◀</button>

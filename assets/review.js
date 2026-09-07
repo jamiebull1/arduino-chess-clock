@@ -30,6 +30,8 @@
     isUci(uci) ? { from: uci.slice(0, 2), to: uci.slice(2, 4), color } : null;
 
   const PIECE_NAME = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
+  const PIECE_VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9 };
+  const sumVals = (list) => list.reduce((s, t) => s + (PIECE_VALUE[t] || 0), 0);
   const esc = (s) => String(s).replace(/[&<>"']/g,
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -60,7 +62,7 @@
 
   // --- state -----------------------------------------------------------------
   let board, chart, engine = null, engineReady = false;
-  let blob = null, fens = [], sans = [], markersByPly = {};
+  let blob = null, fens = [], sans = [], markersByPly = {}, caps = [];
   let ply = 0, orient = "white";
   let explore = null;                 // chess.js instance when in a variation
   let selected = null;                // selected square in variation mode
@@ -79,15 +81,68 @@
     });
   }
 
+  // --- captured material -----------------------------------------------------
+  // Pieces each side has captured up to the shown position (main line or a
+  // variation), newest exploration captures folded onto the main-line total.
+  function capturedNow() {
+    const base = caps[ply] || { w: [], b: [] };
+    if (!explore) return { w: base.w, b: base.b };
+    const w = base.w.slice(), b = base.b.slice();
+    for (const mv of explore.history({ verbose: true })) {
+      if (mv.captured) (mv.color === "w" ? w : b).push(mv.captured);
+    }
+    return { w, b };
+  }
+
+  // One side's tray: overlapped mini-icons of the (opponent-coloured) pieces it
+  // captured, that side's captured points, and a +N badge if it's ahead.
+  function trayHtml(capturer, cap, net) {
+    const list = cap[capturer];
+    const oppColor = capturer === "w" ? "black" : "white";
+    const counts = {};
+    for (const t of list) counts[t] = (counts[t] || 0) + 1;
+    let icons = '<span class="cap-pcs">';
+    for (const t of ["q", "r", "b", "n", "p"]) {
+      if (!counts[t]) continue;
+      icons += '<span class="cap-grp">';
+      for (let i = 0; i < counts[t]; i++) {
+        icons += '<svg class="cap-pc" viewBox="0 0 45 45" aria-hidden="true">'
+          + '<use href="#' + oppColor + "-" + PIECE_NAME[t] + '"/></svg>';
+      }
+      icons += "</span>";
+    }
+    icons += "</span>";
+    const pts = sumVals(list);
+    const ptsHtml = pts ? '<span class="cap-pts">' + pts + " pts</span>" : "";
+    const ahead = (net > 0 && capturer === "w") || (net < 0 && capturer === "b");
+    const advHtml = ahead ? '<span class="cap-adv">+' + Math.abs(net) + "</span>" : "";
+    return icons + ptsHtml + advHtml;
+  }
+
+  function renderCaptured() {
+    if (!caps.length) return;
+    const cap = capturedNow();
+    const net = sumVals(cap.w) - sumVals(cap.b);   // white minus black
+    const bottom = orient === "white" ? "w" : "b"; // side shown at the board foot
+    const top = bottom === "w" ? "b" : "w";
+    $("capTop").innerHTML = trayHtml(top, cap, net);
+    $("capBottom").innerHTML = trayHtml(bottom, cap, net);
+  }
+
   // --- game loading ----------------------------------------------------------
   function precompute() {
     fens = [blob.start_fen];
     sans = [];
+    caps = [{ w: [], b: [] }];   // cumulative pieces captured by each side, per ply
     const g = new Chess(blob.start_fen);
     for (const uci of blob.moves_uci) {
       const mv = g.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] || "q" });
       sans.push(mv ? mv.san : uci);
       fens.push(g.fen());
+      const prev = caps[caps.length - 1];
+      const cur = { w: prev.w.slice(), b: prev.b.slice() };
+      if (mv && mv.captured) cur[mv.color].push(mv.captured);   // mv.color = the capturer
+      caps.push(cur);
     }
     markersByPly = {};
     for (const m of blob.markers) markersByPly[m.ply] = m;
@@ -231,6 +286,7 @@
       ? arrowFromUci(blob.moves_uci[ply], GREEN()) : null;
     render.bestArrow = null;
     renderBoard();
+    renderCaptured();
     applyBest(null, null);   // draws the best-move arrow + commentary (marker best, if any)
     updateReadouts();
     if (chart) chart.update("none");
@@ -460,6 +516,7 @@
     render.bestArrow = null;     // the live engine fills this in for the new position
     $("variationBar").hidden = false;
     renderBoard();
+    renderCaptured();
     renderCommentary();
     analyse(render.fen);
   }
@@ -496,7 +553,7 @@
     $("btnLast").addEventListener("click", () => goToPly(fens.length - 1));
     $("btnFlip").addEventListener("click", () => {
       orient = orient === "white" ? "black" : "white";
-      board.setOrientation(orient); renderBoard();
+      board.setOrientation(orient); renderBoard(); renderCaptured();
     });
     $("btnReset").addEventListener("click", () => goToPly(ply));
     document.addEventListener("keydown", (e) => {
