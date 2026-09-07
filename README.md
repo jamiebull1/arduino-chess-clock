@@ -63,6 +63,29 @@ to GitHub Pages.
 Actions**. (This can't be done from code.) After that, the first run does the full
 Stockfish backfill (~10–15 min); later runs only analyse new games and are quick.
 
+## Refreshing the reports
+
+The reports update themselves from a build; you don't edit anything by hand. Pick whichever
+is convenient:
+
+1. **Push anything to `master`** (the usual way). The Actions workflow runs the full
+   pipeline — it fetches your latest games from the chess.com API, engine-analyses only the
+   *new* ones (the per-game cache under `data/analysis/` means old games are skipped), then
+   rebuilds and redeploys the site. It also commits the refreshed `data/` back to the repo
+   with a `[skip ci]` message so the new games are cached for next time. Even a trivial commit
+   (e.g. a README tweak) triggers a full data refresh.
+2. **Run it manually, no code change:** GitHub → **Actions → "Build chess progress report"
+   → Run workflow** (this is the `workflow_dispatch` trigger). Same pipeline, on demand.
+3. **Locally:** `python -m chessprogress build`, then commit `data/` and push. Handy if you
+   want to eyeball `_site/` before it goes live.
+
+Because only new games are analysed, a refresh is fast (seconds to a couple of minutes) once
+the initial backfill is cached. The footer of every page shows the `generated_at` timestamp
+of the data it was built from.
+
+> Want it fully hands-off? Add a `schedule:` (cron) trigger to `.github/workflows/build.yml`
+> — e.g. a weekly run — and it will refresh without any push.
+
 ## Licence
 
 Copyright © 2026 Jamie Bull.
