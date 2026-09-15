@@ -3,8 +3,9 @@ name: Build chess progress report
 on:
   push:
     branches: [master]
-    paths-ignore:
-      - "data/**"        # the data commit this workflow makes must not retrigger it
+    # The data commit this workflow makes carries "[skip ci]", which already
+    # prevents a retrigger loop — so data pushes (e.g. a manual refresh) still
+    # deploy, rather than being ignored here.
   workflow_dispatch:
 
 permissions:
