@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T21:30:52+00:00",
+  "generated_at": "2026-09-18T22:09:14+00:00",
   "username": "rimanish",
   "profile": {
     "name": "Jamie Bull",
@@ -10,16 +10,16 @@
   },
   "overview": {
     "primary_time_class": "rapid",
-    "current_rating": 819,
+    "current_rating": 803,
     "best_rating": 843,
-    "stats_wins": 123,
-    "stats_losses": 101,
-    "stats_draws": 8,
-    "total_games": 236,
-    "wins": 127,
-    "losses": 101,
-    "draws": 8,
-    "score_pct": 55.5,
+    "stats_wins": 130,
+    "stats_losses": 110,
+    "stats_draws": 9,
+    "total_games": 255,
+    "wins": 136,
+    "losses": 110,
+    "draws": 9,
+    "score_pct": 55.1,
     "rating_trend": [
       {
         "date": "2026-08-15",
@@ -948,98 +948,166 @@
       {
         "date": "2026-09-15",
         "rating": 819
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 803
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 803
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 819
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 819
+      },
+      {
+        "date": "2026-09-16",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-17",
+        "rating": 819
+      },
+      {
+        "date": "2026-09-17",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-18",
+        "rating": 803
+      },
+      {
+        "date": "2026-09-18",
+        "rating": 803
+      },
+      {
+        "date": "2026-09-18",
+        "rating": 795
+      },
+      {
+        "date": "2026-09-18",
+        "rating": 803
+      },
+      {
+        "date": "2026-09-18",
+        "rating": 811
+      },
+      {
+        "date": "2026-09-18",
+        "rating": 803
       }
     ],
     "recent_form": [
       {
-        "date": "2026-09-15",
-        "outcome": "win",
-        "opponent": "Alekinsky",
-        "opponent_rating": 803,
+        "date": "2026-09-18",
+        "outcome": "loss",
+        "opponent": "matse_ing",
+        "opponent_rating": 832,
         "color": "white",
-        "url": "https://www.chess.com/game/live/174529586088",
+        "url": "https://www.chess.com/game/live/184018975430",
+        "result_reason": "checkmated"
+      },
+      {
+        "date": "2026-09-18",
+        "outcome": "win",
+        "opponent": "KL541",
+        "opponent_rating": 813,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/184015449728",
         "result_reason": "win"
       },
       {
-        "date": "2026-09-15",
-        "outcome": "loss",
-        "opponent": "Sunnynatureboy",
-        "opponent_rating": 825,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174525533602",
-        "result_reason": "checkmated"
-      },
-      {
-        "date": "2026-09-15",
-        "outcome": "loss",
-        "opponent": "shanerpm",
-        "opponent_rating": 814,
+        "date": "2026-09-18",
+        "outcome": "win",
+        "opponent": "kikhosroghanbari",
+        "opponent_rating": 776,
         "color": "white",
-        "url": "https://www.chess.com/game/live/174519944082",
+        "url": "https://www.chess.com/game/live/184014917126",
+        "result_reason": "win"
+      },
+      {
+        "date": "2026-09-18",
+        "outcome": "loss",
+        "opponent": "Addestthebaddest",
+        "opponent_rating": 806,
+        "color": "black",
+        "url": "https://www.chess.com/game/live/184012038904",
         "result_reason": "checkmated"
       },
       {
-        "date": "2026-09-15",
-        "outcome": "loss",
-        "opponent": "petrushkaI",
-        "opponent_rating": 853,
+        "date": "2026-09-18",
+        "outcome": "draw",
+        "opponent": "ammar-hr",
+        "opponent_rating": 799,
         "color": "black",
-        "url": "https://www.chess.com/game/live/174515350856",
+        "url": "https://www.chess.com/game/live/184010557384",
+        "result_reason": "repetition"
+      },
+      {
+        "date": "2026-09-18",
+        "outcome": "loss",
+        "opponent": "karateodor",
+        "opponent_rating": 810,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/184007756348",
+        "result_reason": "checkmated"
+      },
+      {
+        "date": "2026-09-17",
+        "outcome": "win",
+        "opponent": "Coach-David",
+        "opponent_rating": 900,
+        "color": "white",
+        "url": "https://www.chess.com/game/daily/242968666",
+        "result_reason": "win"
+      },
+      {
+        "date": "2026-09-17",
+        "outcome": "win",
+        "opponent": "Coach-David",
+        "opponent_rating": 600,
+        "color": "white",
+        "url": "https://www.chess.com/game/daily/242919298",
+        "result_reason": "win"
+      },
+      {
+        "date": "2026-09-17",
+        "outcome": "loss",
+        "opponent": "Aasdfgghjk",
+        "opponent_rating": 820,
+        "color": "white",
+        "url": "https://www.chess.com/game/live/183979248214",
         "result_reason": "resigned"
       },
       {
-        "date": "2026-09-15",
+        "date": "2026-09-17",
         "outcome": "win",
-        "opponent": "Aditya123045456",
-        "opponent_rating": 828,
+        "opponent": "Ruben3ninho",
+        "opponent_rating": 805,
         "color": "white",
-        "url": "https://www.chess.com/game/live/174514602720",
+        "url": "https://www.chess.com/game/live/183964095194",
         "result_reason": "win"
-      },
-      {
-        "date": "2026-09-15",
-        "outcome": "loss",
-        "opponent": "MunichChess25",
-        "opponent_rating": 859,
-        "color": "white",
-        "url": "https://www.chess.com/game/live/174512963776",
-        "result_reason": "abandoned"
-      },
-      {
-        "date": "2026-09-15",
-        "outcome": "loss",
-        "opponent": "Zvizdan2",
-        "opponent_rating": 840,
-        "color": "white",
-        "url": "https://www.chess.com/game/live/174511849572",
-        "result_reason": "checkmated"
-      },
-      {
-        "date": "2026-09-15",
-        "outcome": "win",
-        "opponent": "abdallahosman912",
-        "opponent_rating": 824,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174508394868",
-        "result_reason": "win"
-      },
-      {
-        "date": "2026-09-15",
-        "outcome": "win",
-        "opponent": "YvesMeili",
-        "opponent_rating": 828,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174504636462",
-        "result_reason": "win"
-      },
-      {
-        "date": "2026-09-14",
-        "outcome": "loss",
-        "opponent": "Ryu_Sung",
-        "opponent_rating": 859,
-        "color": "black",
-        "url": "https://www.chess.com/game/live/174487954282",
-        "result_reason": "checkmated"
       }
     ]
   },
@@ -1050,12 +1118,12 @@
         "name": "Kings Pawn Opening Kings Knight Variation",
         "eco": "C40",
         "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
-        "games": 12,
+        "games": 13,
         "w": 6,
-        "l": 5,
+        "l": 6,
         "d": 1,
-        "score_pct": 54.2,
-        "avg_cpl": 105.9
+        "score_pct": 50.0,
+        "avg_cpl": 106.1
       },
       {
         "color": "white",
@@ -1074,24 +1142,24 @@
         "name": "Four Knights Game Italian Variation",
         "eco": "C47",
         "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
-        "games": 10,
-        "w": 6,
+        "games": 11,
+        "w": 7,
         "l": 3,
         "d": 1,
-        "score_pct": 65.0,
-        "avg_cpl": 102.3
+        "score_pct": 68.2,
+        "avg_cpl": 97.5
       },
       {
         "color": "white",
         "name": "French Defense Knight Variation",
         "eco": "C00",
         "eco_url": "https://www.chess.com/openings/French-Defense-Knight-Variation",
-        "games": 5,
+        "games": 6,
         "w": 3,
-        "l": 2,
+        "l": 3,
         "d": 0,
-        "score_pct": 60.0,
-        "avg_cpl": 111.5
+        "score_pct": 50.0,
+        "avg_cpl": 110.4
       },
       {
         "color": "white",
@@ -1119,6 +1187,18 @@
       },
       {
         "color": "white",
+        "name": "Caro Kann Defense 2.d4 d5 3.Nc3",
+        "eco": "B15",
+        "eco_url": "https://www.chess.com/openings/Caro-Kann-Defense-2.d4-d5-3.Nc3",
+        "games": 3,
+        "w": 2,
+        "l": 1,
+        "d": 0,
+        "score_pct": 66.7,
+        "avg_cpl": 86.3
+      },
+      {
+        "color": "white",
         "name": "Giuoco Piano Game Four Knights Game 5.O O",
         "eco": "C50",
         "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game-5.O-O",
@@ -1128,6 +1208,30 @@
         "d": 0,
         "score_pct": 66.7,
         "avg_cpl": 73.6
+      },
+      {
+        "color": "white",
+        "name": "Giuoco Piano Game Four Knights Game",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game",
+        "games": 3,
+        "w": 3,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 66.5
+      },
+      {
+        "color": "white",
+        "name": "Three Knights Opening 3...d6",
+        "eco": "C46",
+        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...d6",
+        "games": 3,
+        "w": 3,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 59.4
       },
       {
         "color": "white",
@@ -1203,18 +1307,6 @@
       },
       {
         "color": "white",
-        "name": "Giuoco Piano Game Four Knights Game",
-        "eco": "C50",
-        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game",
-        "games": 2,
-        "w": 2,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 72.0
-      },
-      {
-        "color": "white",
         "name": "Italian Game Two Knights Defense 4.O O",
         "eco": "C55",
         "eco_url": "https://www.chess.com/openings/Italian-Game-Two-Knights-Defense-4.O-O",
@@ -1227,15 +1319,15 @@
       },
       {
         "color": "white",
-        "name": "Three Knights Opening 3...d6",
-        "eco": "C46",
-        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...d6",
+        "name": "Pirc Defense Modern Defense Geller System 2...Nf6 3.Nc3 e5 4.Bc4",
+        "eco": "B07",
+        "eco_url": "https://www.chess.com/openings/Pirc-Defense-Modern-Defense-Geller-System-2...Nf6-3.Nc3-e5-4.Bc4",
         "games": 2,
         "w": 2,
         "l": 0,
         "d": 0,
         "score_pct": 100.0,
-        "avg_cpl": 65.7
+        "avg_cpl": 75.5
       },
       {
         "color": "white",
@@ -1455,6 +1547,18 @@
       },
       {
         "color": "white",
+        "name": "Reti Opening Queenside Fianchetto Variation 2.e4 Bb7 3.Nc3",
+        "eco": "A04",
+        "eco_url": "https://www.chess.com/openings/Reti-Opening-Queenside-Fianchetto-Variation-2.e4-Bb7-3.Nc3",
+        "games": 1,
+        "w": 0,
+        "l": 1,
+        "d": 0,
+        "score_pct": 0.0,
+        "avg_cpl": 135.9
+      },
+      {
+        "color": "white",
         "name": "Queens Pawn Opening",
         "eco": "A40",
         "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening",
@@ -1587,18 +1691,6 @@
       },
       {
         "color": "white",
-        "name": "Caro Kann Defense 2.d4 d5 3.Nc3",
-        "eco": "B15",
-        "eco_url": "https://www.chess.com/openings/Caro-Kann-Defense-2.d4-d5-3.Nc3",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 81.8
-      },
-      {
-        "color": "white",
         "name": "Scotch Game Scotch Gambit 4...d6 5.Nxd4 Nf6 6.Nc3",
         "eco": "C45",
         "eco_url": "https://www.chess.com/openings/Scotch-Game-Scotch-Gambit-4...d6-5.Nxd4-Nf6-6.Nc3",
@@ -1668,18 +1760,6 @@
         "d": 0,
         "score_pct": 100.0,
         "avg_cpl": 109.2
-      },
-      {
-        "color": "white",
-        "name": "Pirc Defense Modern Defense Geller System 2...Nf6 3.Nc3 e5 4.Bc4",
-        "eco": "B07",
-        "eco_url": "https://www.chess.com/openings/Pirc-Defense-Modern-Defense-Geller-System-2...Nf6-3.Nc3-e5-4.Bc4",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 20.5
       },
       {
         "color": "white",
@@ -1848,9 +1928,45 @@
         "d": 0,
         "score_pct": 100.0,
         "avg_cpl": 45.9
+      },
+      {
+        "color": "white",
+        "name": "Vienna Game Max Lange Defense",
+        "eco": "C25",
+        "eco_url": "https://www.chess.com/openings/Vienna-Game-Max-Lange-Defense",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 39.6
+      },
+      {
+        "color": "white",
+        "name": "Vienna Game 2...d6",
+        "eco": "C25",
+        "eco_url": "https://www.chess.com/openings/Vienna-Game-2...d6",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 83.9
       }
     ],
     "as_black": [
+      {
+        "color": "black",
+        "name": "Petrovs Defense Classical Variation",
+        "eco": "C42",
+        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Classical-Variation",
+        "games": 10,
+        "w": 5,
+        "l": 5,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 95.7
+      },
       {
         "color": "black",
         "name": "Kings Pawn Opening 1...e5",
@@ -1862,18 +1978,6 @@
         "d": 1,
         "score_pct": 55.0,
         "avg_cpl": 99.0
-      },
-      {
-        "color": "black",
-        "name": "Petrovs Defense Classical Variation",
-        "eco": "C42",
-        "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Classical-Variation",
-        "games": 8,
-        "w": 4,
-        "l": 4,
-        "d": 0,
-        "score_pct": 50.0,
-        "avg_cpl": 99.9
       },
       {
         "color": "black",
@@ -1970,6 +2074,18 @@
         "d": 0,
         "score_pct": 50.0,
         "avg_cpl": 95.4
+      },
+      {
+        "color": "black",
+        "name": "Center Game",
+        "eco": "C21",
+        "eco_url": "https://www.chess.com/openings/Center-Game",
+        "games": 2,
+        "w": 1,
+        "l": 1,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 60.0
       },
       {
         "color": "black",
@@ -2453,6 +2569,42 @@
       },
       {
         "color": "black",
+        "name": "Scotch Game Classical Variation 5.Nxc6",
+        "eco": "C45",
+        "eco_url": "https://www.chess.com/openings/Scotch-Game-Classical-Variation-5.Nxc6",
+        "games": 1,
+        "w": 0,
+        "l": 1,
+        "d": 0,
+        "score_pct": 0.0,
+        "avg_cpl": 59.7
+      },
+      {
+        "color": "black",
+        "name": "Four Knights Game Double Spanish Variation",
+        "eco": "C49",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Double-Spanish-Variation",
+        "games": 1,
+        "w": 0,
+        "l": 1,
+        "d": 0,
+        "score_pct": 0.0,
+        "avg_cpl": 144.3
+      },
+      {
+        "color": "black",
+        "name": "Queens Gambit Declined Chigorin Defense 3.e3",
+        "eco": "D07",
+        "eco_url": "https://www.chess.com/openings/Queens-Gambit-Declined-Chigorin-Defense-3.e3",
+        "games": 1,
+        "w": 0,
+        "l": 1,
+        "d": 0,
+        "score_pct": 0.0,
+        "avg_cpl": 94.8
+      },
+      {
+        "color": "black",
         "name": "Queens Pawn Opening Zukertort Chigorin Variation",
         "eco": "D02",
         "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Zukertort-Chigorin-Variation",
@@ -2486,6 +2638,18 @@
         "d": 1,
         "score_pct": 50.0,
         "avg_cpl": 88.9
+      },
+      {
+        "color": "black",
+        "name": "Center Game Accepted",
+        "eco": "C21",
+        "eco_url": "https://www.chess.com/openings/Center-Game-Accepted",
+        "games": 1,
+        "w": 0,
+        "l": 0,
+        "d": 1,
+        "score_pct": 50.0,
+        "avg_cpl": 80.7
       },
       {
         "color": "black",
@@ -2594,18 +2758,6 @@
         "d": 0,
         "score_pct": 100.0,
         "avg_cpl": 122.3
-      },
-      {
-        "color": "black",
-        "name": "Center Game",
-        "eco": "C21",
-        "eco_url": "https://www.chess.com/openings/Center-Game",
-        "games": 1,
-        "w": 1,
-        "l": 0,
-        "d": 0,
-        "score_pct": 100.0,
-        "avg_cpl": 35.4
       },
       {
         "color": "black",
@@ -2798,6 +2950,18 @@
         "d": 0,
         "score_pct": 100.0,
         "avg_cpl": 64.8
+      },
+      {
+        "color": "black",
+        "name": "Queens Pawn Opening Accelerated London System 2...Bf5 3.e3 e6",
+        "eco": "D00",
+        "eco_url": "https://www.chess.com/openings/Queens-Pawn-Opening-Accelerated-London-System-2...Bf5-3.e3-e6",
+        "games": 1,
+        "w": 1,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 59.8
       }
     ],
     "weak_spots": [
@@ -2838,16 +3002,40 @@
         "avg_cpl": 66.7
       },
       {
+        "color": "white",
+        "name": "Kings Pawn Opening Kings Knight Variation",
+        "eco": "C40",
+        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
+        "games": 13,
+        "w": 6,
+        "l": 6,
+        "d": 1,
+        "score_pct": 50.0,
+        "avg_cpl": 106.1
+      },
+      {
         "color": "black",
         "name": "Petrovs Defense Classical Variation",
         "eco": "C42",
         "eco_url": "https://www.chess.com/openings/Petrovs-Defense-Classical-Variation",
-        "games": 8,
-        "w": 4,
-        "l": 4,
+        "games": 10,
+        "w": 5,
+        "l": 5,
         "d": 0,
         "score_pct": 50.0,
-        "avg_cpl": 99.9
+        "avg_cpl": 95.7
+      },
+      {
+        "color": "white",
+        "name": "French Defense Knight Variation",
+        "eco": "C00",
+        "eco_url": "https://www.chess.com/openings/French-Defense-Knight-Variation",
+        "games": 6,
+        "w": 3,
+        "l": 3,
+        "d": 0,
+        "score_pct": 50.0,
+        "avg_cpl": 110.4
       },
       {
         "color": "white",
@@ -2862,18 +3050,6 @@
         "avg_cpl": 63.2
       },
       {
-        "color": "white",
-        "name": "Kings Pawn Opening Kings Knight Variation",
-        "eco": "C40",
-        "eco_url": "https://www.chess.com/openings/Kings-Pawn-Opening-Kings-Knight-Variation",
-        "games": 12,
-        "w": 6,
-        "l": 5,
-        "d": 1,
-        "score_pct": 54.2,
-        "avg_cpl": 105.9
-      },
-      {
         "color": "black",
         "name": "Kings Pawn Opening 1...e5",
         "eco": "C20",
@@ -2884,21 +3060,45 @@
         "d": 1,
         "score_pct": 55.0,
         "avg_cpl": 99.0
-      },
-      {
-        "color": "white",
-        "name": "French Defense Knight Variation",
-        "eco": "C00",
-        "eco_url": "https://www.chess.com/openings/French-Defense-Knight-Variation",
-        "games": 5,
-        "w": 3,
-        "l": 2,
-        "d": 0,
-        "score_pct": 60.0,
-        "avg_cpl": 111.5
       }
     ],
     "strong_spots": [
+      {
+        "color": "white",
+        "name": "Giuoco Piano Game Four Knights Game",
+        "eco": "C50",
+        "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game",
+        "games": 3,
+        "w": 3,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 66.5
+      },
+      {
+        "color": "white",
+        "name": "Three Knights Opening 3...d6",
+        "eco": "C46",
+        "eco_url": "https://www.chess.com/openings/Three-Knights-Opening-3...d6",
+        "games": 3,
+        "w": 3,
+        "l": 0,
+        "d": 0,
+        "score_pct": 100.0,
+        "avg_cpl": 59.4
+      },
+      {
+        "color": "white",
+        "name": "Four Knights Game Italian Variation",
+        "eco": "C47",
+        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
+        "games": 11,
+        "w": 7,
+        "l": 3,
+        "d": 1,
+        "score_pct": 68.2,
+        "avg_cpl": 97.5
+      },
       {
         "color": "black",
         "name": "Queens Pawn Opening 1...d5",
@@ -2937,6 +3137,18 @@
       },
       {
         "color": "white",
+        "name": "Caro Kann Defense 2.d4 d5 3.Nc3",
+        "eco": "B15",
+        "eco_url": "https://www.chess.com/openings/Caro-Kann-Defense-2.d4-d5-3.Nc3",
+        "games": 3,
+        "w": 2,
+        "l": 1,
+        "d": 0,
+        "score_pct": 66.7,
+        "avg_cpl": 86.3
+      },
+      {
+        "color": "white",
         "name": "Giuoco Piano Game Four Knights Game 5.O O",
         "eco": "C50",
         "eco_url": "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game-5.O-O",
@@ -2946,86 +3158,38 @@
         "d": 0,
         "score_pct": 66.7,
         "avg_cpl": 73.6
-      },
-      {
-        "color": "white",
-        "name": "Four Knights Game Italian Variation",
-        "eco": "C47",
-        "eco_url": "https://www.chess.com/openings/Four-Knights-Game-Italian-Variation",
-        "games": 10,
-        "w": 6,
-        "l": 3,
-        "d": 1,
-        "score_pct": 65.0,
-        "avg_cpl": 102.3
-      },
-      {
-        "color": "white",
-        "name": "Italian Game",
-        "eco": "C50",
-        "eco_url": "https://www.chess.com/openings/Italian-Game",
-        "games": 11,
-        "w": 7,
-        "l": 4,
-        "d": 0,
-        "score_pct": 63.6,
-        "avg_cpl": 64.0
-      },
-      {
-        "color": "white",
-        "name": "French Defense Knight Variation",
-        "eco": "C00",
-        "eco_url": "https://www.chess.com/openings/French-Defense-Knight-Variation",
-        "games": 5,
-        "w": 3,
-        "l": 2,
-        "d": 0,
-        "score_pct": 60.0,
-        "avg_cpl": 111.5
-      },
-      {
-        "color": "white",
-        "name": "Philidor Defense 3.Bc4",
-        "eco": "C41",
-        "eco_url": "https://www.chess.com/openings/Philidor-Defense-3.Bc4",
-        "games": 5,
-        "w": 3,
-        "l": 2,
-        "d": 0,
-        "score_pct": 60.0,
-        "avg_cpl": 94.5
       }
     ]
   },
   "tactics": {
-    "acpl": 88.6,
-    "total_moves": 6537,
-    "blunders": 523,
-    "mistakes": 865,
-    "inaccuracies": 788,
-    "blunder_rate": 2.22,
-    "analysed_games": 236,
+    "acpl": 87.9,
+    "total_moves": 7267,
+    "blunders": 584,
+    "mistakes": 949,
+    "inaccuracies": 869,
+    "blunder_rate": 2.29,
+    "analysed_games": 255,
     "by_phase": {
       "opening": {
-        "moves": 2298,
-        "cpl_sum": 139138.0,
-        "blunder": 106,
-        "acpl": 60.5,
-        "blunder_rate": 4.6
+        "moves": 2488,
+        "cpl_sum": 147771.0,
+        "blunder": 113,
+        "acpl": 59.4,
+        "blunder_rate": 4.5
       },
       "middlegame": {
-        "moves": 2383,
-        "cpl_sum": 271439.0,
-        "blunder": 256,
+        "moves": 2572,
+        "cpl_sum": 292930.0,
+        "blunder": 276,
         "acpl": 113.9,
         "blunder_rate": 10.7
       },
       "endgame": {
-        "moves": 1856,
-        "cpl_sum": 168649.0,
-        "blunder": 161,
-        "acpl": 90.9,
-        "blunder_rate": 8.7
+        "moves": 2207,
+        "cpl_sum": 197916.0,
+        "blunder": 195,
+        "acpl": 89.7,
+        "blunder_rate": 8.8
       }
     },
     "acpl_trend": [
@@ -4208,9 +4372,130 @@
         "date": "2026-09-15",
         "acpl": 45.9,
         "rolling": 78.9
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 84.5,
+        "rolling": 78.0
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 59.7,
+        "rolling": 79.2
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 49.6,
+        "rolling": 77.7
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 135.9,
+        "rolling": 81.2
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 59.8,
+        "rolling": 84.7
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 46.9,
+        "rolling": 86.7
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 144.3,
+        "rolling": 87.4
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 78.2,
+        "rolling": 85.3
+      },
+      {
+        "date": "2026-09-16",
+        "acpl": 79.8,
+        "rolling": 78.5
+      },
+      {
+        "date": "2026-09-17",
+        "acpl": 44.0,
+        "rolling": 78.3
+      },
+      {
+        "date": "2026-09-17",
+        "acpl": 104.9,
+        "rolling": 80.3
+      },
+      {
+        "date": "2026-09-17",
+        "acpl": 39.6,
+        "rolling": 78.3
+      },
+      {
+        "date": "2026-09-17",
+        "acpl": 83.9,
+        "rolling": 81.7
+      },
+      {
+        "date": "2026-09-18",
+        "acpl": 108.5,
+        "rolling": 79.0
+      },
+      {
+        "date": "2026-09-18",
+        "acpl": 80.7,
+        "rolling": 81.1
+      },
+      {
+        "date": "2026-09-18",
+        "acpl": 94.8,
+        "rolling": 85.9
+      },
+      {
+        "date": "2026-09-18",
+        "acpl": 130.6,
+        "rolling": 84.5
+      },
+      {
+        "date": "2026-09-18",
+        "acpl": 55.4,
+        "rolling": 82.2
+      },
+      {
+        "date": "2026-09-18",
+        "acpl": 133.2,
+        "rolling": 87.6
       }
     ],
     "worst_blunders": [
+      {
+        "ply": 37,
+        "move_no": 19,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 2261,
+        "eval_before": 761,
+        "eval_after": -1500,
+        "fen_before": "2kr2r1/Qpp2p1p/6p1/3qB3/8/8/PPP2PPP/R3R1K1 w - - 0 19",
+        "played_san": "Red1",
+        "played_uci": "e1d1",
+        "context": [
+          "Be5",
+          "Rde8",
+          "Rfe1",
+          "Rd8",
+          "Qxa7",
+          "Qxd5"
+        ],
+        "best_san": "c4",
+        "best_uci": "c2c4",
+        "date": "2026-09-18",
+        "url": "https://www.chess.com/game/live/184014917126",
+        "opponent": "kikhosroghanbari",
+        "opponent_rating": 776
+      },
       {
         "ply": 32,
         "move_no": 16,
@@ -4574,78 +4859,78 @@
         "url": "https://www.chess.com/game/live/174435290436",
         "opponent": "BranislavDubnicka2505",
         "opponent_rating": 854
-      },
-      {
-        "ply": 51,
-        "move_no": 26,
-        "phase": "middlegame",
-        "side": "white",
-        "cpl": 1508,
-        "eval_before": 8,
-        "eval_after": -1500,
-        "fen_before": "4r3/B5pp/1p2k1b1/3N4/1b2n3/8/PP2qPPP/2R3KR w - - 4 26",
-        "played_san": "Nxb4",
-        "played_uci": "d5b4",
-        "context": [
-          "Na8",
-          "b6",
-          "Nc7+",
-          "Ke7",
-          "Nd5+",
-          "Ke6"
-        ],
-        "best_san": "Nf4+",
-        "best_uci": "d5f4",
-        "date": "2026-09-08",
-        "url": "https://www.chess.com/game/live/174190980868",
-        "opponent": "salmanmalek00011",
-        "opponent_rating": 759
       }
     ]
   },
   "endgames": {
-    "winning_reached": 185,
-    "winning_converted": 120,
-    "thrown_from_winning": 65,
-    "conversion_pct": 64.9,
-    "losing_reached": 154,
-    "saved_from_losing": 55,
-    "save_pct": 35.7,
+    "winning_reached": 201,
+    "winning_converted": 129,
+    "thrown_from_winning": 72,
+    "conversion_pct": 64.2,
+    "losing_reached": 167,
+    "saved_from_losing": 59,
+    "save_pct": 35.3,
     "results_by_length": [
       {
         "bucket": "\u226420 moves",
-        "w": 58,
-        "l": 23,
+        "w": 60,
+        "l": 25,
         "d": 0,
-        "games": 81
+        "games": 85
       },
       {
         "bucket": "21\u201340",
-        "w": 58,
-        "l": 58,
+        "w": 61,
+        "l": 63,
         "d": 1,
-        "games": 117
+        "games": 125
       },
       {
         "bucket": "41\u201360",
-        "w": 11,
-        "l": 17,
+        "w": 13,
+        "l": 18,
         "d": 4,
-        "games": 32
+        "games": 35
       },
       {
         "bucket": "60+",
-        "w": 0,
-        "l": 3,
-        "d": 3,
-        "games": 6
+        "w": 2,
+        "l": 4,
+        "d": 4,
+        "games": 10
       }
     ]
   },
   "highlights": {
-    "brilliant_count": 11,
-    "great_count": 34,
+    "brilliant_count": 12,
+    "great_count": 40,
     "brilliant": [
+      {
+        "ply": 36,
+        "move_no": 18,
+        "phase": "middlegame",
+        "side": "black",
+        "cpl": 2,
+        "eval_before": 230,
+        "eval_after": 239,
+        "fen_before": "r4rk1/1Rpb1p2/p4p1p/8/2BP4/4P3/P1n2PPP/5RK1 b - - 0 18",
+        "played_san": "Bb5",
+        "played_uci": "d7b5",
+        "context": [
+          "Bxd7",
+          "Qxf6",
+          "gxf6",
+          "Rab1",
+          "Nc2",
+          "Rxb7"
+        ],
+        "sac_cp": 300,
+        "date": "2026-09-18",
+        "url": "https://www.chess.com/game/live/184012038904",
+        "opponent": "Addestthebaddest",
+        "opponent_rating": 806,
+        "outcome": "loss"
+      },
       {
         "ply": 29,
         "move_no": 15,
@@ -4934,6 +5219,162 @@
       }
     ],
     "great": [
+      {
+        "ply": 21,
+        "move_no": 11,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 0,
+        "eval_before": 137,
+        "eval_after": 141,
+        "fen_before": "rnbqnrk1/p3bppp/4p3/1N1pP3/2pP4/P2B1N2/1PP2PPP/R1BQ1RK1 w - - 0 11",
+        "played_san": "Be2",
+        "played_uci": "d3e2",
+        "context": [
+          "Bd3",
+          "d5",
+          "a3",
+          "c5",
+          "Nxb5",
+          "c4"
+        ],
+        "gap": 287,
+        "date": "2026-09-17",
+        "url": "https://www.chess.com/game/live/183979248214",
+        "opponent": "Aasdfgghjk",
+        "opponent_rating": 820,
+        "outcome": "loss"
+      },
+      {
+        "ply": 88,
+        "move_no": 44,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 0,
+        "eval_before": 9,
+        "eval_after": 9,
+        "fen_before": "8/1n1k4/P7/2R4p/2p2K2/7P/8/8 b - - 0 44",
+        "played_san": "Nxc5",
+        "played_uci": "b7c5",
+        "context": [
+          "Ke6",
+          "a4",
+          "Kd7",
+          "a5",
+          "Nb7",
+          "a6"
+        ],
+        "gap": 672,
+        "date": "2026-09-16",
+        "url": "https://www.chess.com/game/live/180002905158",
+        "opponent": "sherpastur",
+        "opponent_rating": 806,
+        "outcome": "loss"
+      },
+      {
+        "ply": 34,
+        "move_no": 17,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 6,
+        "eval_before": -92,
+        "eval_after": -98,
+        "fen_before": "1r6/p1p1kppp/2pr1n2/2p1P3/8/1PN2P2/P1P3PP/1R1R2K1 b - - 0 17",
+        "played_san": "Rxd1+",
+        "played_uci": "d6d1",
+        "context": [
+          "Kd7",
+          "Rfd1+",
+          "Ke7",
+          "b3",
+          "Rd6",
+          "e5"
+        ],
+        "gap": 438,
+        "date": "2026-09-16",
+        "url": "https://www.chess.com/game/live/180002905158",
+        "opponent": "sherpastur",
+        "opponent_rating": 806,
+        "outcome": "loss"
+      },
+      {
+        "ply": 27,
+        "move_no": 14,
+        "phase": "middlegame",
+        "side": "white",
+        "cpl": 10,
+        "eval_before": -105,
+        "eval_after": -115,
+        "fen_before": "rn1q1r1k/pbp3pp/1p1p2n1/4pp2/2BQP3/P1BP1NP1/1PP2P1P/R4RK1 w - - 0 14",
+        "played_san": "Qe3",
+        "played_uci": "d4e3",
+        "context": [
+          "Qe3",
+          "Ng6",
+          "g3",
+          "d6",
+          "Qd4",
+          "e5"
+        ],
+        "gap": 314,
+        "date": "2026-09-16",
+        "url": "https://www.chess.com/game/live/180008382920",
+        "opponent": "Jafa24",
+        "opponent_rating": 814,
+        "outcome": "loss"
+      },
+      {
+        "ply": 88,
+        "move_no": 44,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 0,
+        "eval_before": -9,
+        "eval_after": -2,
+        "fen_before": "3kr3/1R2r1p1/PB4p1/8/8/2PK4/6P1/8 b - - 4 44",
+        "played_san": "Kc8",
+        "played_uci": "d8c8",
+        "context": [
+          "Rxe4",
+          "a6",
+          "R4e7",
+          "Rb7+",
+          "Kd8",
+          "Bb6+"
+        ],
+        "gap": 714,
+        "date": "2026-09-16",
+        "url": "https://www.chess.com/game/live/180014160676",
+        "opponent": "JMAC188",
+        "opponent_rating": 783,
+        "outcome": "win"
+      },
+      {
+        "ply": 82,
+        "move_no": 41,
+        "phase": "endgame",
+        "side": "black",
+        "cpl": 0,
+        "eval_before": -53,
+        "eval_after": -31,
+        "fen_before": "4r3/2k3p1/1R2r1p1/P7/3BB3/2PK4/6P1/8 b - - 4 41",
+        "played_san": "Rxe4",
+        "played_uci": "e6e4",
+        "context": [
+          "Rde8",
+          "a5",
+          "Kb8",
+          "Rb1+",
+          "Kc7",
+          "Rb6"
+        ],
+        "gap": 572,
+        "date": "2026-09-16",
+        "url": "https://www.chess.com/game/live/180014160676",
+        "opponent": "JMAC188",
+        "opponent_rating": 783,
+        "outcome": "win"
+      },
       {
         "ply": 58,
         "move_no": 29,
@@ -5822,11 +6263,389 @@
   },
   "time": {
     "timeout_losses": 8,
-    "total_losses": 101,
-    "timeout_rate": 7.9
+    "total_losses": 110,
+    "timeout_rate": 7.3
   },
   "viewer": {
     "games": [
+      {
+        "uuid": "c00956e1-b357-11f1-8cd6-ece1e601000f",
+        "url": "https://www.chess.com/game/live/184007756348",
+        "date": "2026-09-18",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 803,
+        "opponent": "karateodor",
+        "opponent_rating": 810,
+        "eco": "C40",
+        "opening": "Kings Pawn Opening Kings Knight Variation",
+        "ply_count": 60,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 2
+        }
+      },
+      {
+        "uuid": "f5c2c30d-b360-11f1-8cd6-ece1e601000f",
+        "url": "https://www.chess.com/game/live/184010557384",
+        "date": "2026-09-18",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "draw",
+        "result_reason": "repetition",
+        "player_rating": 803,
+        "opponent": "ammar-hr",
+        "opponent_rating": 799,
+        "eco": "C21",
+        "opening": "Center Game Accepted",
+        "ply_count": 124,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 6
+        }
+      },
+      {
+        "uuid": "9b654494-b365-11f1-b6f0-30204801000f",
+        "url": "https://www.chess.com/game/live/184012038904",
+        "date": "2026-09-18",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 795,
+        "opponent": "Addestthebaddest",
+        "opponent_rating": 806,
+        "eco": "D07",
+        "opening": "Queens Gambit Declined Chigorin Defense 3.e3",
+        "ply_count": 79,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 1,
+          "great": 0,
+          "blunder": 4
+        }
+      },
+      {
+        "uuid": "54276bbf-b36e-11f1-baf2-8a56cc01000f",
+        "url": "https://www.chess.com/game/live/184014917126",
+        "date": "2026-09-18",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 803,
+        "opponent": "kikhosroghanbari",
+        "opponent_rating": 776,
+        "eco": "B07",
+        "opening": "Pirc Defense Modern Defense Geller System 2...Nf6 3.Nc3 e5 4.Bc4",
+        "ply_count": 39,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 1
+        }
+      },
+      {
+        "uuid": "e69a4ebc-b36f-11f1-bbdf-8eeeee01000f",
+        "url": "https://www.chess.com/game/live/184015449728",
+        "date": "2026-09-18",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 811,
+        "opponent": "KL541",
+        "opponent_rating": 813,
+        "eco": "C50",
+        "opening": "Giuoco Piano Game Four Knights Game",
+        "ply_count": 127,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 3
+        }
+      },
+      {
+        "uuid": "52b40f0b-b37a-11f1-b4a6-d9079701000f",
+        "url": "https://www.chess.com/game/live/184018975430",
+        "date": "2026-09-18",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 803,
+        "opponent": "matse_ing",
+        "opponent_rating": 832,
+        "eco": "B15",
+        "opening": "Caro Kann Defense 2.d4 d5 3.Nc3",
+        "ply_count": 108,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 9
+        }
+      },
+      {
+        "uuid": "fbf30cf4-b2cf-11f1-93e5-8500da01000f",
+        "url": "https://www.chess.com/game/live/183979248214",
+        "date": "2026-09-17",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "resigned",
+        "player_rating": 811,
+        "opponent": "Aasdfgghjk",
+        "opponent_rating": 820,
+        "eco": "C00",
+        "opening": "French Defense Knight Variation",
+        "ply_count": 37,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 1,
+          "blunder": 2
+        }
+      },
+      {
+        "uuid": "29e53215-b2e4-11f1-b5a8-2f33c19a44b8",
+        "url": "https://www.chess.com/game/daily/242919298",
+        "date": "2026-09-17",
+        "time_class": "daily",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 811,
+        "opponent": "Coach-David",
+        "opponent_rating": 600,
+        "eco": "C25",
+        "opening": "Vienna Game Max Lange Defense",
+        "ply_count": 59,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 1
+        }
+      },
+      {
+        "uuid": "1af3f747-b2ef-11f1-b5a8-2f33c19a44b8",
+        "url": "https://www.chess.com/game/daily/242968666",
+        "date": "2026-09-17",
+        "time_class": "daily",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 811,
+        "opponent": "Coach-David",
+        "opponent_rating": 900,
+        "eco": "C25",
+        "opening": "Vienna Game 2...d6",
+        "ply_count": 97,
+        "accuracy": 82.69,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 4
+        }
+      },
+      {
+        "uuid": "b1f7d8a3-b1d0-11f1-baf2-8a56cc01000f",
+        "url": "https://www.chess.com/game/live/174561780948",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "loss",
+        "result_reason": "resigned",
+        "player_rating": 811,
+        "opponent": "brainboxmira",
+        "opponent_rating": 835,
+        "eco": "C21",
+        "opening": "Center Game",
+        "ply_count": 65,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 3
+        }
+      },
+      {
+        "uuid": "0a737f76-b1e3-11f1-9f37-3022bd01000f",
+        "url": "https://www.chess.com/game/live/180002905158",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 803,
+        "opponent": "sherpastur",
+        "opponent_rating": 806,
+        "eco": "C45",
+        "opening": "Scotch Game Classical Variation 5.Nxc6",
+        "ply_count": 131,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 2,
+          "blunder": 5
+        }
+      },
+      {
+        "uuid": "66523e49-b1ec-11f1-bb1f-e68c2101000f",
+        "url": "https://www.chess.com/game/live/180006013626",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 811,
+        "opponent": "yashandraj",
+        "opponent_rating": 812,
+        "eco": "C47",
+        "opening": "Four Knights Game Italian Variation",
+        "ply_count": 63,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 2
+        }
+      },
+      {
+        "uuid": "9fc89d8d-b1f3-11f1-bb1f-e68c2101000f",
+        "url": "https://www.chess.com/game/live/180008382920",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "loss",
+        "result_reason": "resigned",
+        "player_rating": 803,
+        "opponent": "Jafa24",
+        "opponent_rating": 814,
+        "eco": "A04",
+        "opening": "Reti Opening Queenside Fianchetto Variation 2.e4 Bb7 3.Nc3",
+        "ply_count": 62,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 1,
+          "blunder": 6
+        }
+      },
+      {
+        "uuid": "2e79841b-b1f7-11f1-bbdf-8eeeee01000f",
+        "url": "https://www.chess.com/game/live/180009522214",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 811,
+        "opponent": "FredLevesque2023",
+        "opponent_rating": 787,
+        "eco": "D00",
+        "opening": "Queens Pawn Opening Accelerated London System 2...Bf5 3.e3 e6",
+        "ply_count": 100,
+        "accuracy": 70.41,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 2
+        }
+      },
+      {
+        "uuid": "3ad31ade-b205-11f1-b4a6-d9079701000f",
+        "url": "https://www.chess.com/game/live/180013785640",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "white",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 819,
+        "opponent": "jmpras",
+        "opponent_rating": 813,
+        "eco": "C46",
+        "opening": "Three Knights Opening 3...d6",
+        "ply_count": 31,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 1
+        }
+      },
+      {
+        "uuid": "2f6a75c2-b206-11f1-bb1f-e68c2101000f",
+        "url": "https://www.chess.com/game/live/180014057766",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 811,
+        "opponent": "Colzeroni",
+        "opponent_rating": 809,
+        "eco": "C49",
+        "opening": "Four Knights Game Double Spanish Variation",
+        "ply_count": 25,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 2
+        }
+      },
+      {
+        "uuid": "8c152563-b206-11f1-bbdf-8eeeee01000f",
+        "url": "https://www.chess.com/game/live/180014160676",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "win",
+        "result_reason": "win",
+        "player_rating": 819,
+        "opponent": "JMAC188",
+        "opponent_rating": 783,
+        "eco": "C42",
+        "opening": "Petrovs Defense Classical Variation",
+        "ply_count": 140,
+        "accuracy": 69.89,
+        "counts": {
+          "brilliant": 0,
+          "great": 2,
+          "blunder": 7
+        }
+      },
+      {
+        "uuid": "1dbeaa17-b223-11f1-8cd6-ece1e601000f",
+        "url": "https://www.chess.com/game/live/180020739354",
+        "date": "2026-09-16",
+        "time_class": "rapid",
+        "color": "black",
+        "outcome": "loss",
+        "result_reason": "checkmated",
+        "player_rating": 811,
+        "opponent": "IMUHYUN",
+        "opponent_rating": 864,
+        "eco": "C42",
+        "opening": "Petrovs Defense Classical Variation",
+        "ply_count": 59,
+        "accuracy": null,
+        "counts": {
+          "brilliant": 0,
+          "great": 0,
+          "blunder": 1
+        }
+      },
       {
         "uuid": "6708bbad-b0e9-11f1-b4a6-d9079701000f",
         "url": "https://www.chess.com/game/live/174504636462",
@@ -7894,7 +8713,7 @@
         "outcome": "draw",
         "result_reason": "repetition",
         "player_rating": 777,
-        "opponent": "yejiishere",
+        "opponent": "TheLawOfIndentity",
         "opponent_rating": 794,
         "eco": "C42",
         "opening": "Petrovs Defense",
