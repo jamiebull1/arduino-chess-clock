@@ -209,3 +209,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 footer.site { color: var(--muted); font-size: 12px; padding: 24px 0 40px; text-align: center; }
 .callout { border-left: 3px solid var(--warn); background: rgba(183, 121, 31, .08); padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
+
+.refresh-btn { margin-left: auto; padding: 5px 10px; border: 1px solid var(--border); border-radius: 6px;
+  color: var(--muted); font-size: 12px; text-decoration: none; white-space: nowrap; }
+.refresh-btn:hover { color: var(--text, inherit); border-color: var(--muted); }
