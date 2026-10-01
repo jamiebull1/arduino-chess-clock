@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 
 from . import config as config_mod
-from . import engine, fetch, metrics, render
+from . import engine, fetch, metrics, render, reset
 from .parse import load_games
 
 
@@ -33,8 +33,14 @@ def cmd_render(args) -> int:
     return 0
 
 
+def cmd_clear(args) -> int:
+    reset.clear(_load(args))
+    return 0
+
+
 def cmd_build(args) -> int:
     cfg = _load(args)
+    reset.clear_if_player_changed(cfg)
     print("fetch:")
     fetch.run(cfg)
     print("analyse:")
@@ -57,6 +63,7 @@ def main(argv: list[str] | None = None) -> int:
         ("analyse", cmd_analyse, "run Stockfish over any un-analysed games"),
         ("metrics", cmd_metrics, "aggregate into data/report.json"),
         ("render", cmd_render, "render the static site into _site/"),
+        ("clear", cmd_clear, "delete cached games, analysis and report (start fresh)"),
         ("build", cmd_build, "fetch + analyse + metrics + render"),
     ]:
         p = sub.add_parser(name, help=help_text)

@@ -43,7 +43,7 @@ _DEFAULTS: dict[str, Any] = {
         "line_plies": 6,
     },
     "site": {
-        "title": "chess.com progress",
+        "title": None,  # default: "<username> — chess.com progress"
         "recent_games": 10,
         "worst_blunders": 15,
     },
@@ -100,7 +100,10 @@ class Config:
 
     @property
     def site(self) -> dict:
-        return self.raw["site"]
+        site = dict(self.raw["site"])
+        if not site.get("title"):
+            site["title"] = f"{self.username} — chess.com progress"
+        return site
 
 
 def resolve_stockfish(configured: str | None) -> str | None:

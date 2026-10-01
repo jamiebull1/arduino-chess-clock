@@ -1,4 +1,6 @@
 # chess-progress configuration
+# Your chess.com username: the only setting a fork needs to change.
+# Changing it automatically clears the previous player's cached data on the next build.
 username: rimanish
 
 engine:
@@ -45,7 +47,8 @@ highlights:
   line_plies: 6               # half-moves of the best line walked for sacrifice detection
 
 site:
-  title: "rimanish — chess.com progress"
+  # title: defaults to "<username> — chess.com progress"; uncomment to override.
+  # title: "My chess progress"
   # Number of most-recent games shown in "recent form" and worst-blunder lists.
   recent_games: 10
   worst_blunders: 15

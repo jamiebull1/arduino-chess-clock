@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 
@@ -47,6 +48,12 @@ def _markers(analysis: dict) -> list[dict]:
 
     out.sort(key=lambda m: m["ply"])
     return out
+
+
+def _workflow_url() -> str:
+    """Actions page of the repo doing the build, so forks link to their own workflow."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "jamiebull1/arduino-chess-clock")
+    return f"https://github.com/{repo}/actions/workflows/build.yml"
 
 
 def _write_viewer_games(site, report: dict, analyses: dict, thresholds: dict) -> int:
@@ -162,7 +169,7 @@ def render(cfg: Config, report: dict | None = None) -> None:
     for template_name, page in _PAGES.items():
         html = env.get_template(template_name).render(
             report=ctx, page=page, data_json=data_json, title=cfg.site["title"],
-            piece_defs=piece_defs,
+            piece_defs=piece_defs, workflow_url=_workflow_url(),
         )
         (site / template_name).write_text(html)
     print(f"  rendered {len(_PAGES)} pages to {site} ({n_games} viewer games)")
