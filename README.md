@@ -40,13 +40,24 @@ Pulls my [chess.com](https://www.chess.com/member/rimanish) games, runs a
 
 Configuration (username, engine budget, thresholds) lives in [`config.yaml`](config.yaml).
 
-## Changing the player
+## Fork it for your own games
 
-The player is set by `username` in [`config.yaml`](config.yaml) (also update
-`site.title` there, which is a separate string). Commit and push to `master`, or use
-**Update games**, to rebuild. `data/` is not separated per player, so after switching
-player, clear `data/games/`, `data/analysis/` and `data/report.json` first or the old
-player's games stay cached.
+1. **Fork** this repo on GitHub.
+2. Edit `username` in [`config.yaml`](config.yaml) to your chess.com username. That is the
+   only required change: the site title is built from it, and the previous player's cached
+   games are cleared automatically on the next build.
+3. **Settings → Pages → Source = GitHub Actions**, and enable Actions on the fork.
+4. Push to `master` or run the workflow. The first run does the full Stockfish backfill.
+
+The **Update games** button (header) and the workflow links on the site point at your own
+fork's Actions page.
+
+## Clearing the history
+
+To start from scratch (e.g. after changing engine settings), use **Clear history** in the
+site footer: it opens the workflow page, where you tick **clear_history** and press
+**Run workflow**. Locally, run `python -m chessprogress clear`. Clearing is also
+automatic when `username` changes.
 
 ## Run locally
 

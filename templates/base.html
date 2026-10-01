@@ -25,7 +25,7 @@
       <a href="endgames.html" class="{{ 'active' if page == 'endgames' }}">Endgames</a>
     </nav>
     <a class="refresh-btn" target="_blank" rel="noopener"
-       href="https://github.com/jamiebull1/arduino-chess-clock/actions/workflows/build.yml"
+       href="{{ workflow_url }}"
        title="Opens GitHub Actions: choose Run workflow to fetch and analyse new games">&#8635; Update games</a>
   </div>
 </header>
@@ -38,7 +38,9 @@
 
 <footer class="site">
   Generated {{ report.generated_at }} · {{ report.overview.total_games }} games analysed ·
-  built with Stockfish + python-chess
+  built with Stockfish + python-chess ·
+  <a href="{{ workflow_url }}" target="_blank" rel="noopener"
+     title="Opens GitHub Actions: choose Run workflow and tick 'clear_history' to delete cached games and rebuild from scratch">Clear history</a>
 </footer>
 
 <script>
