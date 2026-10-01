@@ -40,6 +40,14 @@ Pulls my [chess.com](https://www.chess.com/member/rimanish) games, runs a
 
 Configuration (username, engine budget, thresholds) lives in [`config.yaml`](config.yaml).
 
+## Changing the player
+
+The player is set by `username` in [`config.yaml`](config.yaml) (also update
+`site.title` there, which is a separate string). Commit and push to `master`, or use
+**Update games**, to rebuild. `data/` is not separated per player, so after switching
+player, clear `data/games/`, `data/analysis/` and `data/report.json` first or the old
+player's games stay cached.
+
 ## Run locally
 
 ```bash
