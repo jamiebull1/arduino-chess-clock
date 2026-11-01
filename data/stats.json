@@ -1,9 +1,9 @@
 {
 "chess_rapid": {
 "last": {
-"rating": 727,
-"date": 1790895682,
-"rd": 26
+"rating": 657,
+"date": 1793495527,
+"rd": 28
 },
 "best": {
 "rating": 843,
@@ -11,16 +11,28 @@
 "game": "https://www.chess.com/game/live/174318946800"
 },
 "record": {
-"win": 172,
-"loss": 162,
-"draw": 13
+"win": 266,
+"loss": 264,
+"draw": 20
+}
+},
+"chess_blitz": {
+"last": {
+"rating": 324,
+"date": 1792188490,
+"rd": 174
+},
+"record": {
+"win": 0,
+"loss": 3,
+"draw": 0
 }
 },
 "fide": 0,
 "tactics": {
 "highest": {
-"rating": 1461,
-"date": 1790836291
+"rating": 1613,
+"date": 1793468261
 },
 "lowest": {
 "rating": 400,
@@ -29,8 +41,8 @@
 },
 "puzzle_rush": {
 "best": {
-"total_attempts": 22,
-"score": 20
+"total_attempts": 28,
+"score": 25
 }
 }
 }

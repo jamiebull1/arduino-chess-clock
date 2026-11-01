@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T23:03:22+00:00",
+  "generated_at": "2026-11-01T01:14:41+00:00",
   "username": "rimanish",
   "profile": {
     "name": "Jamie Bull",
@@ -10,11 +10,11 @@
   },
   "overview": {
     "primary_time_class": "rapid",
-    "current_rating": 727,
+    "current_rating": 657,
     "best_rating": 843,
-    "stats_wins": 172,
-    "stats_losses": 162,
-    "stats_draws": 13,
+    "stats_wins": 266,
+    "stats_losses": 264,
+    "stats_draws": 20,
     "total_games": 268,
     "wins": 142,
     "losses": 116,
